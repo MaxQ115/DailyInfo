@@ -12,8 +12,8 @@ const CONFIG = {
     { id: 'global', name: '全球市场', active: false, future: true, badge: '筹备中' },
     { id: 'industry', name: '行业追踪', active: false, future: true, badge: '筹备中' }
   ],
-  pollIntervalMs: 30000, // 30 秒静默轮询新资讯
-  pageSize: 100
+  pollIntervalMs: 30000, // 30 秒静默轮询最新资讯
+  pageSize: 50 // 每页拉取数量
 };
 
 // 预置默认快讯数据（保证离线或首屏 0 延迟秒开）
@@ -21,6 +21,7 @@ const PRESET_NEWS = [
   {
     id: 'p1',
     time: '15:04',
+    timestamp: Date.now() - 60000,
     title: '【英国财政大臣希利计划在预算案中对银行行业征税】',
     content: '英国财政大臣希利计划在预算案中对银行行业征税，英国银行股应声下跌。巴克莱银行、劳埃德银行等跌幅居前。',
     isUrgent: false
@@ -28,6 +29,7 @@ const PRESET_NEWS = [
   {
     id: 'p2',
     time: '15:02',
+    timestamp: Date.now() - 180000,
     title: '【ETF两市成交额5989.93亿元，较昨日此时缩量150.42亿元】',
     content: '截至目前，ETF两市成交额报5989.93亿元，较昨日此时缩量150.42亿元。分类别来看，股票型ETF成交额1609.38亿元，债券型ETF成交额3078.75亿元，货币型ETF成交额544.98亿元，商品型ETF成交额77.06亿元，QDII型ETF成交额679.76亿元。其中，成交额最高的非货币型ETF分别是沪深300ETF（510300）、中韩半导体ETF（513310）、科创50ETF（588000），成交额分别为：160.93亿元、102.14亿元、89.37亿元。',
     isUrgent: true
@@ -35,6 +37,7 @@ const PRESET_NEWS = [
   {
     id: 'p3',
     time: '15:01',
+    timestamp: Date.now() - 240000,
     title: '【A股收评：沪指冲高回落收涨0.24%，宽基ETF尾盘再度放量】',
     content: 'A股三大指数今日涨跌不一，截至收盘，上证指数涨0.24%，深证成指跌0.12%，创业板指跌0.39%，北证50跌1.81%，科创50指数跌0.06%。全市市场成交额15691亿元，较上日缩量767亿元，全市场超3300只个股上涨。板块题材上，军工装备、飞行汽车、碳纤维、汽车零部件、白酒、房地产板块涨幅居前；元件、游戏、CRO、AI视频、能源金属、电池板块跌幅居前。盘面上，特斯拉二代Roadster跑车亮相，飞行汽车概念股大涨，华力创通、金盾股份、均胜电子等10余股涨停。房地产板块盘中一度走高，粤宏远A封板，此前一线城市商品住房销售制度改革细则全面落地。军工板块同样表现活跃，长城军工、新兴装备、晨曦航空等股涨停，此前珠海航展超1100家企业参展。此外，白酒、猪肉、风电设备等板块盘中轮动。另一方面，CRO概念股冲高后持续回落，药明康德尾盘大跳水触及跌停。AI视频板块震荡调整，欢瑞世纪、流金科技、易点天下领跌。部分PCB概念股同样回撤，四会富仕、金百泽、本川智能等股跌超10%。',
     isUrgent: true
@@ -42,6 +45,7 @@ const PRESET_NEWS = [
   {
     id: 'p4',
     time: '15:01',
+    timestamp: Date.now() - 250000,
     title: '【维斯塔斯股价上涨3.3%，受诺德仕上调全年业绩指引】',
     content: '维斯塔斯股价上涨3.3%，受诺德仕上调全年业绩指引的带动。',
     isUrgent: false
@@ -49,6 +53,7 @@ const PRESET_NEWS = [
   {
     id: 'p5',
     time: '15:01',
+    timestamp: Date.now() - 260000,
     title: '【2026西太平洋海军论坛海军医学研讨会】',
     content: '国防部新闻发言人介绍，10月21日至22日，中国海军将在上海举办2026年西太平洋海军论坛海军医学研讨会，邀请西太平洋海军论坛成员国和观察员国代表参会。本次会议以“人工智能时代下的海上卫勤：挑战和对策”为主题，围绕海上卫勤保障及伤病员救治、海上灾难医学与应急救援、援潜救生医学保障、海上卫勤力量培训等专题进行研讨交流，进一步加深互相了解与务实合作。',
     isUrgent: false
@@ -56,6 +61,7 @@ const PRESET_NEWS = [
   {
     id: 'p6',
     time: '14:55',
+    timestamp: Date.now() - 600000,
     title: '【南向资金今日净买入超60亿港元】',
     content: '南向资金今日净买入63.85亿港元。阿里巴巴-W、美团-W、腾讯控股分别获净买入12.4亿港元、8.9亿港元、6.7亿港元。',
     isUrgent: false
@@ -63,6 +69,7 @@ const PRESET_NEWS = [
   {
     id: 'p7',
     time: '14:48',
+    timestamp: Date.now() - 1000000,
     title: '【商务部：加快落实推动外贸保稳提质各项政策举措】',
     content: '商务部新闻发言人表示，将密切跟踪外贸运行态势，指导各地加大对外贸企业信贷投放和展会支持力度，多措并举帮助企业抓订单、拓市场。',
     isUrgent: true
@@ -73,7 +80,10 @@ const PRESET_NEWS = [
 let allNews = [...PRESET_NEWS];
 let currentTab = 'cls';
 let searchQuery = '';
-let isFetching = false;
+let isFetchingLatest = false;
+let isFetchingHistory = false;
+let currentHistoryPage = 1;
+let hasMoreHistory = true;
 let autoPollTimer = null;
 let currentFontSizeLevel = 'normal'; // normal | large
 
@@ -90,7 +100,13 @@ const elements = {
   searchClearBtn: document.getElementById('searchClearBtn'),
   fontSizeBtn: document.getElementById('fontSizeBtn'),
   backToTopBtn: document.getElementById('backToTopBtn'),
-  toast: document.getElementById('toast')
+  toast: document.getElementById('toast'),
+  // 上划加载更多相关
+  loadMoreContainer: document.getElementById('loadMoreContainer'),
+  loadMoreBtn: document.getElementById('loadMoreBtn'),
+  loadMoreLoading: document.getElementById('loadMoreLoading'),
+  noMoreTips: document.getElementById('noMoreTips'),
+  scrollSentinel: document.getElementById('scrollSentinel')
 };
 
 // ================= 初始化 =================
@@ -98,12 +114,13 @@ function initApp() {
   renderTabs();
   renderNewsList();
   bindEvents();
+  initInfiniteScroll();
   updateStatusTime();
 
-  // 首屏立即发起一次异步在线抓取
-  fetchLiveNews(false);
+  // 首屏立即发起一次异步在线抓取第1页最新数据
+  fetchLatestNews(false);
 
-  // 启动后台定时轮询
+  // 启动后台定时轮询最新数据
   startAutoPolling();
 }
 
@@ -149,16 +166,16 @@ function handleTabClick(tabId) {
   renderNewsList();
 }
 
-// ================= 数据拉取 (JSONP) =================
-function fetchLiveNews(showManualToast = false) {
-  if (isFetching) return;
-  isFetching = true;
+// ================= 1. 拉取最新最新快讯 (顶部刷新/轮询 page=1) =================
+function fetchLatestNews(showManualToast = false) {
+  if (isFetchingLatest) return;
+  isFetchingLatest = true;
 
   if (elements.refreshBtn) {
     elements.refreshBtn.classList.add('spinning');
   }
 
-  const callbackName = 'live_feed_cb_' + Math.floor(Math.random() * 1000000);
+  const callbackName = 'live_feed_latest_' + Math.floor(Math.random() * 1000000);
   let resolved = false;
 
   const cleanup = () => {
@@ -167,10 +184,9 @@ function fetchLiveNews(showManualToast = false) {
     if (elements.refreshBtn) {
       elements.refreshBtn.classList.remove('spinning');
     }
-    isFetching = false;
+    isFetchingLatest = false;
   };
 
-  // 注册全局回调
   window[callbackName] = function(res) {
     if (resolved) return;
     cleanup();
@@ -179,40 +195,35 @@ function fetchLiveNews(showManualToast = false) {
       const feedList = res?.result?.data?.feed?.list || [];
       if (feedList.length > 0) {
         const parsedList = feedList.map(item => parseRawFeedItem(item));
-        mergeNewsData(parsedList);
+        const newCount = mergeNewsData(parsedList);
         if (showManualToast) {
-          showToast(`已刷新，获取到最新实时电报`);
+          showToast(newCount > 0 ? `已更新，获取到 ${newCount} 条新电报` : '已是最新数据');
         }
       } else if (showManualToast) {
         showToast('已是最新数据');
       }
     } catch (err) {
-      console.warn('解析电报流异常:', err);
+      console.warn('解析最新电报流异常:', err);
       if (showManualToast) showToast('刷新成功');
     }
     updateStatusTime();
   };
 
-  // 通过新浪财经 7x24 实时电报流接口 (包含财联社全量快讯，免后端、跨域极速响应)
   const script = document.createElement('script');
   script.src = `https://zhibo.sina.com.cn/api/zhibo/feed?page=1&page_size=${CONFIG.pageSize}&zhibo_id=152&callback=${callbackName}`;
   
   script.onerror = function() {
     if (!resolved) {
       cleanup();
-      console.warn('电报网络请求失败，维持当前预置流');
-      if (showManualToast) showToast('已展示最新缓存电报');
+      if (showManualToast) showToast('已展示当前快讯');
     }
     script.remove();
   };
-
   script.onload = function() {
     script.remove();
   };
-
   document.head.appendChild(script);
 
-  // 10秒超时回退保护
   setTimeout(() => {
     if (!resolved) {
       cleanup();
@@ -221,7 +232,126 @@ function fetchLiveNews(showManualToast = false) {
   }, 10000);
 }
 
-// 解析单条原始数据
+// ================= 2. 上划加载更早历史快讯 (下一页 page=2, 3...) =================
+function fetchHistoricalNews() {
+  if (isFetchingHistory || !hasMoreHistory) return;
+  // 如果当前处于搜索状态，暂时不翻页，避免列表紊乱
+  if (searchQuery.trim()) return;
+
+  isFetchingHistory = true;
+  updateLoadMoreUI(true);
+
+  const nextPage = currentHistoryPage + 1;
+  const callbackName = 'live_feed_history_' + Math.floor(Math.random() * 1000000);
+  let resolved = false;
+
+  const cleanup = () => {
+    resolved = true;
+    delete window[callbackName];
+    isFetchingHistory = false;
+    updateLoadMoreUI(false);
+  };
+
+  window[callbackName] = function(res) {
+    if (resolved) return;
+    cleanup();
+
+    try {
+      const feedList = res?.result?.data?.feed?.list || [];
+      if (feedList.length > 0) {
+        currentHistoryPage = nextPage;
+        const parsedList = feedList.map(item => parseRawFeedItem(item));
+        const addedCount = mergeNewsData(parsedList);
+        if (addedCount > 0) {
+          showToast(`已加载更早时点的 ${addedCount} 条快讯`);
+        }
+      } else {
+        hasMoreHistory = false;
+        if (elements.noMoreTips) elements.noMoreTips.classList.add('show');
+        if (elements.loadMoreBtn) elements.loadMoreBtn.classList.add('hide');
+      }
+    } catch (err) {
+      console.warn('解析历史电报流异常:', err);
+    }
+  };
+
+  const script = document.createElement('script');
+  script.src = `https://zhibo.sina.com.cn/api/zhibo/feed?page=${nextPage}&page_size=${CONFIG.pageSize}&zhibo_id=152&callback=${callbackName}`;
+  
+  script.onerror = function() {
+    if (!resolved) {
+      cleanup();
+      showToast('加载历史快讯失败，请重试');
+    }
+    script.remove();
+  };
+  script.onload = function() {
+    script.remove();
+  };
+  document.head.appendChild(script);
+
+  setTimeout(() => {
+    if (!resolved) {
+      cleanup();
+    }
+  }, 10000);
+}
+
+// 更新“加载更多”UI状态
+function updateLoadMoreUI(loading) {
+  if (!elements.loadMoreLoading || !elements.loadMoreBtn) return;
+  if (loading) {
+    elements.loadMoreLoading.classList.add('show');
+    elements.loadMoreBtn.classList.add('hide');
+  } else {
+    elements.loadMoreLoading.classList.remove('show');
+    if (hasMoreHistory) {
+      elements.loadMoreBtn.classList.remove('hide');
+    } else {
+      elements.loadMoreBtn.classList.add('hide');
+      if (elements.noMoreTips) elements.noMoreTips.classList.add('show');
+    }
+  }
+}
+
+// ================= 无限滚动监听 (上划触底自动触发) =================
+function initInfiniteScroll() {
+  // 1. 优先使用 IntersectionObserver
+  if ('IntersectionObserver' in window && elements.scrollSentinel) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !isFetchingHistory && hasMoreHistory) {
+          fetchHistoricalNews();
+        }
+      });
+    }, {
+      rootMargin: '250px' // 距离底部 250px 时提前静默拉取，用户上划毫无卡顿
+    });
+
+    observer.observe(elements.scrollSentinel);
+  }
+
+  // 2. 备用滚动事件监听
+  window.addEventListener('scroll', () => {
+    if (isFetchingHistory || !hasMoreHistory || searchQuery.trim()) return;
+    const scrollHeight = document.documentElement.scrollHeight;
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const clientHeight = window.innerHeight;
+
+    if (scrollTop + clientHeight >= scrollHeight - 300) {
+      fetchHistoricalNews();
+    }
+  }, { passive: true });
+
+  // 3. 手动点击按钮加载更多
+  if (elements.loadMoreBtn) {
+    elements.loadMoreBtn.addEventListener('click', () => {
+      fetchHistoricalNews();
+    });
+  }
+}
+
+// ================= 解析单条原始数据 =================
 function parseRawFeedItem(item) {
   const rawText = (item.rich_text || item.text || '').trim();
   let title = '';
@@ -233,7 +363,6 @@ function parseRawFeedItem(item) {
     title = `【${match[1]}】`;
     content = rawText.replace(match[0], '').trim();
   } else {
-    // 若没有中括号标题，根据长度合理切分
     if (rawText.length > 28) {
       title = rawText.substring(0, 24) + '...';
     } else {
@@ -242,16 +371,26 @@ function parseRawFeedItem(item) {
     }
   }
 
-  // 格式化时间
-  const time = formatTimeStr(item.create_time);
+  // 时间与时间戳解析
+  const createTime = item.create_time || '';
+  let timestamp = 0;
+  if (createTime) {
+    timestamp = new Date(createTime.replace(/-/g, '/')).getTime();
+  }
+  if (!timestamp || isNaN(timestamp)) {
+    timestamp = Date.now();
+  }
 
-  // 智能识别是否为重磅资讯
+  const time = formatTimeStr(createTime);
+
+  // 智能识别重磅资讯
   const urgentKeywords = ['重磅', '突发', '国常会', '中央', '央行', '降准', '降息', '收评', '大跌', '大涨', '黑天鹅'];
   const isUrgent = urgentKeywords.some(kw => rawText.includes(kw));
 
   return {
-    id: item.id || (time + title.substring(0, 10)),
+    id: String(item.id || (time + title.substring(0, 10))),
     time,
+    timestamp,
     title,
     content,
     raw: rawText,
@@ -278,9 +417,9 @@ function formatTimeStr(timeInput) {
   return '最新';
 }
 
-// 合并新数据并去重
+// 合并新数据并按时间倒序排列
 function mergeNewsData(incomingList) {
-  if (!Array.isArray(incomingList) || incomingList.length === 0) return;
+  if (!Array.isArray(incomingList) || incomingList.length === 0) return 0;
 
   const existingMap = new Map();
   allNews.forEach(item => {
@@ -297,13 +436,14 @@ function mergeNewsData(incomingList) {
     }
   });
 
-  // 转化为数组并按最新时间倒序排列
-  allNews = Array.from(existingMap.values());
+  // 转化为数组并按最新时间倒序排列 (最新的排最前，历史的排后面)
+  const mergedArr = Array.from(existingMap.values());
+  mergedArr.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+
+  allNews = mergedArr;
   renderNewsList();
 
-  if (newCount > 0) {
-    showToast(`收到 ${newCount} 条最新快讯`);
-  }
+  return newCount;
 }
 
 // ================= 渲染快讯列表 (与用户截图一致的排版) =================
@@ -319,6 +459,10 @@ function renderNewsList() {
       const text = `${item.title} ${item.content} ${item.time}`.toLowerCase();
       return text.includes(query);
     });
+    // 搜索时隐藏翻页提示
+    if (elements.loadMoreContainer) elements.loadMoreContainer.style.display = 'none';
+  } else {
+    if (elements.loadMoreContainer) elements.loadMoreContainer.style.display = 'flex';
   }
 
   // 更新计数
@@ -385,10 +529,10 @@ function renderNewsList() {
 
 // ================= 事件绑定 =================
 function bindEvents() {
-  // 刷新按钮
+  // 顶部手动刷新按钮
   if (elements.refreshBtn) {
     elements.refreshBtn.addEventListener('click', () => {
-      fetchLiveNews(true);
+      fetchLatestNews(true);
     });
   }
 
@@ -490,7 +634,7 @@ function bindEvents() {
 function startAutoPolling() {
   if (autoPollTimer) clearInterval(autoPollTimer);
   autoPollTimer = setInterval(() => {
-    fetchLiveNews(false);
+    fetchLatestNews(false);
   }, CONFIG.pollIntervalMs);
 }
 
