@@ -68,11 +68,11 @@
 
 html, body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-color: var(--bg-page);
   font-family: var(--font-family);
   color: var(--text-body);
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -707,4 +707,668 @@ html, body {
 
 .app-footer a:hover {
   color: var(--primary);
+}
+
+
+/* =========================================================
+   Swiss International Typographic Style (瑞士国际主义排版)
+   用于【AI前沿 (TLDR AI)】Tab 专属视觉体系
+========================================================= */
+
+:root {
+  --swiss-ink: #0f172a;
+  --swiss-border: #cbd5e1;
+  --swiss-border-strong: #1e293b;
+  --swiss-bg-paper: #ffffff;
+  --swiss-bg-tint: #f8fafc;
+  --swiss-red: #e11d48;
+  --swiss-red-soft: rgba(225, 29, 72, 0.08);
+  --swiss-blue: #2563eb;
+  --swiss-blue-soft: rgba(37, 99, 235, 0.1);
+  --swiss-amber: #d97706;
+  --swiss-emerald: #059669;
+  --swiss-shadow: 3px 3px 0px rgba(15, 23, 42, 0.08);
+  --swiss-shadow-hover: 4px 4px 0px rgba(37, 99, 235, 0.18);
+  --swiss-highlight-mark: linear-gradient(180deg, transparent 58%, rgba(254, 240, 138, 0.85) 58%);
+  --swiss-title-underline: linear-gradient(180deg, transparent 68%, rgba(37, 99, 235, 0.14) 68%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --swiss-ink: #f8fafc;
+    --swiss-border: #334155;
+    --swiss-border-strong: #94a3b8;
+    --swiss-bg-paper: #111827;
+    --swiss-bg-tint: #1e293b;
+    --swiss-red: #fb7185;
+    --swiss-red-soft: rgba(251, 113, 133, 0.14);
+    --swiss-blue: #60a5fa;
+    --swiss-blue-soft: rgba(96, 165, 250, 0.16);
+    --swiss-shadow: 3px 3px 0px rgba(0, 0, 0, 0.45);
+    --swiss-shadow-hover: 4px 4px 0px rgba(96, 165, 250, 0.3);
+    --swiss-highlight-mark: linear-gradient(180deg, transparent 58%, rgba(180, 83, 9, 0.45) 58%);
+    --swiss-title-underline: linear-gradient(180deg, transparent 68%, rgba(96, 165, 250, 0.22) 68%);
+  }
+}
+
+.swiss-feed-wrapper {
+  padding: 10px 0 24px;
+}
+
+/* 1. 瑞士国际主义刊头网格 (Masthead Grid) */
+.swiss-masthead {
+  border: 1.5px solid var(--swiss-border-strong);
+  background-color: var(--swiss-bg-paper);
+  box-shadow: var(--swiss-shadow);
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.swiss-masthead-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  border-bottom: 1px solid var(--swiss-border);
+  background-color: var(--swiss-bg-tint);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.swiss-masthead-brand {
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--swiss-ink);
+  border-right: 1px solid var(--swiss-border);
+}
+
+.swiss-square-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--swiss-red);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.swiss-lang-toggle {
+  padding: 6px 11px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--swiss-blue);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.swiss-lang-toggle:hover {
+  background-color: var(--swiss-blue-soft);
+}
+
+.swiss-masthead-body {
+  padding: 14px 14px 12px;
+  border-bottom: 1px solid var(--swiss-border);
+}
+
+.swiss-issue-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+}
+
+.swiss-issue-vol {
+  font-weight: 800;
+  color: var(--swiss-red);
+  letter-spacing: 0.4px;
+  background-color: var(--swiss-red-soft);
+  padding: 1px 6px;
+  border: 1px solid var(--swiss-red);
+}
+
+.swiss-issue-weekday {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.swiss-headline-zh {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--swiss-ink);
+  line-height: 1.45;
+  letter-spacing: -0.2px;
+  margin-bottom: 5px;
+}
+
+.swiss-headline-zh span {
+  background: var(--swiss-title-underline);
+  padding-bottom: 1px;
+}
+
+.swiss-headline-en {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* 封面导读：带 #编号 可点击跳转索引列表 */
+.swiss-highlights-caption {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 800;
+  color: var(--text-muted);
+  letter-spacing: 0.4px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.swiss-highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.swiss-hl-jump-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 9px;
+  border: 1px solid var(--swiss-border);
+  background-color: var(--swiss-bg-tint);
+  color: var(--swiss-ink);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.swiss-hl-jump-btn:hover,
+.swiss-hl-jump-btn:active {
+  border-color: var(--swiss-blue);
+  background-color: var(--swiss-blue-soft);
+  transform: translateX(2px);
+}
+
+.swiss-hl-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
+}
+
+.swiss-hl-code {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  background-color: var(--swiss-ink);
+  color: var(--swiss-bg-paper);
+  padding: 1px 6px;
+  flex-shrink: 0;
+}
+
+.swiss-hl-jump-btn:hover .swiss-hl-code {
+  background-color: var(--swiss-blue);
+  color: #ffffff;
+}
+
+.swiss-hl-text-zh {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--swiss-ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.swiss-hl-text-en {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
+}
+
+.swiss-hl-arrow {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--swiss-blue);
+  flex-shrink: 0;
+}
+
+/* 点击导读跳转后的目标卡片闪烁高亮 */
+@keyframes swissTargetPulse {
+  0% {
+    border-color: var(--swiss-red);
+    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.22), 4px 4px 0px var(--swiss-red);
+  }
+  70% {
+    border-color: var(--swiss-red);
+    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.14), 4px 4px 0px var(--swiss-red);
+  }
+  100% {
+    border-color: var(--swiss-border);
+    box-shadow: var(--swiss-shadow);
+  }
+}
+
+.swiss-card.swiss-card-flash {
+  border-color: var(--swiss-red) !important;
+  animation: swissTargetPulse 2.2s ease-out;
+}
+
+/* 期数切换横栏 */
+.swiss-date-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  background-color: var(--swiss-bg-tint);
+}
+
+.swiss-date-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.swiss-date-pill {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 9px;
+  border: 1px solid var(--swiss-border);
+  background-color: var(--swiss-bg-paper);
+  color: var(--text-body);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.swiss-date-pill:hover {
+  border-color: var(--swiss-ink);
+  color: var(--swiss-ink);
+}
+
+.swiss-date-pill.active {
+  background-color: var(--swiss-ink);
+  color: var(--swiss-bg-paper);
+  border-color: var(--swiss-ink);
+  box-shadow: 2px 2px 0px var(--swiss-blue);
+}
+
+.swiss-date-pill.sync-btn {
+  border-color: var(--swiss-blue);
+  color: var(--swiss-blue);
+  background-color: var(--swiss-blue-soft);
+}
+
+.swiss-date-pill.sync-btn:hover {
+  background-color: var(--swiss-blue);
+  color: #ffffff;
+}
+
+/* 2. 瑞士国际主义章节分栏眉头 (Section Header 01-05) */
+.swiss-section {
+  margin-bottom: 22px;
+}
+
+.swiss-section-header {
+  display: flex;
+  align-items: stretch;
+  border-top: 2px solid var(--swiss-border-strong);
+  border-bottom: 1px solid var(--swiss-border);
+  border-left: 1px solid var(--swiss-border);
+  border-right: 1px solid var(--swiss-border);
+  background-color: var(--swiss-bg-tint);
+  margin-bottom: 12px;
+  box-shadow: 2px 2px 0px rgba(15, 23, 42, 0.04);
+}
+
+.swiss-sec-num {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 900;
+  padding: 8px 12px;
+  background-color: var(--swiss-ink);
+  color: var(--swiss-bg-paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.5px;
+}
+
+.swiss-sec-num.swiss-red {
+  background-color: var(--swiss-red);
+  color: #ffffff;
+}
+
+.swiss-sec-num.swiss-blue {
+  background-color: var(--swiss-blue);
+  color: #ffffff;
+}
+
+.swiss-sec-num.swiss-amber {
+  background-color: var(--swiss-amber);
+  color: #ffffff;
+}
+
+.swiss-sec-num.swiss-emerald {
+  background-color: var(--swiss-emerald);
+  color: #ffffff;
+}
+
+.swiss-sec-titles {
+  flex: 1;
+  padding: 6px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.swiss-sec-en {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.swiss-sec-zh {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--swiss-ink);
+  letter-spacing: -0.1px;
+}
+
+.swiss-sec-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  border-left: 1px dashed var(--swiss-border);
+}
+
+/* 3. 瑞士国际主义资讯卡片 (带边框、微硬边阴影、文字装饰强调) */
+.swiss-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.swiss-card {
+  border: 1px solid var(--swiss-border);
+  background-color: var(--swiss-bg-paper);
+  box-shadow: var(--swiss-shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  position: relative;
+  scroll-margin-top: 116px;
+}
+
+.swiss-card:hover {
+  border-color: var(--swiss-border-strong);
+  box-shadow: var(--swiss-shadow-hover);
+  transform: translate(-1px, -1px);
+}
+
+/* 顶部几何角标装饰 */
+.swiss-card::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--swiss-ink);
+  pointer-events: none;
+}
+
+.swiss-card.accent-red::before {
+  background-color: var(--swiss-red);
+}
+
+.swiss-card.accent-blue::before {
+  background-color: var(--swiss-blue);
+}
+
+/* 卡片顶部元数据栏 */
+.swiss-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border-bottom: 1px dashed var(--swiss-border);
+  background-color: var(--swiss-bg-tint);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.swiss-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.swiss-item-idx {
+  font-weight: 800;
+  color: var(--swiss-ink);
+}
+
+/* 焦点关键词装饰胶囊 */
+.swiss-kw-badge {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--swiss-blue);
+  background-color: var(--swiss-blue-soft);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  padding: 0px 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 170px;
+}
+
+.swiss-read-time {
+  font-weight: 700;
+  color: var(--text-muted);
+  font-size: 10.5px;
+  letter-spacing: 0.3px;
+  flex-shrink: 0;
+}
+
+/* 卡片主体区 */
+.swiss-card-body {
+  padding: 12px 13px 10px;
+}
+
+.swiss-card-title-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.swiss-card-title-zh {
+  font-size: calc(var(--content-font-size) + 1px);
+  font-weight: 800;
+  color: var(--swiss-ink);
+  line-height: 1.48;
+  letter-spacing: -0.2px;
+  display: inline;
+  /* 文字装饰强调：底部精细几何色带衬底 */
+  background-image: var(--swiss-title-underline);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition: color 0.15s ease;
+}
+
+.swiss-card-title-link:hover .swiss-card-title-zh {
+  color: var(--swiss-blue);
+}
+
+.swiss-ext-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--swiss-blue);
+  border: 1px solid var(--swiss-border);
+  background-color: var(--swiss-bg-tint);
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+  vertical-align: text-bottom;
+  transition: all 0.15s ease;
+}
+
+.swiss-card-title-link:hover .swiss-ext-arrow {
+  background-color: var(--swiss-blue);
+  color: #ffffff;
+  border-color: var(--swiss-blue);
+}
+
+.swiss-card-title-en {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* 摘要正文：左侧瑞士竖线导引 + 重点词汇高光装饰 */
+.swiss-card-summary-zh {
+  font-size: var(--content-font-size);
+  line-height: var(--content-line-height);
+  color: var(--text-body);
+  padding-left: 10px;
+  border-left: 2.5px solid var(--swiss-border-strong);
+  margin-top: 8px;
+  word-break: break-word;
+}
+
+.swiss-card.accent-red .swiss-card-summary-zh {
+  border-left-color: var(--swiss-red);
+}
+
+.swiss-card.accent-blue .swiss-card-summary-zh {
+  border-left-color: var(--swiss-blue);
+}
+
+/* 正文内专有名词文字装饰强调 */
+.swiss-term-mark {
+  background: var(--swiss-highlight-mark);
+  font-weight: 700;
+  color: var(--swiss-ink);
+  padding: 0 2px;
+}
+
+/* 英文原文摘要折叠框 */
+.swiss-card-summary-en {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background-color: var(--swiss-bg-tint);
+  border: 1px dashed var(--swiss-border);
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  display: none;
+}
+
+.swiss-card-summary-en.show {
+  display: block;
+}
+
+.swiss-en-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--swiss-ink);
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+  display: block;
+}
+
+/* 卡片底部瑞士规格栏 */
+.swiss-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border-top: 1px solid var(--border-light);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.swiss-source-domain {
+  color: var(--text-muted);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.swiss-source-domain::before {
+  content: '■';
+  font-size: 8px;
+  color: var(--text-light);
+}
+
+.swiss-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swiss-act-btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 2px 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.swiss-act-btn:hover {
+  color: var(--swiss-ink);
+  border-color: var(--swiss-border);
+  background-color: var(--swiss-bg-tint);
+}
+
+.swiss-act-btn.primary-link {
+  color: var(--swiss-blue);
+}
+
+.swiss-act-btn.primary-link:hover {
+  background-color: var(--swiss-blue);
+  color: #ffffff;
+  border-color: var(--swiss-blue);
 }

@@ -8,7 +8,7 @@ const CONFIG = {
   // Tab 栏配置（方便未来一键扩展更多 Tab）
   tabs: [
     { id: 'cls', name: '财联社 7×24', active: true, live: true, badge: '实时' },
-    { id: 'yaowen', name: '全网要闻', active: false, future: true, badge: '筹备中' },
+    { id: 'ai', name: 'AI前沿', active: false, live: false, badge: 'TLDR' },
     { id: 'global', name: '全球市场', active: false, future: true, badge: '筹备中' },
     { id: 'industry', name: '行业追踪', active: false, future: true, badge: '筹备中' }
   ],
@@ -87,6 +87,12 @@ let hasMoreHistory = true;
 let autoPollTimer = null;
 let currentFontSizeLevel = 'normal'; // normal | large
 
+// AI 前沿 (TLDR AI) 状态
+let tldrIssuesMap = typeof loadTldrCache === 'function' ? loadTldrCache() : {};
+let currentTldrDate = '2026-11-02';
+let showBilingualMode = false; // 是否全局展开英文原文对照
+let isSyncingTldr = false;
+
 // ================= DOM 元素 =================
 const elements = {
   tabContainer: document.getElementById('tabsContainer'),
@@ -98,6 +104,7 @@ const elements = {
   searchDrawer: document.getElementById('searchDrawer'),
   searchInput: document.getElementById('searchInput'),
   searchClearBtn: document.getElementById('searchClearBtn'),
+  quickFilterTags: document.getElementById('quickFilterTags'),
   fontSizeBtn: document.getElementById('fontSizeBtn'),
   backToTopBtn: document.getElementById('backToTopBtn'),
   toast: document.getElementById('toast'),
@@ -163,7 +170,68 @@ function handleTabClick(tabId) {
   currentTab = tabId;
   CONFIG.tabs.forEach(t => t.active = (t.id === tabId));
   renderTabs();
-  renderNewsList();
+  updateQuickFilterTagsForTab();
+  renderCurrentTabView();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderCurrentTabView() {
+  if (currentTab === 'ai') {
+    renderAiFeed();
+  } else {
+    renderNewsList();
+    updateStatusTime();
+  }
+}
+
+function updateQuickFilterTagsForTab() {
+  if (!elements.quickFilterTags) return;
+  if (currentTab === 'ai') {
+    if (elements.searchInput) {
+      elements.searchInput.placeholder = '搜索 AI 前沿（如：OpenAI、Claude、DeepSeek、Agent）...';
+    }
+    elements.quickFilterTags.innerHTML = `
+      <span class="filter-tag" data-kw="OpenAI"># OpenAI / GPT</span>
+      <span class="filter-tag" data-kw="Anthropic"># Anthropic / Claude</span>
+      <span class="filter-tag" data-kw="Google"># Google / Gemini</span>
+      <span class="filter-tag" data-kw="DeepSeek"># DeepSeek</span>
+      <span class="filter-tag" data-kw="智能体"># Agent 智能体</span>
+      <span class="filter-tag" data-kw="GitHub"># 开源 / GitHub</span>
+    `;
+  } else {
+    if (elements.searchInput) {
+      elements.searchInput.placeholder = '搜索快讯关键词（如：ETF、降息、茅台）...';
+    }
+    elements.quickFilterTags.innerHTML = `
+      <span class="filter-tag" data-kw="ETF"># ETF</span>
+      <span class="filter-tag" data-kw="收评"># 收评</span>
+      <span class="filter-tag" data-kw="央行"># 央行/降准</span>
+      <span class="filter-tag" data-kw="芯片"># 芯片/半导体</span>
+      <span class="filter-tag" data-kw="白酒"># 白酒/消费</span>
+      <span class="filter-tag" data-kw="重磅"># 焦点重磅</span>
+    `;
+  }
+  bindQuickFilterTagClicks();
+}
+
+function bindQuickFilterTagClicks() {
+  document.querySelectorAll('.filter-tag').forEach(tag => {
+    tag.addEventListener('click', () => {
+      const kw = tag.getAttribute('data-kw') || tag.textContent.trim();
+      searchQuery = kw;
+      if (elements.searchInput) {
+        elements.searchInput.value = kw;
+      }
+      if (elements.searchClearBtn) {
+        elements.searchClearBtn.style.display = 'flex';
+      }
+      if (elements.searchDrawer) {
+        elements.searchDrawer.classList.add('show');
+        elements.searchToggleBtn.classList.add('active');
+      }
+      renderCurrentTabView();
+    });
+  });
 }
 
 // ================= 1. 拉取最新最新快讯 (顶部刷新/轮询 page=1) =================
@@ -206,7 +274,9 @@ function fetchLatestNews(showManualToast = false) {
       console.warn('解析最新电报流异常:', err);
       if (showManualToast) showToast('刷新成功');
     }
-    updateStatusTime();
+    if (currentTab === 'cls') {
+      updateStatusTime();
+    }
   };
 
   const script = document.createElement('script');
@@ -234,6 +304,7 @@ function fetchLatestNews(showManualToast = false) {
 
 // ================= 2. 上划加载更早历史快讯 (下一页 page=2, 3...) =================
 function fetchHistoricalNews() {
+  if (currentTab !== 'cls') return;
   if (isFetchingHistory || !hasMoreHistory) return;
   // 如果当前处于搜索状态，暂时不翻页，避免列表紊乱
   if (searchQuery.trim()) return;
@@ -441,7 +512,9 @@ function mergeNewsData(incomingList) {
   mergedArr.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
 
   allNews = mergedArr;
-  renderNewsList();
+  if (currentTab === 'cls') {
+    renderNewsList();
+  }
 
   return newCount;
 }
@@ -527,12 +600,348 @@ function renderNewsList() {
   });
 }
 
+// ================= 渲染【AI前沿 (TLDR AI)】瑞士国际主义排版视图 =================
+function renderAiFeed() {
+  if (!elements.newsFeed) return;
+
+  // 在 AI 前沿 Tab 下隐藏底部的 7x24 历史无限滚动容器
+  if (elements.loadMoreContainer) {
+    elements.loadMoreContainer.style.display = 'none';
+  }
+
+  const availableDates = Object.keys(tldrIssuesMap).sort((a, b) => b.localeCompare(a));
+  if (!tldrIssuesMap[currentTldrDate] && availableDates.length > 0) {
+    currentTldrDate = availableDates[0];
+  }
+  const issue = tldrIssuesMap[currentTldrDate];
+
+  if (!issue) {
+    elements.newsFeed.innerHTML = `
+      <div class="empty-box">
+        <div class="empty-icon">🤖</div>
+        <p>正在拉取并翻译 TLDR AI 最新刊物...</p>
+      </div>
+    `;
+    return;
+  }
+
+  // 统计当前期刊（及搜索过滤后）的条目数
+  const query = searchQuery.trim().toLowerCase();
+  let totalItemsCount = 0;
+
+  const filteredSections = issue.sections.map((sec, origSecIdx) => {
+    const meta = (typeof TLDR_SECTION_MAP !== 'undefined' && TLDR_SECTION_MAP[sec.sectionKey]) || {
+      index: String(origSecIdx + 1).padStart(2, '0'),
+      en: sec.sectionKey.toUpperCase(),
+      zh: sec.sectionKey,
+      accent: 'swiss-ink'
+    };
+
+    const items = sec.items
+      .map((item, origItemIdx) => ({
+        ...item,
+        _itemCode: `#${meta.index}.${origItemIdx + 1}`
+      }))
+      .filter(item => {
+        if (!query) return true;
+        const haystack = `${item.title_zh} ${item.title_en} ${item.summary_zh} ${item.summary_en} ${item.domain}`.toLowerCase();
+        return haystack.includes(query);
+      });
+
+    totalItemsCount += items.length;
+    return {
+      ...sec,
+      _meta: meta,
+      items
+    };
+  }).filter(sec => sec.items.length > 0);
+
+  // 更新状态栏
+  if (elements.statusTime) {
+    elements.statusTime.innerHTML = `<span>■</span> <span>TLDR AI · ${issue.date} (${issue.weekday.split('·')[1]?.trim() || '早报'})</span>`;
+  }
+  if (elements.statusCount) {
+    elements.statusCount.textContent = `共 ${totalItemsCount} 篇前沿`;
+  }
+
+  // 期数选择按钮栏
+  const datePillsHtml = availableDates.map(d => {
+    const shortDate = d.slice(5).replace('-', '.');
+    const wk = (tldrIssuesMap[d]?.weekday || '').split('·')[1]?.trim() || '';
+    const activeCls = d === currentTldrDate ? 'active' : '';
+    return `<button type="button" class="swiss-date-pill ${activeCls}" data-tldr-date="${d}">${shortDate} ${wk}</button>`;
+  }).join('');
+
+  // 构建章节与卡片 HTML
+  let sectionsHtml = '';
+  if (filteredSections.length === 0) {
+    sectionsHtml = `
+      <div class="empty-box">
+        <div class="empty-icon">🔍</div>
+        <p>当期 AI 前沿中未找到匹配“${escapeHtml(searchQuery)}”的资讯</p>
+      </div>
+    `;
+  } else {
+    sectionsHtml = filteredSections.map((sec) => {
+      const meta = sec._meta;
+
+      const cardsHtml = sec.items.map((item) => {
+        const itemCode = item._itemCode;
+        const cardAccent = meta.index === '01' ? 'accent-red' : (meta.index === '02' ? 'accent-blue' : '');
+        const titleZhHtml = highlightText(escapeHtml(item.title_zh), searchQuery);
+        const titleEnHtml = highlightText(escapeHtml(item.title_en), searchQuery);
+        const summaryZhHtml = highlightText(decorateAiTerms(escapeHtml(item.summary_zh)), searchQuery);
+        const summaryEnHtml = highlightText(escapeHtml(item.summary_en), searchQuery);
+        const kwBadge = item.highlight_kw ? `<span class="swiss-kw-badge">${escapeHtml(item.highlight_kw)}</span>` : '';
+        const showEnCls = showBilingualMode ? 'show' : '';
+        const copyPayload = `【${item.title_zh}】(${item.title_en})\n${item.summary_zh}\n原文链接：${item.url}`;
+
+        return `
+          <article class="swiss-card ${cardAccent}" data-item-code="${itemCode}" data-copy="${escapeHtml(copyPayload)}">
+            <div class="swiss-card-meta">
+              <div class="swiss-meta-left">
+                <span class="swiss-item-idx">${itemCode}</span>
+                ${kwBadge}
+              </div>
+              <span class="swiss-read-time">${escapeHtml(item.read_time || '3 MIN READ')}</span>
+            </div>
+
+            <div class="swiss-card-body">
+              <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="swiss-card-title-link">
+                <h4 class="swiss-card-title-zh">${titleZhHtml}</h4>
+                <span class="swiss-ext-arrow" title="打开英文原链接">↗</span>
+                <span class="swiss-card-title-en">${titleEnHtml}</span>
+              </a>
+
+              <div class="swiss-card-summary-zh">${summaryZhHtml}</div>
+
+              <div class="swiss-card-summary-en ${showEnCls}">
+                <span class="swiss-en-label">EN // ORIGINAL SUMMARY</span>
+                <div>${summaryEnHtml}</div>
+              </div>
+            </div>
+
+            <div class="swiss-card-footer">
+              <span class="swiss-source-domain">${escapeHtml(item.domain || 'tldr.tech')}</span>
+              <div class="swiss-card-actions">
+                <button type="button" class="swiss-act-btn toggle-en-btn">${showBilingualMode ? '收起原文' : 'EN 原文'}</button>
+                <button type="button" class="swiss-act-btn swiss-copy-btn">复制</button>
+                <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="swiss-act-btn primary-link">原文 ↗</a>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      return `
+        <section class="swiss-section">
+          <div class="swiss-section-header">
+            <div class="swiss-sec-num ${meta.accent}">${meta.index}</div>
+            <div class="swiss-sec-titles">
+              <span class="swiss-sec-en">${escapeHtml(meta.en)}</span>
+              <span class="swiss-sec-zh">${escapeHtml(meta.zh)}</span>
+            </div>
+            <div class="swiss-sec-count">${sec.items.length} 篇</div>
+          </div>
+          <div class="swiss-cards-list">
+            ${cardsHtml}
+          </div>
+        </section>
+      `;
+    }).join('');
+  }
+
+  // 构建封面导读可点击跳转列表
+  const highlightsList = typeof resolveIssueHighlights === 'function' ? resolveIssueHighlights(issue) : [];
+  const highlightsHtml = highlightsList.map(hl => `
+    <button type="button" class="swiss-hl-jump-btn" data-jump-code="${escapeHtml(hl.code)}" title="点击定位至 ${escapeHtml(hl.code)}">
+      <div class="swiss-hl-left">
+        <span class="swiss-hl-code">${escapeHtml(hl.code)}</span>
+        <span class="swiss-hl-text-zh">${escapeHtml(hl.label_zh)}</span>
+        <span class="swiss-hl-text-en">${escapeHtml(hl.label_en || '')}</span>
+      </div>
+      <span class="swiss-hl-arrow">定位 ⤵</span>
+    </button>
+  `).join('');
+
+  elements.newsFeed.innerHTML = `
+    <div class="swiss-feed-wrapper">
+      <!-- 瑞士国际主义刊头信息网格 -->
+      <div class="swiss-masthead">
+        <div class="swiss-masthead-top">
+          <div class="swiss-masthead-brand">
+            <span class="swiss-square-dot"></span>
+            <span>TLDR.AI // SWISS EDITION · 每日 AI 前沿内参</span>
+          </div>
+          <button type="button" class="swiss-lang-toggle" id="bilingualToggleBtn">
+            ${showBilingualMode ? '■ 双语对照: 开' : '□ 双语对照: 关'}
+          </button>
+        </div>
+
+        <div class="swiss-masthead-body">
+          <div class="swiss-issue-meta-row">
+            <span class="swiss-issue-vol">${escapeHtml(issue.issueNo || ('VOL. ' + issue.date))}</span>
+            <span class="swiss-issue-weekday">${escapeHtml(issue.weekday || 'WORKDAY')} · 已译为中文</span>
+          </div>
+          <div class="swiss-highlights-caption">
+            <span>INDEX // 本期封面看点导读</span>
+            <span>点击编号直达正文 ⤵</span>
+          </div>
+          <div class="swiss-highlights-list">
+            ${highlightsHtml}
+          </div>
+        </div>
+
+        <div class="swiss-date-bar">
+          ${datePillsHtml}
+          <button type="button" class="swiss-date-pill sync-btn" id="syncLatestTldrBtn">
+            <span>${isSyncingTldr ? '⏳ 正在拉取翻译...' : '⚡ 实时同步最新期'}</span>
+          </button>
+        </div>
+      </div>
+
+      ${sectionsHtml}
+    </div>
+  `;
+
+  // 绑定封面导读点击跳转并高亮目标卡片
+  elements.newsFeed.querySelectorAll('.swiss-hl-jump-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetCode = btn.getAttribute('data-jump-code');
+      if (!targetCode) return;
+
+      // 若当前有搜索词过滤导致目标卡片被隐藏，先清空搜索以展现全量卡片
+      if (searchQuery.trim()) {
+        searchQuery = '';
+        if (elements.searchInput) elements.searchInput.value = '';
+        if (elements.searchClearBtn) elements.searchClearBtn.style.display = 'none';
+        renderAiFeed();
+      }
+
+      const targetCard = elements.newsFeed.querySelector(`.swiss-card[data-item-code="${targetCode}"]`);
+      if (targetCard) {
+        targetCard.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+
+        targetCard.classList.remove('swiss-card-flash');
+        void targetCard.offsetWidth; // 触发重绘以重新播放脉冲动画
+        targetCard.classList.add('swiss-card-flash');
+        showToast(`已定位至 ${targetCode}`);
+      }
+    });
+  });
+
+  // 绑定刊头双语切换按钮
+  const biBtn = document.getElementById('bilingualToggleBtn');
+  if (biBtn) {
+    biBtn.addEventListener('click', () => {
+      showBilingualMode = !showBilingualMode;
+      renderAiFeed();
+      showToast(showBilingualMode ? '已开启中英双语全文对照' : '已切换为精炼中文视图');
+    });
+  }
+
+  // 绑定期数切换按钮
+  elements.newsFeed.querySelectorAll('[data-tldr-date]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetDate = btn.getAttribute('data-tldr-date');
+      if (targetDate && targetDate !== currentTldrDate) {
+        currentTldrDate = targetDate;
+        renderAiFeed();
+        showToast(`已切换至 ${targetDate} 期 AI 前沿`);
+      }
+    });
+  });
+
+  // 绑定实时同步最新期按钮
+  const syncBtn = document.getElementById('syncLatestTldrBtn');
+  if (syncBtn) {
+    syncBtn.addEventListener('click', () => {
+      syncLatestTldrIssue(true);
+    });
+  }
+
+  // 绑定单卡展开/收起英文原文
+  elements.newsFeed.querySelectorAll('.toggle-en-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.swiss-card');
+      const enBox = card ? card.querySelector('.swiss-card-summary-en') : null;
+      if (enBox) {
+        const isShown = enBox.classList.toggle('show');
+        btn.textContent = isShown ? '收起原文' : 'EN 原文';
+      }
+    });
+  });
+
+  // 绑定单卡复制
+  elements.newsFeed.querySelectorAll('.swiss-copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.swiss-card');
+      const copyText = card ? card.getAttribute('data-copy') : '';
+      if (copyText) {
+        copyToClipboard(copyText);
+        showToast('AI 前沿摘要与原文链接已复制');
+      }
+    });
+  });
+}
+
+// 为中文摘要中的关键数字、百分比与模型术语添加瑞士排版微高光装饰
+function decorateAiTerms(escapedText) {
+  if (!escapedText) return '';
+  return escapedText.replace(
+    /(\d+(?:\.\d+)?%|\d+(?:\.\d+)?\s*(?:倍|亿|万亿|GB|MB|TB|B|K|M\s*token)|GPT-[A-Za-z0-9.\-]+|Claude\s*[A-Za-z0-9.\-]*|Gemini\s*[A-Za-z0-9.\-]*|DeepSeek|Qwen[0-9.\-]*|Mistral\s*[A-Za-z0-9.\-]*|Llama\s*[0-9.\-]*|RISC-V|Lean\s*4?)/g,
+    '<span class="swiss-term-mark">$1</span>'
+  );
+}
+
+// 实时从 TLDR AI 官方 RSS 探测最新日期并抓取网页 + 自动中文翻译
+async function syncLatestTldrIssue(showManualToast = true) {
+  if (isSyncingTldr) return;
+  isSyncingTldr = true;
+  if (elements.refreshBtn) elements.refreshBtn.classList.add('spinning');
+  if (currentTab === 'ai') renderAiFeed();
+
+  try {
+    if (showManualToast) showToast('正在连接 tldr.tech/ai 检查最新期刊...');
+    const feedList = await fetchTldrRssFeedList();
+    if (feedList && feedList.length > 0) {
+      const latestItem = feedList[0];
+      const latestDate = latestItem.date;
+
+      if (!tldrIssuesMap[latestDate]) {
+        if (showManualToast) showToast(`发现新刊 ${latestDate}，正在抓取网页并翻译为中文...`);
+        const translatedIssue = await fetchAndTranslateTldrIssue(latestDate, latestItem.headline_en);
+        tldrIssuesMap[latestDate] = translatedIssue;
+        currentTldrDate = latestDate;
+        if (showManualToast) showToast(`已成功抓取并翻译 ${latestDate} 最新期 AI 前沿！`);
+      } else {
+        currentTldrDate = latestDate;
+        if (showManualToast) showToast(`当前已是最新一期 (${latestDate}) TLDR AI 资讯`);
+      }
+    }
+  } catch (err) {
+    console.warn('实时同步 TLDR AI 提示:', err);
+    if (showManualToast) showToast('已加载本地精校双语期刊数据');
+  } finally {
+    isSyncingTldr = false;
+    if (elements.refreshBtn) elements.refreshBtn.classList.remove('spinning');
+    if (currentTab === 'ai') renderAiFeed();
+  }
+}
+
 // ================= 事件绑定 =================
 function bindEvents() {
   // 顶部手动刷新按钮
   if (elements.refreshBtn) {
     elements.refreshBtn.addEventListener('click', () => {
-      fetchLatestNews(true);
+      if (currentTab === 'ai') {
+        syncLatestTldrIssue(true);
+      } else {
+        fetchLatestNews(true);
+      }
     });
   }
 
@@ -558,7 +967,7 @@ function bindEvents() {
       if (elements.searchClearBtn) {
         elements.searchClearBtn.style.display = searchQuery ? 'flex' : 'none';
       }
-      renderNewsList();
+      renderCurrentTabView();
     });
   }
 
@@ -571,28 +980,12 @@ function bindEvents() {
         elements.searchInput.focus();
       }
       elements.searchClearBtn.style.display = 'none';
-      renderNewsList();
+      renderCurrentTabView();
     });
   }
 
   // 快捷搜索标签点击
-  document.querySelectorAll('.filter-tag').forEach(tag => {
-    tag.addEventListener('click', () => {
-      const kw = tag.getAttribute('data-kw') || tag.textContent.trim();
-      searchQuery = kw;
-      if (elements.searchInput) {
-        elements.searchInput.value = kw;
-      }
-      if (elements.searchClearBtn) {
-        elements.searchClearBtn.style.display = 'flex';
-      }
-      if (elements.searchDrawer) {
-        elements.searchDrawer.classList.add('show');
-        elements.searchToggleBtn.classList.add('active');
-      }
-      renderNewsList();
-    });
-  });
+  bindQuickFilterTagClicks();
 
   // 字号切换
   if (elements.fontSizeBtn) {
