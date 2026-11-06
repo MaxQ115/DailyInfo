@@ -56,6 +56,596 @@ const TLDR_SECTION_MAP = {
 };
 
 const PRESET_TLDR_ISSUES = {
+  '2026-11-05': {
+    date: '2026-11-05',
+    weekday: 'THU · 周四',
+    issueNo: 'VOL. 2026.11.05',
+    headline_zh: 'GPT-Image-2.6 原生生成 GIF · Meta 收购 AI 编程初创 Conductor · Cognition 发布 SWE-2 Flash',
+    headline_en: 'GPT-Image-2.6 🖼️, Meta buys Conductor 💻, Cognition SWE-2 Flash ⚡',
+    highlights: [
+      { code: '#01.1', label_zh: 'GPT-Image-2.6 原生生成 GIF', label_en: 'GPT-Image-2.6 🖼️' },
+      { code: '#04.2', label_zh: 'Meta 收购 AI 编程初创 Conductor', label_en: 'Meta buys Conductor 💻' },
+      { code: '#03.1', label_zh: 'Cognition 发布 SWE-2 Flash', label_en: 'Cognition SWE-2 Flash ⚡' }
+    ],
+    sections: [
+      {
+        sectionKey: 'Headlines & Launches',
+        items: [
+          {
+            title_zh: 'OpenAI 全球推出 Images 2.6：提速 50% 并支持原生 GIF 动图生成与逐帧编辑',
+            title_en: 'OpenAI launches Images 2.6 with GIFs and image reference',
+            read_time: '1 MIN READ',
+            url: 'https://www.testingcatalog.com/openai-launches-images-2-6-with-gifs-and-image-reference/?utm_source=tldrai',
+            domain: 'testingcatalog.com',
+            highlight_kw: 'GPT-Image-2.6',
+            summary_zh: 'OpenAI 正在 ChatGPT 与 Codex 中向全球用户推送 Images 2.6 模型。新模型图像生成速度较上一代提升 50%，并新增参考图控制与原生 GIF 动图生成能力——用户可直接调节动图播放速率、独立编辑单帧画面并一键分享。同时，GPT-Image-2.6 Flare 与 Sunburst 现已通过 API 正式开放。',
+            summary_en: 'OpenAI is rolling out Images 2.6 globally in ChatGPT and Codex. The new model generates images 50% faster than the previous iteration, and it can also create GIFs. Users can adjust the speed of the GIF, edit individual frames, and share it. GPT-Image-2.6 Flare and Sunburst are now available through the API.'
+          },
+          {
+            title_zh: 'Ricursive 发布 Ripple-65B Preview：以 1/10 训练成本登顶 TerminalBench 2.1 开源榜首',
+            title_en: 'Ripple-65B Preview',
+            read_time: '4 MIN READ',
+            url: 'https://www.ricursive.com/ripple?utm_source=tldrai',
+            domain: 'ricursive.com',
+            highlight_kw: 'Ripple-65B',
+            summary_zh: 'Ripple-65B Preview 是一款前沿开源权重模型，在 TerminalBench 2.1 上刷新了开源 SOTA 纪录，一举超越多个参数量高出数倍至十余倍的美国开源模型（包括 Reflection Beam 501B、Meta Muse Spark Open 816B、Thinking Machines Inkling 975B 及 Nvidia Nemotron 3 Ultra 550B）。其训练成本仅 3,200 万美元，约为前任开源智能体编程霸主预估成本的十分之一，现已上线 Hugging Face、Together AI、GMI Cloud 与 OpenRouter。',
+            summary_en: 'Ripple-65B Preview is a frontier open-weight model that achieves state-of-the-art performance on TerminalBench 2.1. It surpasses significantly larger open-weight models from the US, including Reflection Beam 501B, Meta Muse Spark Open 816B, Thinking Machines Inkling 975B, and Nvidia Nemotron 3 Ultra 550B. The model was trained for only $32 million, one-tenth the estimated cost of the previous open-weight SOTA on agentic coding.'
+          },
+          {
+            title_zh: 'Pangram 发布 Image 1.0：支持像素级热力图定位的 AI 图像与视频鉴伪模型',
+            title_en: 'Introducing Pangram Image 1.0',
+            read_time: '5 MIN READ',
+            url: 'https://www.pangram.com/blog/introducing-pangram-image-1-0?utm_source=tldrai',
+            domain: 'pangram.com',
+            highlight_kw: 'Pangram Image 1.0',
+            summary_zh: 'Pangram Image 1.0 是一款专为检测 AI 生成图像与视频打造的鉴伪模型，能够输出精准的热力图（Heatmap）以标定画面中哪些局部区域由 AI 合成或篡改，且对二次裁剪编辑、高倍压缩与低分辨率具有极强鲁棒性，目前已同步提供 Chrome 浏览器插件及图像/视频检测 API。',
+            summary_en: 'Pangram Image 1.0 is an AI image and AI video detection model that can produce a heatmap localizing exactly where AI appears in images. It is robust to edits, compression, and low resolutions. There is a Chrome Extension available that can detect AI, as well as API support for images and video.'
+          }
+        ]
+      },
+      {
+        sectionKey: 'Deep Dives & Analysis',
+        items: [
+          {
+            title_zh: 'OpenAI 安全团队揭秘：如何用自治流水线一次性挖掘并修补 948 个 Linux 提权漏洞',
+            title_en: 'How OpenAI Patched 948 Linux Vulnerabilities',
+            read_time: '12 MIN READ',
+            url: 'https://openai.com/index/a-thousand-fewer-paths-to-root/?utm_source=tldrai',
+            domain: 'openai.com',
+            highlight_kw: '948个 Linux 漏洞修补',
+            summary_zh: 'OpenAI 构建了一套全自动化的安全漏洞发现、利用验证与补丁生成流水线。在单次集中运行测试中，其网络安全专用模型成功验证了 948 个 Linux 本地提权（Local Privilege Escalation）漏洞，并自动生成了通过测试的修复补丁。',
+            summary_en: 'OpenAI developed an autonomous pipeline for discovering, exploiting, and patching security vulnerabilities. In a single run, its cybersecurity model validated and generated patches for 948 Linux local privilege escalation vulnerabilities.'
+          },
+          {
+            title_zh: 'Axiom Math 完成《Stacks Project》全量 Lean 形式化：史上最大可复用机器验证数学库',
+            title_en: 'The Stacks Project, formalized in Lean',
+            read_time: '13 MIN READ',
+            url: 'https://axiommath.ai/research/the-stacks-project-formalized/?utm_source=tldrai',
+            domain: 'axiommath.ai',
+            highlight_kw: 'Stacks Project Lean',
+            summary_zh: 'Axiom 正式开源了整部《Stacks Project》（现代代数几何核心开源百科全书）的完整 Lean 形式化版本。这是人类迄今构建的规模最大、集成度最高的可复用形式化数学代码库，科研人员与 AI 智能体可直接将其作为单一下游依赖库导入并在此基础上构建全新的形式化数学证明。',
+            summary_en: 'Axiom has released a Lean formalization of the entire Stacks Project, an open-source reference that lays the foundation of modern algebraic geometry. The release is the largest integrated, reusable library of formalized mathematics ever built.'
+          }
+        ]
+      },
+      {
+        sectionKey: 'Engineering & Research',
+        items: [
+          {
+            title_zh: 'Cognition 发布 SWE-2 Flash：引入全新强化学习前“中段训练（Mid-training）”阶段的极速编程模型',
+            title_en: 'Cognition Introduces SWE-2 Flash',
+            read_time: '2 MIN READ',
+            url: 'https://cognition.com/blog/swe-2-flash?utm_source=tldrai',
+            domain: 'cognition.com',
+            highlight_kw: 'SWE-2 Flash',
+            summary_zh: 'Devin 背后的研发团队 Cognition 正式推出 SWE-2 Flash 编程专用模型，创新性地在强化学习（RL）之前引入了专门的中段训练（Mid-training）阶段，在保持高工程推理质量的同时大幅压缩响应延迟。',
+            summary_en: 'SWE-2 Flash is a coding model that uses a new mid-training stage before reinforcement learning.'
+          },
+          {
+            title_zh: '腾讯发布混元 Hy4 多模态开源大模型：打通细粒度视觉推理与 CLI/GUI 双栖智能体操控',
+            title_en: 'Tencent Launches Hy4, Joining the Ranks of the World\'s Leading Open-Source AI Models',
+            read_time: '8 MIN READ',
+            url: 'https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/?utm_source=tldrai',
+            domain: 'tencent.com',
+            highlight_kw: 'Tencent Hy4',
+            summary_zh: '腾讯正式发布具备深度视觉理解能力的混元 Hy4 大模型，并计划于未来数日内公开模型权重与系统卡。Hy4 擅长细粒度图像处理、复杂图表解析与数学视觉推理，并能同时交互操控命令行界面（CLI）与图形用户界面（GUI）以完成复杂的日常与办公任务。',
+            summary_en: 'Hy4 is a large language model with visual understanding capabilities. Tencent plans to release model weights and system cards in the coming days. The model supports fine-grained image processing, complex chart analysis, mathematical visual reasoning, and can interact with both CLIs and GUIs.'
+          },
+          {
+            title_zh: 'Cartesia 提出 H-Nets：摒弃分词器直接从原始字节（Raw Bytes）学习，大幅节省训练算力',
+            title_en: 'H-Nets Learn Directly From Raw Bytes',
+            read_time: '2 MIN READ',
+            url: 'https://x.com/_albertgu/status/2115502111924600855?utm_source=tldrai',
+            domain: 'x.com',
+            highlight_kw: 'H-Nets Raw Bytes',
+            summary_zh: '由 Albert Gu 等人领衔的 Cartesia 团队展示了分层网络 H-Nets，无需预设 Tokenizer 分词即可直接从原始字节流端到端学习，在显著降低训练算力消耗的同时追平主流基准性能。',
+            summary_en: 'Cartesia\'s H-Nets learn directly from raw bytes, matching benchmark performance with substantially less training compute.'
+          },
+          {
+            title_zh: 'Google DeepMind 开源 AlphaEvolve：基于 Gemini 的通用进化式算法发现智能体',
+            title_en: 'AlphaEvolve (GitHub Repo)',
+            read_time: 'GITHUB REPO',
+            url: 'https://github.com/google-deepmind/alphaevolve?utm_source=tldrai',
+            domain: 'github.com',
+            highlight_kw: 'AlphaEvolve',
+            summary_zh: 'AlphaEvolve 是基于 Gemini 驱动的算法设计编程智能体，将大模型的创造性解题能力与自动化验证评估器闭环结合，已成功应用于优化 Google 数据中心调度、芯片设计与 AI 训练管线。本仓库包含了 AlphaEvolve 的精简实现及其发现的多项算法突破成果代码与数据集。',
+            summary_en: 'AlphaEvolve is a Gemini-powered coding agent for designing advanced algorithms. It pairs the creative problem-solving capabilities of Gemini models with automated evaluators that verify answers.'
+          }
+        ]
+      },
+      {
+        sectionKey: 'Miscellaneous',
+        items: [
+          {
+            title_zh: 'OpenAI 宣布收购代码基础设施初创 Pierre Computer，强化 Codex 代码托管与开源工具链',
+            title_en: 'OpenAI to acquire Pierre Computer Company, Inc.',
+            read_time: '3 MIN READ',
+            url: 'https://openai.com/index/openai-to-acquire-pierre?utm_source=tldrai',
+            domain: 'openai.com',
+            highlight_kw: 'OpenAI 收购 Pierre',
+            summary_zh: 'OpenAI 宣布将收购 Pierre Computer Company，以全面增强 Codex 的开发者工具链生态（包括 Code Storage 代码存储基础设施及相关开源项目）。',
+            summary_en: 'OpenAI will acquire Pierre Computer Company to enhance Codex\'s developer tools, including Code Storage and other open-source projects.'
+          },
+          {
+            title_zh: 'Meta 宣布收购多智能体并行编程初创公司 Conductor',
+            title_en: 'Meta Acquires AI Coding Startup Conductor',
+            read_time: '1 MIN READ',
+            url: 'https://www.conductor.build/changelog/0.93.0-conductor-is-joining-meta?utm_source=tldrai',
+            domain: 'conductor.build',
+            highlight_kw: 'Meta 收购 Conductor',
+            summary_zh: '帮助开发者在并行隔离工作区（Workspaces）中同时编排运行多个 AI 编程智能体的明星初创公司 Conductor 正式宣布加入 Meta。',
+            summary_en: 'Conductor is a startup that lets developers run multiple AI coding agents in parallel workspaces and is now joining Meta.'
+          }
+        ]
+      },
+      {
+        sectionKey: 'Quick Links',
+        items: [
+          {
+            title_zh: '论文洞察：你其实并不需要超长上下文（You don\'t need long context）',
+            title_en: 'You don\'t need long context',
+            read_time: '1 MIN READ',
+            url: 'https://arxiv.org/abs/2611.05306?utm_source=tldrai',
+            domain: 'arxiv.org',
+            highlight_kw: '短上下文推理',
+            summary_zh: '最新研究表明，前沿大语言模型在精简压缩后的较短上下文窗口下依然能保持出色的任务表现，且丝毫不牺牲准确率。',
+            summary_en: 'Researchers find that frontier language models perform well with shorter contexts without sacrificing accuracy.'
+          },
+          {
+            title_zh: 'Together AI 发布 Together Compiler：由高吞吐智能体驱动的 AI 推理持续编译优化环',
+            title_en: 'Together Compiler: Continual Compilation for AI inference',
+            read_time: '9 MIN READ',
+            url: 'https://www.together.ai/blog/together-compiler-continual-compilation-for-ai-inference?utm_source=tldrai',
+            domain: 'together.ai',
+            highlight_kw: 'Together Compiler',
+            summary_zh: '利用高吞吐智能体针对多样化的生产推理负载进行不间断的算子与图编译持续优化。',
+            summary_en: 'Together Compiler is a truly continual optimization loop that leverages high-throughput agents to optimize for diverse inference workloads.'
+          },
+          {
+            title_zh: '月之暗面发布 3 万亿参数级模型 Kimi-K3.1-Pro：支持百万上下文与多模态 3D/编程跃升',
+            title_en: 'Kimi-K3.1-Pro',
+            read_time: '10 MIN READ',
+            url: 'https://huggingface.co/moonshotai/Kimi-K3.1-Pro?utm_source=tldrai',
+            domain: 'huggingface.co',
+            highlight_kw: 'Kimi-K3.1-Pro',
+            summary_zh: '作为最新一代 3T（3 万亿）参数量级旗舰模型，Kimi K3.1 Pro 配备 1M token 上下文窗口，在多模态理解、代码工程、3D 创作与事实准确性上大幅精进。',
+            summary_en: 'Kimi K3.1 Pro, the latest in the 3T-class models, excels in multimodal tasks, improving outputs in coding, 3D creation, and factual accuracy with a million-token context window.'
+          },
+          {
+            title_zh: 'Perplexity 为 Decisions API 引入实时网页事实锚定（Web Grounding）',
+            title_en: 'Web grounding for the Decisions API',
+            read_time: '7 MIN READ',
+            url: 'https://www.perplexity.ai/hub/blog/web-grounding-for-the-decisions-api?utm_source=tldrai',
+            domain: 'perplexity.ai',
+            highlight_kw: 'Decisions API',
+            summary_zh: 'Perplexity 旗下的 Decisions API 现已支持在给出决策响应前自动检索全网实时信息以完成事实核验。',
+            summary_en: 'Perplexity\'s Decisions API can now search the web before it answers.'
+          },
+          {
+            title_zh: '前 Claude Code 核心负责人 Cat Wu 宣布加盟 OpenAI',
+            title_en: 'Cat Wu joins OpenAI',
+            read_time: '1 MIN READ',
+            url: 'https://x.com/_catwu/status/2118137612577968402?utm_source=tldrai',
+            domain: 'x.com',
+            highlight_kw: 'Cat Wu 加盟 OpenAI',
+            summary_zh: 'Cat Wu 正式加入 OpenAI，致力于构建高可靠性且始终让人类用户掌握控制权的 AI 智能体产品。',
+            summary_en: 'Cat Wu has joined OpenAI to build reliable agents that keep users in control.'
+          }
+        ]
+      }
+    ]
+  },
+
+  '2026-11-04': {
+    date: '2026-11-04',
+    weekday: 'WED · 周三',
+    issueNo: 'VOL. 2026.11.04',
+    headline_zh: '苹果向全体开发者开放 Siri AI · Google 推出 Gemini Notebook API · Anthropic 可证明大模型推理',
+    headline_en: 'Siri AI developer 🍎, Gemini Notebook API 👨‍💻, provable inference ⚡',
+    highlights: [
+      { code: '#01.1', label_zh: '苹果向开发者开放 Siri AI', label_en: 'Siri AI developer 🍎' },
+      { code: '#03.1', label_zh: 'Google Gemini Notebook API', label_en: 'Gemini Notebook API 👨‍💻' },
+      { code: '#03.3', label_zh: 'Anthropic 可证明推理 (zkSNARK)', label_en: 'provable inference ⚡' }
+    ],
+    sections: [
+      {
+        sectionKey: 'Headlines & Launches',
+        items: [
+          {
+            title_zh: '苹果随 iOS 27.3 Beta 向全体开发者正式开放 Siri AI 深度集成接口',
+            title_en: 'Siri AI is now open to all developers',
+            read_time: '4 MIN READ',
+            url: 'https://developer.apple.com/news/?id=gdk2umrf&utm_source=tldrai',
+            domain: 'developer.apple.com',
+            highlight_kw: 'Siri AI 开放',
+            summary_zh: '随着 iOS 27.3 Beta 发布，全球开发者现可将 Siri AI 深度集成至自有 App 中，直接调用 Siri 的高级自然语言处理与个人跨应用上下文理解能力。目前该功能暂未向欧盟地区及 13 岁以下用户开放，已支持多国语言并将持续扩充。',
+            summary_en: 'Developers can now integrate Siri AI into their apps with the iOS 27.3 beta. This update allows apps to leverage Siri\'s advanced features, like natural language processing and personal context understanding, enhancing user interaction.'
+          },
+          {
+            title_zh: 'Baseten 发布 Grid 路由治理、可恢复沙箱 Sandboxes 与 Serverless 强化学习 Loops',
+            title_en: 'Baseten Introduces Grid, Sandboxes, and Serverless Loops',
+            read_time: '5 MIN READ',
+            url: 'https://www.baseten.co/blog/the-building-blocks-of-the-open-frontier?utm_source=tldrai',
+            domain: 'baseten.co',
+            highlight_kw: 'Baseten Grid & Loops',
+            summary_zh: 'Baseten 推出三大基础设施套件：用于多模型路由与治理的 Grid、面向智能体执行的虚拟机级隔离可恢复沙箱 Sandboxes，以及全面开放（GA）的无服务器监督微调与强化学习平台 Loops，打通训练、推理与执行全链路，且客户完全保有训练模型权重所有权。',
+            summary_en: 'Baseten announced Grid for model routing and governance, resumable VM-isolated Sandboxes for agent execution, and general availability of Loops for serverless supervised fine-tuning and reinforcement learning.'
+          },
+          {
+            title_zh: 'Fireworks AI 在 Forge 大会发布 1,500 token/s 极速推理引擎与 Nexus 企业级套件',
+            title_en: 'Fireworks Launches Faster AI Inference and Enterprise Tools',
+            read_time: '5 MIN READ',
+            url: 'https://fireworks.ai/blog/fireworks-unveils-new-products-at-forge-to-help-companies-build-specialized-intelligence?utm_source=tldrai',
+            domain: 'fireworks.ai',
+            highlight_kw: '1,500 tokens/s',
+            summary_zh: 'Fireworks AI 在 Forge 大会上推出多项核心产品：吞吐高达 1,500 tokens/秒的极速推理服务、低成本后台批处理通道，以及可在企业现有工具内无缝调用多模型的 Nexus 平台，并配套提供模型评测、微调部署与企业自控基础设施方案。',
+            summary_en: 'Fireworks AI unveiled new products at Forge, including Ultra-fast inference reaching up to 1,500 tokens per second, lower-cost background processing, and Nexus for accessing multiple AI models within existing tools.'
+          }
+        ]
+      },
+      {
+        sectionKey: 'Deep Dives & Analysis',
+        items: [
+          {
+            title_zh: 'Vals AI 实测分析：大模型的推理强度（Reasoning Effort）究竟如何影响得分与成本？',
+            title_en: 'How Much Does Reasoning Effort Affect Score and Cost?',
+            read_time: '8 MIN READ',
+            url: 'https://www.vals.ai/blogs/reasoning-effort?utm_source=tldrai',
+            domain: 'vals.ai',
+            highlight_kw: 'Reasoning Effort',
+            summary_zh: '实测表明，调低大模型的推理强度（Reasoning Effort）所节省的开销比例，远大于其带来的输出质量折损。在大量实际任务中，低推理挡位模型完全能以极低成本媲美高推理挡位的表现，具体收益高度取决于任务类型。',
+            summary_en: 'Lower reasoning effort reduces cost much more than it lowers the quality of results. Tests show that models on low reasoning can match models on high reasoning at lower cost. The impact of reasoning effort depends on the task.'
+          },
+          {
+            title_zh: 'Prime Intellect 审计公开评测基准：如何防范榜单刷分与评测失真？',
+            title_en: 'Learnings from Auditing Public Evaluations',
+            read_time: '8 MIN READ',
+            url: 'https://www.primeintellect.ai/blog/auditing-public-evaluations?utm_source=tldrai',
+            domain: 'primeintellect.ai',
+            highlight_kw: '评测基准审计',
+            summary_zh: '文章复盘了大模型公开评测基准面临的普遍缺陷，并详述了对 AUTOMATIONBENCH 与 OFFICEQA PRO V2 的重构改进：用严格的 JSON Schema 取代含糊的自然语言描述、升级评分系统，并提出多层防作弊监控体系以确保模型能力度量的真实有效。',
+            summary_en: 'The article outlines issues faced during public evaluations of LLMs and details improvements made to benchmarks such as AUTOMATIONBENCH and OFFICEQA PRO V2, replacing ambiguous prose descriptions with JSON schemas.'
+          },
+          {
+            title_zh: '仅花 2.1 万美元从零训练文生图模型：双人实验室的 P-JiT 像素空间架构实践',
+            title_en: 'Training a Text-to-Image Model for $21K',
+            read_time: '13 MIN READ',
+            url: 'https://www.linum.ai/field-notes/pjit-21k?utm_source=tldrai',
+            domain: 'linum.ai',
+            highlight_kw: '$21K 训练文生图',
+            summary_zh: '双人研究实验室 Linum 正尝试从零自研生成式视频模型以普及动画创作。他们提出的金字塔像素空间架构 Pyramid-JiT (P-JiT) 通过精心设计的噪声调度实现了激进的 Token 缩减，同时让像素级模型更好捕捉细粒度细节，仅耗资 2.1 万美元即完成了长周期压力测试。',
+            summary_en: 'Linum is a two-person research lab training generative models from scratch. Pyramid-JiT (P-JiT) is a pixel-space architecture that achieves aggressive token reduction through a noise schedule that helps pixel-space models better learn fine-grained detail.'
+          }
+        ]
+      },
+      {
+        sectionKey: 'Engineering & Research',
+        items: [
+          {
+            title_zh: 'Google 开放 Gemini Notebook API 与 MCP Server 公测：编程化构建持久化知识笔记本',
+            title_en: 'Gemini Notebook API',
+            read_time: '1 MIN READ',
+            url: 'https://developers.google.com/notebook/docs?utm_source=tldrai',
+            domain: 'developers.google.com',
+            highlight_kw: 'Gemini Notebook API',
+            summary_zh: 'Gemini Notebook API 提供了一套标准 REST 接口与配套 MCP Server，支持开发者通过代码自动创建和管理笔记本及知识源，可将网页、YouTube 视频、纯文本与 Markdown 一键转化为持久化知识库（目前处于早期公测阶段，暂仅支持个人 Google 账号）。',
+            summary_en: 'The Gemini Notebook API is a REST interface for programmatically creating and managing notebooks and sources in Gemini Notebook. It can turn web pages, YouTube videos, plain text, and Markdown into persistent notebooks.'
+          },
+          {
+            title_zh: 'OpenAI 赋能物理世界工程：用 GPT-6 Astra 加速机械设计、CAD 建模与马自达气动仿真',
+            title_en: 'Accelerating engineering for the physical world',
+            read_time: '6 MIN READ',
+            url: 'https://openai.com/index/accelerating-engineering-for-the-physical-world/?utm_source=tldrai',
+            domain: 'openai.com',
+            highlight_kw: 'GPT-6 Astra 物理工程',
+            summary_zh: 'OpenAI 正利用旗下前沿模型全面加速机械与电气工程全链路。工程师们借助 GPT-6 Astra 完成硬件设备设计、CAD 三维建模与性能仿真优化，并携手马自达（Mazda）等车企探索汽车空气动力学研发中的大模型落地。',
+            summary_en: 'OpenAI is leveraging its AI models to enhance mechanical and electrical engineering processes, from design to simulation and production, utilizing models like GPT-6 Astra for CAD model creation and collaborating with Mazda on vehicle aerodynamics.'
+          },
+          {
+            title_zh: 'Anthropic 零知识证明突破：基于 zkSNARK 实现大语言模型的“可证明推理（Provable Inference）”',
+            title_en: 'Progress on provable inference for large language models',
+            read_time: '30 MIN READ',
+            url: 'https://www.anthropic.com/research/provable-inference?utm_source=tldrai',
+            domain: 'anthropic.com',
+            highlight_kw: 'zkSNARK 可证明推理',
+            summary_zh: '在外部几乎无法核实某段输出究竟由哪个模型生成（或是否被偷换为蒸馏小模型）的背景下，Anthropic 详细披露了利用 zkSNARK 密码学证明实现“可证明推理”的最新进展，使模型提供商能够从数学上向用户及监管机构证明特定输出确由指定权重的模型生成。',
+            summary_en: 'Cryptographic proofs of inference allow model providers to prove that a specific output was produced by a specific model. This post details progress made on a powerful type of cryptographic proof uniquely fit for provable inference called zkSNARK.'
+          }
+        ]
+      },
+      {
+        sectionKey: 'Miscellaneous',
+        items: [
+          {
+            title_zh: 'OpenAI 运营数据揭秘：ChatGPT 搜索量已达 Google 的 20%，周活突破 12 亿、语音用户达 2.5 亿',
+            title_en: 'OpenAI: ChatGPT Search Is About 20% of Google\'s, 250 Million People Speak With ChatGPT, and Chat Is Merging With Work',
+            read_time: '16 MIN READ',
+            url: 'https://www.bigtechnology.com/p/openai-chatgpt-search-is-about-20?utm_source=tldrai',
+            domain: 'bigtechnology.com',
+            highlight_kw: '12亿周活 / Google 20%',
+            summary_zh: '最新披露数据显示，ChatGPT 搜索量已相当于 Google 搜索的 20%；过去两个月内 ChatGPT 狂揽 2 亿新用户，周活跃用户（WAU）高达 12 亿，其中每周使用 GPT Live 实时语音交互的用户达 2.5 亿。同时 OpenAI 正推进合并 Chat 与 Work 模式以简化操作流。',
+            summary_en: 'ChatGPT\'s search volume has reached 20% of Google\'s, with ChatGPT rapidly gaining 200 million users in the past two months, leading to 1.2 billion weekly active users and 250 million weekly voice users.'
+          },
+          {
+            title_zh: 'DeepSeek 计划采用华为昇腾（Ascend）芯片预训练下一代旗舰模型 DeepSeek V5',
+            title_en: 'DeepSeek Plans to Train Its Next-Generation Model on Huawei Ascend Chips',
+            read_time: '3 MIN READ',
+            url: 'https://www.geopolitechs.org/p/deepseek-plans-to-train-its-next?utm_source=tldrai',
+            domain: 'geopolitechs.org',
+            highlight_kw: 'DeepSeek V5 昇腾芯片',
+            summary_zh: '据悉 DeepSeek 计划使用华为昇腾 AI 芯片完整预训练下一代旗舰模型 DeepSeek V5。此前昇腾芯片主要用于推理而非大规模预训练，此次尝试将成为检验国产 AI 加速卡能否独立支撑前沿大模型全量预训练的关键里程碑。',
+            summary_en: 'DeepSeek plans to use Huawei\'s Ascend AI chips to pretrain DeepSeek V5. This will be an important test of whether Chinese AI accelerators can support the full pre-training of a frontier large language model.'
+          }
+        ]
+      },
+      {
+        sectionKey: 'Quick Links',
+        items: [
+          {
+            title_zh: '冷思考：“GPT-6 Astra 直接读写神经网络权重改进 Qwen”的说法存在误导',
+            title_en: 'The \'Astra can read and write weights to improve Qwen\' post is misleading',
+            read_time: '4 MIN READ',
+            url: 'https://honnibal.dev/blog/astra-read-write-misleading?utm_source=tldrai',
+            domain: 'honnibal.dev',
+            highlight_kw: '权重编辑祛魅',
+            summary_zh: 'spaCy 作者 Matthew Honnibal 撰文指出，近期热传的“Astra 直接读改权重提升 Qwen 性能”在表述上存在夸大与误导。',
+            summary_en: 'The \'Astra can read and write weights\' claims are misleading.'
+          },
+          {
+            title_zh: 'OpenAI Images API 已合入 GIF 动画输出支持，即将登陆 ChatGPT',
+            title_en: 'ChatGPT is about to start making GIFs',
+            read_time: '1 MIN READ',
+            url: 'https://x.com/tokengremlin/status/2117526651932205552?utm_source=tldrai',
+            domain: 'x.com',
+            highlight_kw: 'ChatGPT GIF',
+            summary_zh: 'OpenAI 已将动态 GIF 输出能力合并至图像生成接口中，为次日 Images 2.6 的全面发布埋下伏笔。',
+            summary_en: 'OpenAI just merged animated GIF output into its image generation API.'
+          },
+          {
+            title_zh: '智能体状态机（Agent State Machines）：在 Prompt 之外构建确定性安全脚手架',
+            title_en: 'Agent State Machines: Building Deterministic Scaffolding for Agents',
+            read_time: '9 MIN READ',
+            url: 'https://x.com/josharosen/status/2117687393213932003?utm_source=tldrai',
+            domain: 'x.com',
+            highlight_kw: 'Agent State Machines',
+            summary_zh: '详解如何利用状态机在模型提示词之外强制执行智能体权限控制、人类审批、失败重试与完成度验收准则。',
+            summary_en: 'This post explains how state machines enforce agent permissions, approvals, retries, and completion criteria outside model prompts.'
+          },
+          {
+            title_zh: '算力经济学：大模型 Token 的真实成本究竟是多少？',
+            title_en: 'How much do tokens really cost?',
+            read_time: '6 MIN READ',
+            url: 'https://substack.hadley.nz/p/how-much-do-tokens-really-cost?utm_source=tldrai',
+            domain: 'substack.hadley.nz',
+            highlight_kw: 'Token 成本拆解',
+            summary_zh: '分析表明当前 AI Token 的定价完全具备可持续性，且模型厂商间的激烈竞争正持续拉低推理边际成本。',
+            summary_en: 'AI tokens\' pricing appears sustainable, as competition among providers is driving down costs.'
+          }
+        ]
+      }
+    ]
+  },
+
+  '2026-11-03': {
+    date: '2026-11-03',
+    weekday: 'TUE · 周二',
+    issueNo: 'VOL. 2026.11.03',
+    headline_zh: 'Claude 推出消息线程降低 35% 首字延迟 · GPT-6.2 Astra 现身 Codex · Anthropic 披露逼近递归自我改进 (RSI)',
+    headline_en: 'Claude Message Threads 🧵, Astra 6.2 spotted 👀, Anthropic nears RSI 🔄',
+    highlights: [
+      { code: '#01.3', label_zh: 'Claude 消息线程公测', label_en: 'Claude Message Threads 🧵' },
+      { code: '#01.1', label_zh: 'GPT-6.2 Astra 现身 Codex', label_en: 'Astra 6.2 spotted 👀' },
+      { code: '#01.2', label_zh: 'Anthropic 逼近递归自我改进', label_en: 'Anthropic nears RSI 🔄' }
+    ],
+    sections: [
+      {
+        sectionKey: 'Headlines & Launches',
+        items: [
+          {
+            title_zh: 'GPT-6.2-Astra 现身 Codex 用量统计明细，OpenAI 跳过 6.1 版本发布在即',
+            title_en: 'GPT-6.2 Astra appears in Codex usage ahead of possible launch',
+            read_time: '3 MIN READ',
+            url: 'https://www.testingcatalog.com/gpt-6-2-astra-appears-codex-usage/?utm_source=tldrai',
+            domain: 'testingcatalog.com',
+            highlight_kw: 'GPT-6.2-Astra',
+            summary_zh: '多位开发者在 Codex 用量统计明细中发现了 GPT-6.2-Astra 的身影，表明部分请求已作为 A/B 测试被静默路由至该新模型，正式发布或仅在数日之内。据悉出于对欺骗行为与能力边界的审慎考量，OpenAI 决定直接跳过 GPT-6.1 Astra。',
+            summary_en: 'GPT-6.2-Astra has started appearing in Codex usage breakdowns. The requests are likely being quietly routed to the new model as part of an A/B test or a staged rollout. OpenAI reportedly decided to skip GPT-6.1 Astra due to concerns about deception and scope.'
+          },
+          {
+            title_zh: 'Anthropic 在更新版招股书中预警：公司正逼近“递归自我改进（RSI）”临界点',
+            title_en: 'Anthropic Warns It May Be Close to Self-Improving AI',
+            read_time: '3 MIN READ',
+            url: 'https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/?utm_source=tldrai',
+            domain: 'techcrunch.com',
+            highlight_kw: 'Anthropic RSI',
+            summary_zh: 'Anthropic 在最新修订的 IPO 招股书中正式披露，公司可能很快达到其内部定义的“递归自我改进（Recursive Self-Improvement, RSI）”能力阈值——即由 AI 系统深度参与并加速研发出能力更强的下一代 AI 模型。',
+            summary_en: 'Anthropic disclosed in its updated IPO filing that it may soon reach its internal definition of recursive self-improvement (RSI), where AI systems help develop increasingly capable AI models.'
+          },
+          {
+            title_zh: 'Claude 推出消息线程（Message Threads）公测：免除重复发送历史，长上下文首字延迟降低 35%',
+            title_en: 'Claude Introduces Message Threads',
+            read_time: '2 MIN READ',
+            url: 'https://claude.com/resources/articles/message-threads?utm_source=tldrai',
+            domain: 'claude.com',
+            highlight_kw: 'Message Threads',
+            summary_zh: 'Anthropic 开放 Message Threads 公测，允许智能体在多轮对话中仅发送新增消息而无需每次重传完整历史记录。在 500K–1M tokens 的长上下文请求中，该特性在不改变 Token 计费逻辑的前提下将首字响应时间（TTFT）中位数大幅缩短了约 35%。',
+            summary_en: 'Anthropic released message threads in public beta, allowing agents to send only new messages instead of resending their entire conversation history. The feature reduced median time to first token by approximately 35% for requests with 500K–1M tokens.'
+          }
+        ]
+      },
+      {
+        sectionKey: 'Deep Dives & Analysis',
+        items: [
+          {
+            title_zh: '如何训练智能体蜂群（Swarm）？群体推理时扩展与并行强化学习激励设计',
+            title_en: 'How to Train a Swarm',
+            read_time: '19 MIN READ',
+            url: 'https://www.gr.inc/blog/how-to-train-a-swarm?utm_source=tldrai',
+            domain: 'gr.inc',
+            highlight_kw: '群体推理时扩展',
+            summary_zh: '智能体蜂群（Swarms）是由多个智能体围绕共同目标协作的 AI 系统。本文深入探讨了“群体推理时扩展（Collective Inference-time Scaling）”技术，让智能体同步扩展并行有效工作量与跨节点通信效率，并拆解了如何为并行协作设计强化学习激励函数。',
+            summary_en: 'Swarms are AI systems where multiple agents cooperate towards a shared goal. This post discusses collective inference-time scaling and how to design incentives for parallel work in reinforcement learning.'
+          },
+          {
+            title_zh: '算力孤岛训练漫游指南：跨异构小集群联合预训练前沿大模型的机遇与安全隐患',
+            title_en: 'The Hitchhiker\'s Guide to Training on Compute Islands',
+            read_time: '18 MIN READ',
+            url: 'https://www.coreauto.com/hitchhikers-guide-to-training-on-compute-islands?utm_source=tldrai',
+            domain: 'coreauto.com',
+            highlight_kw: 'Compute Islands',
+            summary_zh: '在多个中小型算力孤岛上可靠地开展联合训练，能够大幅拓宽前沿模型的可用算力池，甚至允许单次训练混用不同代际与不同厂商的加速芯片。但跨供应商训练也带来了完整性与安全挑战：单一受损节点可能悄无声息地劣化或篡改模型权重且极难溯源。',
+            summary_en: 'Being able to train reliably on multiple smaller clusters widens the usable training pool for frontier training, mixing accelerator generations and vendors, though integrity and safety become harder to trace across providers.'
+          },
+          {
+            title_zh: '微软构建 Copilot Cowork 实战复盘：4.5 个月全球上线并在生产环境将运行时从 Python 迁移至 Rust',
+            title_en: 'Lessons from building Copilot Cowork',
+            read_time: '21 MIN READ',
+            url: 'https://commandline.microsoft.com/how-we-built-copilot-cowork-python-to-rust-migration/?utm_source=tldrai',
+            domain: 'commandline.microsoft.com',
+            highlight_kw: 'Python 迁移至 Rust',
+            summary_zh: '微软智能体执行层 Copilot Cowork 仅用四个半月即实现全球上线，并在不停机状态下将底层运行时从 Python 平滑重构为 Rust。团队总结的核心经验包括：编码前先写严密规范（Specs）、运行边界清晰的小型专职智能体，以及用硬核自动化测试守住代码变更质量。',
+            summary_en: 'Microsoft\'s Copilot Cowork achieved global availability in four and a half months, switching its runtime from Python to Rust while live by writing clear specs before coding and running narrow agents with clear boundaries.'
+          }
+        ]
+      },
+      {
+        sectionKey: 'Engineering & Research',
+        items: [
+          {
+            title_zh: 'GPU 加速“权重瞬移（Weight Teleportation）”：将强化学习训练与采样器同步停顿压缩至 0.23 秒内',
+            title_en: 'GPU-accelerated Weight Teleportation',
+            read_time: '17 MIN READ',
+            url: 'https://humansand.ai/blog/gpu-accelerated-weight-teleportation?utm_source=tldrai',
+            domain: 'humansand.ai',
+            highlight_kw: '0.23秒 权重同步',
+            summary_zh: 'Humans& 团队提出的 GPU 加速权重瞬移技术，通过协同设计的 GPU 并行压缩/解压流水线（结合 LZ4、Snappy 与 Zstd 分层编码），极速优化了 RL 训练器与推理采样器之间的权重同步，将训练停顿时间压缩至 0.23 秒以内。',
+            summary_en: 'GPU-accelerated Weight Teleportation optimizes RL training by improving weight syncing between trainers and samplers, reducing pause times to under 0.23 seconds using GPU-accelerated parallel compression.'
+          },
+          {
+            title_zh: 'Framer 发布 Harness 2：流式边接收边执行智能体代码，成本降低 33%、提速 20%',
+            title_en: 'Harness 2: executing agent code as it streams',
+            read_time: '6 MIN READ',
+            url: 'https://framer.com/blog/harness-2/?utm_source=tldrai',
+            domain: 'framer.com',
+            highlight_kw: 'Framer Harness 2',
+            summary_zh: 'Framer 的 Harness 2 架构允许在单一程序流中随着模型流式输出实时执行 JavaScript 代码（Eager Execution）并支持提前熔断取消，使工具调用步数减少 43%、单条消息缓存输入 Token 减少 39%，整体成本降低 33% 且执行速度提升 20%。',
+            summary_en: 'Framer\'s Harness 2 executes JavaScript as it streams in, achieving up to 33% cost reduction, 20% faster execution, and 43% fewer tool steps.'
+          },
+          {
+            title_zh: 'NVIDIA 升级 Cosmos 物理 AI 世界模型框架：支持同步生成视频与激光雷达（LiDAR）仿真',
+            title_en: 'NVIDIA\'s Cosmos Framework',
+            read_time: '6 MIN READ',
+            url: 'https://developer.nvidia.com/blog/build-world-models-for-interactive-simulation-with-nvidia-cosmos/?utm_source=tldrai',
+            domain: 'developer.nvidia.com',
+            highlight_kw: 'NVIDIA Cosmos',
+            summary_zh: 'NVIDIA 为 Cosmos 框架推出全新物理 AI 世界模型训练、微调与强化学习能力，支持开发者为机器人与自动驾驶生成时间同步的视频与 LiDAR 点云交互仿真，并通过 Cosmos NIM 微服务一键加速部署。',
+            summary_en: 'NVIDIA introduced new Cosmos Framework capabilities for physical AI world models, enabling synchronized video and LiDAR simulations for robotics and autonomous vehicles.'
+          }
+        ]
+      },
+      {
+        sectionKey: 'Miscellaneous',
+        items: [
+          {
+            title_zh: 'OpenAI 正式合并 ChatGPT 的 Chat 与 Work 标签页，并与 Codex 共享额度池',
+            title_en: 'OpenAI is finally merging ChatGPT\'s Chat and Work tabs',
+            read_time: '2 MIN READ',
+            url: 'https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/?utm_source=tldrai',
+            domain: 'techcrunch.com',
+            highlight_kw: 'Chat & Work 合并',
+            summary_zh: '在小范围测试后，OpenAI 计划将 ChatGPT 内的 Chat 与 Work 标签页合二为一，让用户在同一空间内无缝完成从灵感探索到工作交付的闭环；Codex 在桌面端仍保持独立入口，但很快将与 ChatGPT 共享统一的用量额度池。',
+            summary_en: 'OpenAI plans to merge the Chat and Work tabs within the ChatGPT experience, while ChatGPT and Codex will soon draw from the same allowance pool.'
+          },
+          {
+            title_zh: '深度评述：大模型直接读写神经网络权重并非“超人类魔法”，更接近资深研究员的工程解题',
+            title_en: 'LLMs are not superhuman at reading and writing neural network weights',
+            read_time: '4 MIN READ',
+            url: 'https://www.seangoedecke.com/llms-are-not-superhuman-at-reading-and-writing-neural-network-weights/?utm_source=tldrai',
+            domain: 'seangoedecke.com',
+            highlight_kw: '权重编辑解析',
+            summary_zh: '近期论文展示了 GPT-6 Astra 直接编辑 0.8B Qwen 模型权重以提升其数学能力的实验。作者分析指出，这一表现反映的是类似人类高水平研究员的高级工程问题求解能力，而非某种超越人类理解范畴的全新超自然 AI 能力。',
+            summary_en: 'A recent paper demonstrates GPT-6 Astra editing a 0.8B Qwen LLM\'s weights natively. While impressive, these capabilities reflect advanced problem-solving akin to skilled human researchers.'
+          },
+          {
+            title_zh: 'Anthropic 更新 IPO 招股书披露三季报：前 9 个月营收暴增 1,200% 至 332.4 亿美元，算力承诺近 9,000 亿',
+            title_en: 'Anthropic releases amended IPO prospectus with third-quarter financials',
+            read_time: '1 MIN READ',
+            url: 'https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html?utm_source=tldrai',
+            domain: 'cnbc.com',
+            highlight_kw: '营收 332.4亿美元',
+            summary_zh: 'Anthropic 修订版 S-1 招股书显示，2026 年前 9 个月公司营收同比暴增 1,200% 达到 332.4 亿美元，同期净亏损为 1,040 亿美元；其未来多年的算力与基础设施总承诺支出高达约 8,954 亿美元。',
+            summary_en: 'Anthropic\'s amended IPO prospectus reveals a 1,200% increase in revenue to $33.24 billion for the first nine months of 2026, a net loss of $104 billion, and compute commitments totaling $895.4 billion.'
+          }
+        ]
+      },
+      {
+        sectionKey: 'Quick Links',
+        items: [
+          {
+            title_zh: 'GitHub Next 推出 Enclaves：限制跨仓库智能体工作流中的私有代码信息泄露',
+            title_en: 'Limit what agents learn about private repos with enclaves',
+            read_time: '17 MIN READ',
+            url: 'https://githubnext.com/posts/enclaves/?utm_source=tldrai',
+            domain: 'githubnext.com',
+            highlight_kw: 'GitHub Enclaves',
+            summary_zh: 'Enclaves 是面向跨仓库 GitHub Agentic Workflows 的新型安全原语，允许智能体协同处理不同仓库的同时严格限制彼此间的信息传递。',
+            summary_en: 'Enclaves are a new security primitive for cross-repository GitHub Agentic Workflows that lets agents work on different repositories while limiting what they say to each other.'
+          },
+          {
+            title_zh: 'OpenAI 发布 LifeVal 评测基准：衡量 AI 在家庭预算、育儿与政务办理等日常事务上的表现',
+            title_en: 'OpenAI Introduces LifeVal to Measure AI Performance on Everyday Tasks',
+            read_time: '4 MIN READ',
+            url: 'https://openai.com/index/lifeval/?utm_source=tldrai',
+            domain: 'openai.com',
+            highlight_kw: 'OpenAI LifeVal',
+            summary_zh: '专门评估 AI 在规划家庭预算、寻找托育服务及办理政府公共服务等贴近真实生活场景中的实用能力。',
+            summary_en: 'LifeVal is a benchmark designed to evaluate AI performance on practical everyday tasks such as budgeting, finding childcare, and accessing government services.'
+          },
+          {
+            title_zh: 'Teaching Qwen Why：将 Anthropic“理解规则背后意图”的对齐训练法泛化迁移至 Qwen 模型',
+            title_en: 'Teaching Qwen Why',
+            read_time: '47 MIN READ',
+            url: 'https://www.lesswrong.com/posts/35yw2qGK7naFLAvcq/teaching-qwen-why-1?utm_source=tldrai',
+            domain: 'lesswrong.com',
+            highlight_kw: 'Teaching Qwen Why',
+            summary_zh: '结合合成文档微调（SDF）与含伦理困境故事的监督微调（SFT），在开源模型上有效复现并降低了智能体失调率。',
+            summary_en: 'The research extends Anthropic\'s "Teaching Claude Why" methods to new models, reducing agentic misalignment through synthetic document finetuning (SDF) and supervised finetuning (SFT).'
+          },
+          {
+            title_zh: '马斯克确认因运营成本飙升而收紧 X 平台 Grok Bot 调用限额',
+            title_en: 'Elon Musk Limits Grok Bot Usage Over Rising Costs',
+            read_time: '2 MIN READ',
+            url: 'https://x.com/elonmusk/status/2116992258520064397?utm_source=tldrai',
+            domain: 'x.com',
+            highlight_kw: 'Grok 限流降本',
+            summary_zh: '马斯克证实由于高并发调用导致算力运营成本相对于收入过高，已下调 Grok Bot 的免费调用配额。',
+            summary_en: 'Elon Musk confirmed that Grok Bot usage limits were reduced after operating costs became unsustainably high relative to revenue.'
+          }
+        ]
+      }
+    ]
+  },
+
   '2026-11-02': {
     date: '2026-11-02',
     weekday: 'MON · 周一',
@@ -689,23 +1279,30 @@ async function translateEnToZh(text) {
   return text;
 }
 
-// 通过多路 CORS 代理拉取文本内容
+// 通过多路 CORS 通道拉取文本内容（支持原生 CORS、Jina Reader HTML/Markdown 及备用代理）
 async function fetchTextWithCorsFallback(targetUrl) {
-  const endpoints = [
-    targetUrl, // 如果目标本身支持 CORS (如 tldr.tech/api/rss/ai)
-    `https://corsproxy.io/?url=${encodeURIComponent(targetUrl)}`,
-    `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`,
-    `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(targetUrl)}`
-  ];
+  const isRss = targetUrl.includes('/api/rss/');
+  const candidates = isRss
+    ? [
+        { url: targetUrl, headers: {} },
+        { url: `https://r.jina.ai/${targetUrl}`, headers: { 'X-Return-Format': 'html' } },
+        { url: `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`, headers: {} }
+      ]
+    : [
+        { url: `https://r.jina.ai/${targetUrl}`, headers: { 'X-Return-Format': 'html' } },
+        { url: `https://r.jina.ai/${targetUrl}`, headers: {} },
+        { url: `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`, headers: {} },
+        { url: `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(targetUrl)}`, headers: {} }
+      ];
 
-  // 对于 HTML 页面，跳过直接请求以节省一次 CORS 报错时间
-  const startIdx = targetUrl.includes('/api/rss/') ? 0 : 1;
-
-  for (let i = startIdx; i < endpoints.length; i++) {
+  for (let i = 0; i < candidates.length; i++) {
     try {
       const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 8500);
-      const res = await fetch(endpoints[i], { signal: controller.signal });
+      const timer = setTimeout(() => controller.abort(), 9000);
+      const res = await fetch(candidates[i].url, {
+        headers: candidates[i].headers,
+        signal: controller.signal
+      });
       clearTimeout(timer);
       if (res.ok) {
         const text = await res.text();
@@ -718,6 +1315,90 @@ async function fetchTextWithCorsFallback(targetUrl) {
     }
   }
   throw new Error('无法连接至 TLDR AI 源站');
+}
+
+// 解析 Jina Reader 返回的 Markdown 格式刊物内容（当 HTML 通道回退至纯文本 Markdown 时使用）
+function parseTldrMarkdownSections(mdText) {
+  const lines = mdText.split(/\r?\n/);
+  const sections = [];
+  let currentSec = null;
+  let currentItem = null;
+
+  const flushItem = () => {
+    if (currentSec && currentItem && currentItem.summary_en) {
+      currentItem.summary_en = currentItem.summary_en.replace(/\s+/g, ' ').trim();
+      if (
+        !currentItem.title_en.includes('(Sponsor)') &&
+        !currentItem.title_en.includes('at TLDR (') &&
+        currentItem.summary_en
+      ) {
+        currentSec.items.push(currentItem);
+      }
+    }
+    currentItem = null;
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (!line) continue;
+
+    // 终止于底部订阅引导
+    if (line.startsWith('## Get the most interesting AI stories')) {
+      flushItem();
+      break;
+    }
+
+    // 匹配 ### [标题 (X minute read)](https://...)
+    const itemMatch = line.match(/^###\s+\[(.+?)\]\((https?:\/\/[^\s)]+)\)/);
+    if (itemMatch) {
+      flushItem();
+      if (!currentSec) continue;
+
+      const fullTitleEn = itemMatch[1].trim();
+      const href = itemMatch[2].trim();
+      let cleanTitleEn = fullTitleEn;
+      let readTime = '3 MIN READ';
+      const parenMatch = fullTitleEn.match(/\(([^)]+)\)\s*$/);
+      if (parenMatch) {
+        readTime = parenMatch[1].toUpperCase().replace('MINUTE', 'MIN');
+        cleanTitleEn = fullTitleEn.slice(0, parenMatch.index).trim();
+      }
+
+      currentItem = {
+        title_en: cleanTitleEn,
+        read_time: readTime,
+        url: href,
+        domain: extractDomain(href),
+        summary_en: ''
+      };
+      continue;
+    }
+
+    // 匹配 ### 章节名
+    if (line.startsWith('### ')) {
+      flushItem();
+      const secHeading = line.replace(/^###\s+/, '').trim();
+      let normalizedKey = '';
+      Object.keys(TLDR_SECTION_MAP).forEach(k => {
+        if (secHeading.toLowerCase().includes(k.toLowerCase())) {
+          normalizedKey = k;
+        }
+      });
+      if (normalizedKey) {
+        currentSec = { sectionKey: normalizedKey, items: [] };
+        sections.push(currentSec);
+      } else {
+        currentSec = null;
+      }
+      continue;
+    }
+
+    if (currentItem) {
+      currentItem.summary_en += (currentItem.summary_en ? ' ' : '') + line;
+    }
+  }
+  flushItem();
+  return sections.filter(s => s.items.length > 0);
 }
 
 // 1. 从官方 RSS 源同步最新可用的期刊日期列表与英文导语
@@ -749,9 +1430,13 @@ async function fetchAndTranslateTldrIssue(dateStr, rssHeadlineEn = '') {
   const parser = new DOMParser();
   const doc = parser.parseFromString(htmlText, 'text/html');
 
-  const h2Text = doc.querySelector('h2')?.textContent?.trim() || rssHeadlineEn || `TLDR AI Daily (${dateStr})`;
+  let h2Text = doc.querySelector('h2')?.textContent?.trim() || rssHeadlineEn || '';
+  if (!h2Text) {
+    const mdTitleMatch = htmlText.match(/^Title:\s*(.+)$/m);
+    h2Text = mdTitleMatch ? mdTitleMatch[1].trim() : `TLDR AI Daily (${dateStr})`;
+  }
   const sectionEls = Array.from(doc.querySelectorAll('section'));
-  const rawSections = [];
+  let rawSections = [];
 
   sectionEls.forEach(sec => {
     const headerEl = sec.querySelector('h2, h3, header');
@@ -813,6 +1498,11 @@ async function fetchAndTranslateTldrIssue(dateStr, rssHeadlineEn = '') {
       });
     }
   });
+
+  // 如果返回的是 Jina Markdown 文本，使用 Markdown 解析器回退提取
+  if (rawSections.length === 0) {
+    rawSections = parseTldrMarkdownSections(htmlText);
+  }
 
   if (rawSections.length === 0) {
     throw new Error(`${dateStr} 当日暂无刊物（周末或尚未发刊）`);

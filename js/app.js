@@ -89,9 +89,10 @@ let currentFontSizeLevel = 'normal'; // normal | large
 
 // AI 前沿 (TLDR AI) 状态
 let tldrIssuesMap = typeof loadTldrCache === 'function' ? loadTldrCache() : {};
-let currentTldrDate = '2026-11-02';
+let currentTldrDate = Object.keys(tldrIssuesMap).sort((a, b) => b.localeCompare(a))[0] || '2026-11-05';
 let showBilingualMode = false; // 是否全局展开英文原文对照
 let isSyncingTldr = false;
+let hasAutoCheckedTldr = false;
 
 // ================= DOM 元素 =================
 const elements = {
@@ -178,6 +179,10 @@ function handleTabClick(tabId) {
 function renderCurrentTabView() {
   if (currentTab === 'ai') {
     renderAiFeed();
+    if (!hasAutoCheckedTldr) {
+      hasAutoCheckedTldr = true;
+      syncLatestTldrIssue(false);
+    }
   } else {
     renderNewsList();
     updateStatusTime();
@@ -897,7 +902,7 @@ function decorateAiTerms(escapedText) {
   );
 }
 
-// 实时从 TLDR AI 官方 RSS 探测最新日期并抓取网页 + 自动中文翻译
+// 实时从 TLDR AI 官方 RSS 探测最新日期并抓取网页 + 自动中文翻译（支持自动补齐最近缺失期刊）
 async function syncLatestTldrIssue(showManualToast = true) {
   if (isSyncingTldr) return;
   isSyncingTldr = true;
@@ -908,18 +913,30 @@ async function syncLatestTldrIssue(showManualToast = true) {
     if (showManualToast) showToast('正在连接 tldr.tech/ai 检查最新期刊...');
     const feedList = await fetchTldrRssFeedList();
     if (feedList && feedList.length > 0) {
-      const latestItem = feedList[0];
-      const latestDate = latestItem.date;
+      const latestDate = feedList[0].date;
+      const missingItems = feedList.slice(0, 5).filter(item => !tldrIssuesMap[item.date]);
 
-      if (!tldrIssuesMap[latestDate]) {
-        if (showManualToast) showToast(`发现新刊 ${latestDate}，正在抓取网页并翻译为中文...`);
-        const translatedIssue = await fetchAndTranslateTldrIssue(latestDate, latestItem.headline_en);
-        tldrIssuesMap[latestDate] = translatedIssue;
-        currentTldrDate = latestDate;
-        if (showManualToast) showToast(`已成功抓取并翻译 ${latestDate} 最新期 AI 前沿！`);
+      if (missingItems.length > 0) {
+        if (showManualToast) {
+          showToast(`发现新刊 ${missingItems[0].date}，正在抓取网页并翻译为中文...`);
+        }
+        for (const item of missingItems) {
+          try {
+            const translatedIssue = await fetchAndTranslateTldrIssue(item.date, item.headline_en);
+            tldrIssuesMap[item.date] = translatedIssue;
+          } catch (itemErr) {
+            console.warn(`抓取期刊 ${item.date} 跳过:`, itemErr);
+          }
+        }
+        if (tldrIssuesMap[latestDate]) {
+          currentTldrDate = latestDate;
+          showToast(`已成功同步 ${latestDate} 最新期 AI 前沿！`);
+        }
       } else {
-        currentTldrDate = latestDate;
-        if (showManualToast) showToast(`当前已是最新一期 (${latestDate}) TLDR AI 资讯`);
+        if (showManualToast) {
+          currentTldrDate = latestDate;
+          showToast(`当前已是最新一期 (${latestDate}) TLDR AI 资讯`);
+        }
       }
     }
   } catch (err) {
