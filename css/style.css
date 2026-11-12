@@ -1372,3 +1372,576 @@ html, body {
   color: #ffffff;
   border-color: var(--swiss-blue);
 }
+
+
+/* =========================================================
+   【酒价内参】新浪财经·知名白酒大单品终端零售价排版样式
+========================================================= */
+
+.liquor-feed-wrapper {
+  padding: 10px 0 24px;
+}
+
+.liquor-masthead {
+  border: 1.5px solid var(--swiss-border-strong);
+  background-color: var(--swiss-bg-paper);
+  box-shadow: var(--swiss-shadow);
+  margin-bottom: 14px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.liquor-masthead-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 12px;
+  background-color: var(--swiss-bg-tint);
+  border-bottom: 1px solid var(--swiss-border);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.liquor-masthead-brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--swiss-ink);
+}
+
+.liquor-brand-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #b91c1c;
+  display: inline-block;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.liquor-masthead-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.liquor-source-link {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.liquor-source-link:hover {
+  color: var(--primary);
+}
+
+.liquor-sync-btn {
+  padding: 3px 9px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary);
+  background-color: var(--primary-soft);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.liquor-sync-btn:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.liquor-masthead-body {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--swiss-border);
+}
+
+.liquor-masthead-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.liquor-masthead-title {
+  font-size: 15.5px;
+  font-weight: 900;
+  color: var(--swiss-ink);
+  letter-spacing: -0.2px;
+}
+
+.liquor-Order-badge {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #b91c1c;
+  background-color: rgba(185, 28, 28, 0.08);
+  border: 1px solid rgba(185, 28, 28, 0.3);
+  padding: 1px 7px;
+  border-radius: 3px;
+}
+
+.liquor-masthead-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.liquor-masthead-desc strong {
+  color: var(--swiss-ink);
+  font-weight: 700;
+}
+
+/* 核心指标速览三宫格 */
+.liquor-kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.liquor-kpi-card {
+  background-color: var(--swiss-bg-tint);
+  border: 1px solid var(--swiss-border);
+  border-radius: 5px;
+  padding: 7px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.liquor-kpi-card .kpi-label {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.liquor-kpi-card .kpi-val-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.liquor-kpi-card .kpi-price {
+  font-family: var(--font-mono);
+  font-size: 14.5px;
+  font-weight: 900;
+  color: var(--swiss-ink);
+}
+
+.liquor-kpi-card .kpi-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.liquor-kpi-card .kpi-chg {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.liquor-kpi-card .kpi-chg.up {
+  color: #dc2626;
+}
+
+.liquor-kpi-card .kpi-chg.down {
+  color: #059669;
+}
+
+/* 横向胶囊筛选栏 */
+.liquor-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  background-color: var(--swiss-bg-tint);
+  border-bottom: 1px solid var(--swiss-border);
+}
+
+.liquor-filter-bar.date-bar {
+  border-bottom: none;
+}
+
+.liquor-filter-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.liquor-pills-scroll {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex: 1;
+}
+
+.liquor-pills-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.liquor-filter-pill,
+.liquor-date-pill {
+  flex-shrink: 0;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border: 1px solid var(--swiss-border);
+  background-color: var(--swiss-bg-paper);
+  color: var(--text-body);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.liquor-date-pill {
+  font-family: var(--font-mono);
+}
+
+.liquor-filter-pill:hover,
+.liquor-date-pill:hover {
+  border-color: var(--swiss-ink);
+  color: var(--swiss-ink);
+}
+
+.liquor-filter-pill.active,
+.liquor-date-pill.active {
+  background-color: var(--swiss-ink);
+  color: var(--swiss-bg-paper);
+  border-color: var(--swiss-ink);
+}
+
+/* 单品 30日区间统计横幅 */
+.liquor-single-stats {
+  border: 1px solid var(--swiss-border);
+  background-color: var(--swiss-bg-paper);
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.liquor-stat-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--swiss-border);
+}
+
+.liquor-stat-item .stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.liquor-stat-item .stat-val.brand {
+  font-size: 13.5px;
+  font-weight: 900;
+  color: var(--swiss-ink);
+}
+
+.liquor-stat-item .stat-val.brand small {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.liquor-stat-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.liquor-stat-metrics .stat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.liquor-stat-metrics .stat-box .k {
+  font-size: 10.5px;
+  color: var(--text-muted);
+}
+
+.liquor-stat-metrics .stat-box .v {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--swiss-ink);
+}
+
+.liquor-stat-metrics .stat-box .v.up {
+  color: #dc2626;
+}
+
+.liquor-stat-metrics .stat-box .v.down {
+  color: #059669;
+}
+
+/* 主体三列表格卡片：时间 | 酒 | 酒价 */
+.liquor-table-card {
+  border: 1.5px solid var(--swiss-border-strong);
+  background-color: var(--swiss-bg-paper);
+  box-shadow: var(--swiss-shadow);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.liquor-table-header {
+  display: grid;
+  grid-template-columns: 92px 1fr 122px;
+  align-items: center;
+  padding: 9px 12px;
+  background-color: var(--swiss-ink);
+  color: var(--swiss-bg-paper);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.lh-col-time {
+  text-align: left;
+  font-family: var(--font-mono);
+}
+
+.lh-col-wine {
+  text-align: left;
+  padding-left: 4px;
+}
+
+.lh-col-price {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* 日期分组横条（时间倒序分隔） */
+.liquor-date-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  background-color: var(--swiss-bg-tint);
+  border-bottom: 1px solid var(--swiss-border);
+  border-top: 1px solid var(--swiss-border);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+}
+
+.liquor-table-body > .liquor-date-group-header:first-child {
+  border-top: none;
+}
+
+.liquor-date-group-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.liquor-date-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+
+.liquor-date-group-title {
+  font-weight: 800;
+  color: var(--swiss-ink);
+}
+
+.liquor-date-group-badge {
+  font-size: 10px;
+  font-weight: 800;
+  color: #ffffff;
+  background-color: #dc2626;
+  padding: 1px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.liquor-date-group-sub {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* 每一条报价行：严格对应 时间 | 酒 | 酒价 */
+.liquor-table-row {
+  display: grid;
+  grid-template-columns: 92px 1fr 122px;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.liquor-table-row:last-child {
+  border-bottom: none;
+}
+
+.liquor-table-row:hover {
+  background-color: var(--swiss-bg-tint);
+}
+
+/* 第1列：时间 */
+.liquor-col-time {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-right: 8px;
+}
+
+.liquor-date-main {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--swiss-ink);
+  letter-spacing: -0.2px;
+}
+
+.liquor-date-sub {
+  font-size: 10px;
+  color: var(--text-light);
+}
+
+/* 第2列：酒（知名白酒大单品） */
+.liquor-col-wine {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding-right: 6px;
+}
+
+.liquor-bottle-thumb {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  flex-shrink: 0;
+}
+
+.liquor-wine-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.liquor-wine-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--swiss-ink);
+  line-height: 1.3;
+}
+
+.liquor-wine-spec {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* 第3列：酒价（终端零售成交价） */
+.liquor-col-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  text-align: right;
+}
+
+.liquor-price-main {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 2px;
+  font-family: var(--font-mono);
+}
+
+.liquor-price-yen {
+  font-size: 12px;
+  font-weight: 800;
+  color: #b91c1c;
+}
+
+.liquor-price-num {
+  font-size: 16.5px;
+  font-weight: 900;
+  color: #b91c1c;
+  letter-spacing: -0.3px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .liquor-price-yen,
+  .liquor-price-num {
+    color: #fb7185;
+  }
+}
+
+.liquor-price-unit {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-left: 2px;
+}
+
+.liquor-chg-pill {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.liquor-chg-pill.up {
+  color: #dc2626;
+  background-color: rgba(220, 38, 38, 0.1);
+}
+
+.liquor-chg-pill.down {
+  color: #059669;
+  background-color: rgba(5, 150, 105, 0.1);
+}
+
+.liquor-chg-pill.flat {
+  color: var(--text-muted);
+  background-color: var(--swiss-bg-tint);
+}
+
+/* 窄屏手机自适应微调 */
+@media (max-width: 420px) {
+  .liquor-kpi-strip {
+    grid-template-columns: 1fr;
+  }
+  .liquor-table-header,
+  .liquor-table-row {
+    grid-template-columns: 92px 1fr 124px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  .liquor-date-group-sub {
+    display: none;
+  }
+}
+

@@ -9,7 +9,7 @@ const CONFIG = {
   tabs: [
     { id: 'cls', name: '财联社 7×24', active: true, live: true, badge: '实时' },
     { id: 'ai', name: 'AI前沿', active: false, live: false, badge: 'TLDR' },
-    { id: 'global', name: '全球市场', active: false, future: true, badge: '筹备中' },
+    { id: 'liquor', name: '酒价内参', active: false, live: false, badge: '新浪' },
     { id: 'industry', name: '行业追踪', active: false, future: true, badge: '筹备中' }
   ],
   pollIntervalMs: 30000, // 30 秒静默轮询最新资讯
@@ -93,6 +93,13 @@ let currentTldrDate = Object.keys(tldrIssuesMap).sort((a, b) => b.localeCompare(
 let showBilingualMode = false; // 是否全局展开英文原文对照
 let isSyncingTldr = false;
 let hasAutoCheckedTldr = false;
+
+// 酒价内参 (新浪财经) 状态
+let liquorStore = typeof loadLiquorStore === 'function' ? loadLiquorStore() : { list: [], details: {} };
+let selectedLiquorId = 'all'; // 'all' 或具体 liquor_id
+let selectedLiquorDate = 'all'; // 'all' 或具体 YYYY-MM-DD
+let isSyncingLiquor = false;
+let hasAutoCheckedLiquor = false;
 
 // ================= DOM 元素 =================
 const elements = {
@@ -183,6 +190,12 @@ function renderCurrentTabView() {
       hasAutoCheckedTldr = true;
       syncLatestTldrIssue(false);
     }
+  } else if (currentTab === 'liquor') {
+    renderLiquorFeed();
+    if (!hasAutoCheckedLiquor) {
+      hasAutoCheckedLiquor = true;
+      syncLatestLiquorPrices(false);
+    }
   } else {
     renderNewsList();
     updateStatusTime();
@@ -202,6 +215,18 @@ function updateQuickFilterTagsForTab() {
       <span class="filter-tag" data-kw="DeepSeek"># DeepSeek</span>
       <span class="filter-tag" data-kw="智能体"># Agent 智能体</span>
       <span class="filter-tag" data-kw="GitHub"># 开源 / GitHub</span>
+    `;
+  } else if (currentTab === 'liquor') {
+    if (elements.searchInput) {
+      elements.searchInput.placeholder = '搜索酒名或日期（如：飞天茅台、五粮液、国窖1573、2026-11-12）...';
+    }
+    elements.quickFilterTags.innerHTML = `
+      <span class="filter-tag" data-kw="飞天"># 飞天茅台</span>
+      <span class="filter-tag" data-kw="五粮液"># 五粮液普五</span>
+      <span class="filter-tag" data-kw="国窖1573"># 国窖1573</span>
+      <span class="filter-tag" data-kw="茅台1935"># 茅台1935</span>
+      <span class="filter-tag" data-kw="青花汾20"># 青花汾20</span>
+      <span class="filter-tag" data-kw="水晶剑南春"># 水晶剑南春</span>
     `;
   } else {
     if (elements.searchInput) {
@@ -949,6 +974,376 @@ async function syncLatestTldrIssue(showManualToast = true) {
   }
 }
 
+// ================= 渲染【酒价内参 (新浪财经)】视图 =================
+function renderLiquorFeed() {
+  if (!elements.newsFeed) return;
+
+  if (elements.loadMoreContainer) {
+    elements.loadMoreContainer.style.display = 'none';
+  }
+
+  const allRows = typeof buildLiquorTimelineRows === 'function' ? buildLiquorTimelineRows(liquorStore) : [];
+  const liquorList = Array.isArray(liquorStore?.list) ? [...liquorStore.list].sort((a, b) => (a.sort || 99) - (b.sort || 99)) : [];
+
+  // 提取所有日期并按时间倒序排列
+  const allDatesSet = new Set();
+  allRows.forEach(r => {
+    if (r.date) allDatesSet.add(r.date);
+  });
+  const allDates = Array.from(allDatesSet).sort((a, b) => b.localeCompare(a));
+  const latestDate = allDates[0] || '2026-11-12';
+
+  // 计算最新一日核心指标（飞天茅台、五粮液普五、12大单品打包总价）
+  const latestDayRows = allRows.filter(r => r.date === latestDate);
+  const feitianLatest = latestDayRows.find(r => r.name.includes('飞天')) || liquorList.find(r => r.name.includes('飞天'));
+  const wuliangyeLatest = latestDayRows.find(r => r.name.includes('普五')) || liquorList.find(r => r.name.includes('普五'));
+  const bundleTotalPrice = latestDayRows.reduce((acc, cur) => acc + (Number(cur.price) || 0), 0);
+  const bundleTotalChange = latestDayRows.reduce((acc, cur) => acc + (Number(cur.price_change) || 0), 0);
+
+  // 过滤：按单品、按日期、按搜索关键词，始终保持时间倒序排列
+  const query = searchQuery.trim().toLowerCase();
+  const filteredRows = allRows.filter(row => {
+    if (selectedLiquorId !== 'all' && String(row.liquor_id) !== String(selectedLiquorId)) {
+      return false;
+    }
+    if (selectedLiquorDate !== 'all' && row.date !== selectedLiquorDate) {
+      return false;
+    }
+    if (query) {
+      const haystack = `${row.date} ${row.name} ${row.shortName || ''} ${row.specifications || ''} ${row.price}`.toLowerCase();
+      return haystack.includes(query);
+    }
+    return true;
+  });
+
+  // 更新顶部状态栏
+  if (elements.statusTime) {
+    elements.statusTime.innerHTML = `<span>🍶</span> <span>新浪财经 · 酒价内参 · 最新披露 ${latestDate}</span>`;
+  }
+  if (elements.statusCount) {
+    elements.statusCount.textContent = `共 ${filteredRows.length} 条成交价`;
+  }
+
+  // 构建酒品筛选胶囊栏
+  const liquorPillsHtml = [
+    `<button type="button" class="liquor-filter-pill ${selectedLiquorId === 'all' ? 'active' : ''}" data-liquor-id="all">全部大单品 (${liquorList.length})</button>`,
+    ...liquorList.map(item => {
+      const shortLabel = (typeof LIQUOR_SHORT_META !== 'undefined' && LIQUOR_SHORT_META[item.name]?.shortName) || item.name;
+      const activeCls = String(selectedLiquorId) === String(item.liquor_id) ? 'active' : '';
+      return `<button type="button" class="liquor-filter-pill ${activeCls}" data-liquor-id="${item.liquor_id}">${escapeHtml(shortLabel)}</button>`;
+    })
+  ].join('');
+
+  // 构建日期筛选胶囊栏（时间倒序）
+  const datePillsHtml = [
+    `<button type="button" class="liquor-date-pill ${selectedLiquorDate === 'all' ? 'active' : ''}" data-liquor-date="all">全部时间 (倒序)</button>`,
+    ...allDates.slice(0, 14).map(d => {
+      const shortD = d.slice(5);
+      const activeCls = selectedLiquorDate === d ? 'active' : '';
+      return `<button type="button" class="liquor-date-pill ${activeCls}" data-liquor-date="${d}">${shortD}</button>`;
+    })
+  ].join('');
+
+  // 如果选中了某一款具体白酒，计算其近30日最高/最低/区间涨跌概览
+  let singleLiquorStatsHtml = '';
+  if (selectedLiquorId !== 'all') {
+    const singleSeries = allRows.filter(r => String(r.liquor_id) === String(selectedLiquorId));
+    if (singleSeries.length > 0) {
+      const prices = singleSeries.map(r => r.price).filter(p => p > 0);
+      const maxP = Math.max(...prices);
+      const minP = Math.min(...prices);
+      const newestP = singleSeries[0].price;
+      const oldestP = singleSeries[singleSeries.length - 1].price;
+      const periodDiff = newestP - oldestP;
+      const periodDiffStr = periodDiff > 0 ? `+${periodDiff}` : `${periodDiff}`;
+      const periodCls = periodDiff > 0 ? 'up' : (periodDiff < 0 ? 'down' : 'flat');
+
+      singleLiquorStatsHtml = `
+        <div class="liquor-single-stats">
+          <div class="liquor-stat-item">
+            <span class="stat-label">当前选中大单品</span>
+            <span class="stat-val brand">${escapeHtml(singleSeries[0].name)} <small>(${escapeHtml(singleSeries[0].specifications)})</small></span>
+          </div>
+          <div class="liquor-stat-metrics">
+            <div class="stat-box">
+              <span class="k">最新终端价</span>
+              <span class="v">¥${newestP}</span>
+            </div>
+            <div class="stat-box">
+              <span class="k">30日最高</span>
+              <span class="v">¥${maxP}</span>
+            </div>
+            <div class="stat-box">
+              <span class="k">30日最低</span>
+              <span class="v">¥${minP}</span>
+            </div>
+            <div class="stat-box">
+              <span class="k">30日累计变动</span>
+              <span class="v ${periodCls}">${periodDiffStr} 元</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  // 构建【时间 | 酒 | 酒价】时间倒序列表行
+  let tableRowsHtml = '';
+  if (filteredRows.length === 0) {
+    tableRowsHtml = `
+      <div class="empty-box">
+        <div class="empty-icon">🍶</div>
+        <p>未找到匹配的白酒终端零售成交价记录</p>
+      </div>
+    `;
+  } else {
+    let lastRenderedDate = '';
+    tableRowsHtml = filteredRows.map(row => {
+      // 当展示多日数据时，在每个新日期组前插入时间倒序日历分隔条
+      let dateGroupBanner = '';
+      if (selectedLiquorId === 'all' && selectedLiquorDate === 'all' && !query && row.date !== lastRenderedDate) {
+        lastRenderedDate = row.date;
+        const isLatestTag = row.date === latestDate ? '<span class="liquor-date-group-badge">最新披露</span>' : '';
+        dateGroupBanner = `
+          <div class="liquor-date-group-header">
+            <div class="liquor-date-group-left">
+              <span class="liquor-date-dot"></span>
+              <span class="liquor-date-group-title">${escapeHtml(row.date)}</span>
+              ${isLatestTag}
+            </div>
+            <span class="liquor-date-group-sub">过去24h全国终端真实成交均价</span>
+          </div>
+        `;
+      }
+
+      const chg = Number(row.price_change) || 0;
+      let chgHtml = '<span class="liquor-chg-pill flat">持平 0</span>';
+      if (chg > 0) {
+        chgHtml = `<span class="liquor-chg-pill up">▲ +${chg}</span>`;
+      } else if (chg < 0) {
+        chgHtml = `<span class="liquor-chg-pill down">▼ ${chg}</span>`;
+      }
+
+      const dateHtml = highlightText(escapeHtml(row.date), searchQuery);
+      const nameHtml = highlightText(escapeHtml(row.name), searchQuery);
+      const specHtml = escapeHtml(row.specifications || '500ml');
+      const unitHtml = escapeHtml(row.unit || '元/瓶');
+      const copyStr = `【新浪财经·酒价内参】${row.date} ${row.name}（${row.specifications}）市场真实成交终端零售价：${row.price} ${row.unit}（较前一日${chg > 0 ? '+' + chg : (chg < 0 ? chg : '持平')}）`;
+
+      return `
+        ${dateGroupBanner}
+        <div class="liquor-table-row" data-liquor-row-id="${row.liquor_id}" data-copy="${escapeHtml(copyStr)}" title="点击查看【${escapeHtml(row.name)}】历史走势或复制报价">
+          <!-- 第1列：时间（倒序排列） -->
+          <div class="liquor-col-time">
+            <span class="liquor-date-main">${dateHtml}</span>
+            <span class="liquor-date-sub">终端成交日</span>
+          </div>
+
+          <!-- 第2列：酒（知名白酒大单品） -->
+          <div class="liquor-col-wine">
+            <img class="liquor-bottle-thumb" src="${escapeHtml(row.pic)}" alt="${escapeHtml(row.name)}" loading="lazy" onerror="this.style.display='none'" />
+            <div class="liquor-wine-info">
+              <div class="liquor-wine-name">${nameHtml}</div>
+              <div class="liquor-wine-spec">${specHtml}</div>
+            </div>
+          </div>
+
+          <!-- 第3列：酒价（市场真实成交终端零售价） -->
+          <div class="liquor-col-price">
+            <div class="liquor-price-main">
+              <span class="liquor-price-yen">¥</span><span class="liquor-price-num">${row.price}</span>
+              <span class="liquor-price-unit">${unitHtml}</span>
+            </div>
+            <div class="liquor-price-meta">
+              ${chgHtml}
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  const bundleChangeText = bundleTotalChange > 0 ? `+${bundleTotalChange}` : `${bundleTotalChange}`;
+  const bundleChangeCls = bundleTotalChange > 0 ? 'up' : (bundleTotalChange < 0 ? 'down' : 'flat');
+
+  elements.newsFeed.innerHTML = `
+    <div class="liquor-feed-wrapper">
+      <!-- 刊头：新浪财经【酒价内参】 -->
+      <div class="liquor-masthead">
+        <div class="liquor-masthead-top">
+          <div class="liquor-masthead-brand">
+            <span class="liquor-brand-dot"></span>
+            <span>SINA FINANCE // 新浪财经 · 酒价内参</span>
+          </div>
+          <div class="liquor-masthead-actions">
+            <a href="https://finance.sina.cn/app/2025_baijiu_list.shtml" target="_blank" rel="noopener noreferrer" class="liquor-source-link">新浪官方源 ↗</a>
+            <button type="button" class="liquor-sync-btn" id="syncLiquorBtn">
+              ${isSyncingLiquor ? '⏳ 同步中...' : '⚡ 实时同步'}
+            </button>
+          </div>
+        </div>
+
+        <div class="liquor-masthead-body">
+          <div class="liquor-masthead-title-row">
+            <h3 class="liquor-masthead-title">知名白酒大单品 · 市场真实成交终端零售价</h3>
+            <span class="liquor-Order-badge">时间倒序排列 ↓</span>
+          </div>
+          <p class="liquor-masthead-desc">
+            数据源自新浪财经【酒价内参】全国约 200 个采集点（酒企指定经销商、社会经销商、主流电商、零售网点）过去 24 小时各单品<strong>市场真实成交终端零售均价</strong>。
+          </p>
+
+          <!-- 核心基准指标速览 -->
+          <div class="liquor-kpi-strip">
+            <div class="liquor-kpi-card">
+              <span class="kpi-label">飞天茅台 (终端 / 直营)</span>
+              <div class="kpi-val-row">
+                <span class="kpi-price">¥${feitianLatest ? feitianLatest.price : 1766}</span>
+                <span class="kpi-sub">/ ¥1499</span>
+              </div>
+            </div>
+            <div class="liquor-kpi-card">
+              <span class="kpi-label">五粮液普五 (终端成交)</span>
+              <div class="kpi-val-row">
+                <span class="kpi-price">¥${wuliangyeLatest ? wuliangyeLatest.price : 786}</span>
+                <span class="kpi-sub">元/瓶</span>
+              </div>
+            </div>
+            <div class="liquor-kpi-card">
+              <span class="kpi-label">12大单品单瓶总价</span>
+              <div class="kpi-val-row">
+                <span class="kpi-price">¥${bundleTotalPrice || 9963}</span>
+                <span class="kpi-chg ${bundleChangeCls}">${bundleChangeText}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 筛选栏1：按知名白酒大单品筛选 -->
+        <div class="liquor-filter-bar">
+          <span class="liquor-filter-label">酒品:</span>
+          <div class="liquor-pills-scroll">
+            ${liquorPillsHtml}
+          </div>
+        </div>
+
+        <!-- 筛选栏2：按日期筛选（倒序） -->
+        <div class="liquor-filter-bar date-bar">
+          <span class="liquor-filter-label">时间:</span>
+          <div class="liquor-pills-scroll">
+            ${datePillsHtml}
+          </div>
+        </div>
+      </div>
+
+      ${singleLiquorStatsHtml}
+
+      <!-- 严格三列表头：时间 | 酒 | 酒价 -->
+      <div class="liquor-table-card">
+        <div class="liquor-table-header">
+          <div class="lh-col-time">时间 ↓</div>
+          <div class="lh-col-wine">酒（知名白酒大单品）</div>
+          <div class="lh-col-price">酒价（终端零售价）</div>
+        </div>
+        <div class="liquor-table-body">
+          ${tableRowsHtml}
+        </div>
+      </div>
+    </div>
+  `;
+
+  // 绑定酒品筛选点击
+  elements.newsFeed.querySelectorAll('[data-liquor-id]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-liquor-id') || 'all';
+      selectedLiquorId = id;
+      renderLiquorFeed();
+    });
+  });
+
+  // 绑定日期筛选点击
+  elements.newsFeed.querySelectorAll('[data-liquor-date]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const dt = btn.getAttribute('data-liquor-date') || 'all';
+      selectedLiquorDate = dt;
+      renderLiquorFeed();
+    });
+  });
+
+  // 绑定实时同步按钮
+  const syncBtn = document.getElementById('syncLiquorBtn');
+  if (syncBtn) {
+    syncBtn.addEventListener('click', () => {
+      syncLatestLiquorPrices(true);
+    });
+  }
+
+  // 绑定行点击：点击某行可切换查看该单品完整时间倒序走势，同时复制该条报价
+  elements.newsFeed.querySelectorAll('.liquor-table-row').forEach(rowEl => {
+    rowEl.addEventListener('click', () => {
+      const rowLiquorId = rowEl.getAttribute('data-liquor-row-id');
+      const copyText = rowEl.getAttribute('data-copy');
+      if (copyText) {
+        copyToClipboard(copyText);
+      }
+      if (selectedLiquorId === 'all' && rowLiquorId) {
+        selectedLiquorId = rowLiquorId;
+        selectedLiquorDate = 'all';
+        renderLiquorFeed();
+        showToast('已筛选该单品历史走势（报价已复制）');
+      } else {
+        showToast('已复制该条白酒终端零售成交价');
+      }
+    });
+  });
+}
+
+// 实时从新浪财经【酒价内参】官方 JSONP 接口同步最新报价与历史明细
+async function syncLatestLiquorPrices(showManualToast = true) {
+  if (isSyncingLiquor) return;
+  if (typeof fetchSinaLiquorListJsonp !== 'function') return;
+
+  isSyncingLiquor = true;
+  if (elements.refreshBtn) elements.refreshBtn.classList.add('spinning');
+  if (currentTab === 'liquor') renderLiquorFeed();
+
+  try {
+    if (showManualToast) showToast('正在连接新浪财经【酒价内参】同步最新终端价...');
+    const liveList = await fetchSinaLiquorListJsonp(8000);
+    if (Array.isArray(liveList) && liveList.length > 0) {
+      liquorStore.list = liveList;
+      const latestDateFromApi = liveList[0].price_date;
+
+      // 并发拉取各单品的最新 31 日历史明细
+      const detailPromises = liveList.map(item =>
+        fetchSinaLiquorDetailJsonp(item.liquor_id, 8000)
+          .then(data => {
+            if (data && Array.isArray(data.history)) {
+              liquorStore.details[item.liquor_id] = data;
+            }
+          })
+          .catch(() => {})
+      );
+      await Promise.all(detailPromises);
+
+      if (typeof saveLiquorStore === 'function') {
+        saveLiquorStore(liquorStore);
+      }
+      if (showManualToast) {
+        showToast(`已同步新浪【酒价内参】最新终端成交价 (${latestDateFromApi || '最新'})`);
+      }
+    }
+  } catch (err) {
+    console.warn('同步新浪酒价内参提示:', err);
+    if (showManualToast) {
+      showToast('已展示最新新浪财经【酒价内参】数据');
+    }
+  } finally {
+    isSyncingLiquor = false;
+    if (elements.refreshBtn) elements.refreshBtn.classList.remove('spinning');
+    if (currentTab === 'liquor') renderLiquorFeed();
+  }
+}
+
 // ================= 事件绑定 =================
 function bindEvents() {
   // 顶部手动刷新按钮
@@ -956,6 +1351,8 @@ function bindEvents() {
     elements.refreshBtn.addEventListener('click', () => {
       if (currentTab === 'ai') {
         syncLatestTldrIssue(true);
+      } else if (currentTab === 'liquor') {
+        syncLatestLiquorPrices(true);
       } else {
         fetchLatestNews(true);
       }
