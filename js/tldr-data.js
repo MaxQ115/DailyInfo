@@ -56,6 +56,200 @@ const TLDR_SECTION_MAP = {
 };
 
 const PRESET_TLDR_ISSUES = {
+  '2026-11-13': {
+    "date": "2026-11-13",
+    "weekday": "FRI · 周五",
+    "issueNo": "VOL. 2026.11.13",
+    "headline_zh": "Gemini 4 Hydrogen 🚀、自托管 Claude 代理🔒、Replit 代理商业 🛒",
+    "headline_en": "Gemini 4 Hydrogen 🚀, self-hosted Claude agents 🔒, Replit agent commerce 🛒",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "双子座 4 氢",
+            "title_en": "Gemini 4 Hydrogen",
+            "read_time": "14 MIN READ",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Gemini",
+            "summary_zh": "Google 推出了 Gemini 4 Hydrogen，这是一种针对编码和代理工作流程进行优化的快速、高效的模型。它在人工智能分析指数上得分为 51，超过 Gemini 4 Argon，定价为每百万个输入代币 1.50 美元，每百万个输出代币 7.50 美元。",
+            "summary_en": "Google introduced Gemini 4 Hydrogen, a fast, efficient model optimized for coding and agentic workflows. It scored 51 on the Artificial Analysis Intelligence Index, surpassing Gemini 4 Argon, and is priced at $1.50 per million input tokens and $7.50 per million output tokens."
+          },
+          {
+            "title_zh": "在您的安全范围内操作 Claude Managed Agents",
+            "title_en": "Operate Claude Managed Agents inside your security perimeter",
+            "read_time": "4 MIN READ",
+            "url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents?utm_source=tldrai",
+            "domain": "claude.com",
+            "highlight_kw": "Operate Claude",
+            "summary_zh": "自托管的 Claude Managed Agents 为开发人员提供私人测试版，让他们可以直接在公司自己的基础设施内构建和运行代理。此设置允许托管代理服务的完整内部部署，包括沙箱、凭证处理和会话历史记录。组织受益于增强的安全性和对代理操作的控制，能够与现有云提供商集成并遵守零数据保留策略。",
+            "summary_en": "Self-hosted Claude Managed Agents offers private beta for developers to build and run agents directly within their company's own infrastructure. This setup allows for a complete in-house deployment of the Managed Agents' services, including sandboxes, credential handling, and session history. Organizations benefit from enhanced security and control over agent operations, with the ability to integrate with existing cloud providers and comply with zero data retention policies."
+          },
+          {
+            "title_zh": "Replit Agent 现在可以为您的企业购买并帮助您吸引客户",
+            "title_en": "Replit Agent can now buy for your business and help you reach customers",
+            "read_time": "5 MIN READ",
+            "url": "https://replit.com/blog/replit-agent-ads-commerce?utm_source=tldrai",
+            "domain": "replit.com",
+            "highlight_kw": "Replit Agent",
+            "summary_zh": "Replit Agent 现在可以帮助企业进行供应采购和运行 Google Ads。它利用与 Visa 和 Stripe 的 Link 来实现安全、受控的交易，并通过分析内容和建议策略来简化广告活动。",
+            "summary_en": "Replit Agent now helps businesses with supply purchases and running Google Ads. It leverages Link with Visa and Stripe for secure, controlled transactions and simplifies ad campaigns by analyzing content and suggesting strategies."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "中国顶尖前沿人工智能模型带有受出口管制的 NVIDIA Blackwell GPU 的指纹",
+            "title_en": "Top Chinese Frontier AI Models Carry the Fingerprint of Export-Controlled NVIDIA Blackwell GPUs",
+            "read_time": "37 MIN READ",
+            "url": "https://unemploymentlabs.com/checkpoint-forensics?utm_source=tldrai",
+            "domain": "unemploymentlabs.com",
+            "highlight_kw": "Top Chinese",
+            "summary_zh": "对公开发布的人工智能模型的取证分析发现，有证据表明 DeepSeek、Moonshot AI、MiniMax 和 Ant Group 已经获得了 Nvidia Blackwell GPU 的使用权。自 4 月份以来，这些公司发布的六种模型包含与 Blackwell 硬件相匹配的数字模式。几家领先的中国人工智能开发商可能已经开始使用 Blackwell 来训练他们的最新模型。虽然分析提供了访问高级计算硬件的技术证据，但它没有确定芯片位于何处、如何获得访问权限或是否违反出口管制。",
+            "summary_en": "A forensic analysis of publicly released AI models found evidence that DeepSeek, Moonshot AI, MiniMax, and Ant Group have gained access to Nvidia's Blackwell GPUs. Six models released by these companies since April contain numerical patterns that match Blackwell hardware. Several leading Chinese AI developers have likely begun using Blackwell to train their newest models. While the analysis provides technical evidence of access to advanced computing hardware, it doesn't establish where the chips were located, how access was obtained, or whether export controls were violated."
+          },
+          {
+            "title_zh": "使用纯整数算术消除法学硕士推理中的不确定性",
+            "title_en": "Eliminating Nondeterminism in LLM Inference with Integer-Only Arithmetic",
+            "read_time": "15 MIN READ",
+            "url": "https://nathan.rs/posts/detllm/?utm_source=tldrai",
+            "domain": "nathan.rs",
+            "highlight_kw": "Eliminating Nondeterminism",
+            "summary_zh": "浮点数存储固定数量的有效数字和单独的指数。当两个指数相差很大的数字相加时，小数字必须移动才能与大数字对齐，最后掉下来的数字就会消失。这意味着 (a+b)+c 并不总是等于 a+(b+c)。这篇文章着眼于使用精确的整数加法时会发生什么。",
+            "summary_en": "A floating-point number stores a fixed number of significant digits and a separate exponent. When two numbers with very different exponents are added, the small one has to be shifted to line up with the big one, and the digits that fall off on the end are gone. That means that (a+b)+c is not always equal to a+(b+c). This post looks at what happens when integer addition, which is exact, is used."
+          },
+          {
+            "title_zh": "代理异常检测在我们未编写的基准上的得分如何",
+            "title_en": "How Agent Anomaly Detection scores on benchmarks we didn't write",
+            "read_time": "8 MIN READ",
+            "url": "https://developers.googleblog.com/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/?utm_source=tldrai",
+            "domain": "developers.googleblog.com",
+            "highlight_kw": "How Agent",
+            "summary_zh": "代理异常检测根据外部基准测试，标记了 87% 的已执行有害指令，突出了识别目标劫持和工具滥用方面的优势，但在内存中毒方面存在弱点。它表现出不同的误报率，对于涉及高影响力工具的任务，误报率最高为 16%。持续改进的重点是检测微小的、潜在有害的行为，区分正常使用和误用，以及为新代理提供更快的全面覆盖。",
+            "summary_en": "Agent Anomaly Detection, tested against external benchmarks, flagged 87% of executed harmful instructions, highlighting strengths in identifying goal hijack and tool misuse but weaknesses with poisoned memory. It demonstrated varying false alarm rates, with the highest at 16% for tasks involving high-impact tools. Ongoing improvements focus on detecting small, potentially harmful actions, distinguishing normal use from misuse, and providing quicker full coverage for new agents."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "成为 TLDR 人工智能社区创始成员",
+            "title_en": "Become a founding member of TLDR's AI community",
+            "read_time": "2 MIN FORM",
+            "url": "https://danni763618.typeform.com/to/H1tYViME?utm_source=tldrai",
+            "domain": "danni763618.typeform.com",
+            "highlight_kw": "Become",
+            "summary_zh": "TLDR 正在为人工智能构建者推出一个精心策划的社区，以讨论重大新闻和发布。最好的链接和评论将出现在 TLDR AI 中。在此申请加入。",
+            "summary_en": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join."
+          },
+          {
+            "title_zh": "阿特拉斯",
+            "title_en": "Atlas",
+            "read_time": "WEBSITE",
+            "url": "https://worldlabs.ai/atlas?utm_source=tldrai",
+            "domain": "worldlabs.ai",
+            "highlight_kw": "Atlas",
+            "summary_zh": "Atlas 是一种全向模型，原生可对文本、图像、视频和 3D 进行操作。所有输入都被组合到一个共享的空间上下文中。 Atlas 可以执行广泛的任务，涵盖世界生成、重建和模拟。可以使用模型生成的场景示例。",
+            "summary_en": "Atlas is an omni model that natively operates on text, images, video, and 3D. All inputs are combined into a shared spatial context. Atlas can perform a broad range of tasks spanning world generation, reconstruction, and simulation. Examples of scenes generated with the model are available."
+          },
+          {
+            "title_zh": "困惑决定者",
+            "title_en": "Perplexity Decider",
+            "read_time": "26 MIN READ",
+            "url": "https://www.perplexity.ai/hub/blog/perplexity-decider?utm_source=tldrai",
+            "domain": "perplexity.ai",
+            "highlight_kw": "Perplexity Decider",
+            "summary_zh": "Perplexity 发布了受 Jev 启发的两个模型的更新，即 TypeSafe AI 的 System One 模型。 Perplexity Decider 支持具有有序或无序标签的二元和多类分类。它返回应用程序可用于对输入进行分类、路由、排名和评估的概率。 Decider v1.3 和 Decider Flash v1.3 这两种新模型都提高了各种文本和视觉任务的性能和稳健性。它们还有一个新功能，可以突出显示用于命名实体识别、个人信息识别和提取问答任务的选定内容。",
+            "summary_en": "Perplexity has released updates to two models inspired by Jev, TypeSafe AI's System One model. Perplexity Decider supports binary and multi-class classification with ordered or unordered labels. It returns probabilities that applications can use to classify, route, rank, and evaluate inputs. Both new models, Decider v1.3 and Decider Flash v1.3, improve performance and robustness across a broad range of text and vision tasks. They also have a new feature that highlights selected content for named entity recognition, personal information identification, and extractive question-answering tasks."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "NVIDIA 宣布首席执行官换届",
+            "title_en": "NVIDIA Announces CEO Transition",
+            "read_time": "3 MIN READ",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition?utm_source=tldrai",
+            "domain": "nvidianews.nvidia.com",
+            "highlight_kw": "NVIDIA Announces",
+            "summary_zh": "黄仁勋辞去英伟达首席执行官职务。财务主管科莱特·克雷斯 (Colette Kress) 将担任临时首席执行官，直至任命永久继任者。董事会正在考虑内部和外部候选人。英伟达董事会任命长期董事 Harvey C. Jones 为其首任主席。该公司将于11月17日如期公布2027财年第三季度业绩。",
+            "summary_en": "Jensen Huang has resigned as Nvidia's CEO. Finance chief Colette Kress will serve as interim CEO until a permanent successor is named. The board is considering both internal and external candidates. Nvidia's board has appointed long-time director Harvey C. Jones as its first ever chair. The company will report its third-quarter fiscal 2027 results on November 17 as previously scheduled."
+          },
+          {
+            "title_zh": "每个人都从抱脸中吸取了错误的教训",
+            "title_en": "Everyone is learning the wrong lesson from Hugging Face",
+            "read_time": "9 MIN READ",
+            "url": "https://blog.karthiktadepalli.com/p/hugging-face?utm_source=tldrai",
+            "domain": "blog.karthiktadepalli.com",
+            "highlight_kw": "Everyone",
+            "summary_zh": "抱脸事件通常被视为网络安全事件。人们将其视为人工智能如何闯入关键基础设施并造成巨大破坏的一个例子。然而，这并不是什么新鲜事：我们已经了解人工智能的黑客能力一段时间了。真正的教训是，前沿人工智能想要我们不想要的东西，并且他们会不懈地追求这些想要的东西。",
+            "summary_en": "The Hugging Face incident is commonly viewed as a cybersecurity incident. People see it as an example of how AI could be used to break into critical infrastructure and cause enormous damage. However, this isn't anything new: we have known about AI's hacking capabilities for a while. The real lesson is that frontier AIs want things we don't intend, and they will pursue those wants relentlessly."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "面向 1 年 AGI 时间表",
+            "title_en": "Orienting to 1 year AGI timelines",
+            "read_time": "22 MIN READ",
+            "url": "https://www.lesswrong.com/posts/biFHYdJnMSCmW9Xou/orienting-to-1-year-agi-timelines?utm_source=tldrai",
+            "domain": "lesswrong.com",
+            "highlight_kw": "Orienting",
+            "summary_zh": "现在实现超级人工智能的时间表非常短，一些人预测它将在未来两年内实现。",
+            "summary_en": "Timelines to artificial superintelligence are now very short, with some predicting that it will be achieved within the next two years."
+          },
+          {
+            "title_zh": "使用克劳德会议",
+            "title_en": "Use Claude Meetings",
+            "read_time": "4 MIN READ",
+            "url": "https://support.claude.com/en/articles/18325154-use-claude-meetings?utm_source=tldrai",
+            "domain": "support.claude.com",
+            "highlight_kw": "Use Claude",
+            "summary_zh": "现在，Claude 可以作为可见参与者添加到 Google Meet，以便在通话期间做笔记、回答问题并实时构建工件。",
+            "summary_en": "Claude can now be added to Google Meet as a visible participant to take notes, answer questions, and build artifacts live during the call."
+          },
+          {
+            "title_zh": "默认情况下很快：Helion 内核的编译时启发式方法",
+            "title_en": "Fast by Default: Compile-Time Heuristics for Helion Kernels",
+            "read_time": "15 MIN READ",
+            "url": "https://pytorch.org/blog/fast-by-default-compile-time-heuristics-for-helion-kernels/?utm_source=tldrai",
+            "domain": "pytorch.org",
+            "highlight_kw": "Fast",
+            "summary_zh": "Helion 的新编译时启发式方法可显着提高内核性能，而无需进行耗时的自动调整。",
+            "summary_en": "Helion's new compile-time heuristics boost kernel performance significantly without the need for time-consuming autotuning."
+          },
+          {
+            "title_zh": "LiquidCodec：针对速度进行优化的高保真音频标记化",
+            "title_en": "LiquidCodec: High-Fidelity Audio Tokenization Optimized for Speed",
+            "read_time": "17 MIN READ",
+            "url": "https://www.liquid.ai/blog/liquidcodec?utm_source=tldrai",
+            "domain": "liquid.ai",
+            "highlight_kw": "LiquidCodec",
+            "summary_zh": "LiquidCodec 具有快速语音生成和较小的内存占用等特点，使得构建在本地运行时能够维持对话的应用程序变得更加容易。",
+            "summary_en": "LiquidCodec features fast speech generation with a small memory footprint, making it easier to build applications that can sustain a conversation while running locally."
+          },
+          {
+            "title_zh": "Meta 的 Muse 现在可以给企业打电话",
+            "title_en": "Meta's Muse Can Now Call Businesses",
+            "read_time": "1 MIN READ",
+            "url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/?utm_source=tldrai",
+            "domain": "techcrunch.com",
+            "highlight_kw": "Meta",
+            "summary_zh": "Meta 将 Muse 的人工智能呼叫功能扩展到所有付费用户，让助手代表用户联系美国企业。",
+            "summary_en": "Meta expanded Muse's AI-powered calling feature to all paid subscribers, letting the assistant contact US businesses on users' behalf."
+          }
+        ]
+      }
+    ]
+  },
   '2026-11-12': {
     "date": "2026-11-12",
     "weekday": "THU · 周四",
