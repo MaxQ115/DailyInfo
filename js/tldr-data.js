@@ -56,6 +56,996 @@ const TLDR_SECTION_MAP = {
 };
 
 const PRESET_TLDR_ISSUES = {
+  '2026-11-12': {
+    "date": "2026-11-12",
+    "weekday": "THU · 周四",
+    "issueNo": "VOL. 2026.11.12",
+    "headline_zh": "Grok Bot 1.0 🤖、AlphaGenome 2 🧬、Gemini Decisions 🧠",
+    "headline_en": "Grok Bot 1.0 🤖, AlphaGenome 2 🧬, Gemini Decisions 🧠",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "Gemini Decisions API：快速、经过校准的多模式决策",
+            "title_en": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+            "read_time": "1 MIN READ",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Gemini Decisions",
+            "summary_zh": "Google 的 Gemini Decisions API 通过分析图像和文本等输入，实现快速、校准的多模式决策。它评估场景并提供可行的见解，例如确定泄漏严重程度和建议清理行动。",
+            "summary_en": "Google's Gemini Decisions API enables fast, calibrated multimodal decision-making by analyzing inputs like images and text. It assesses scenarios and provides actionable insights, such as determining spill severity and recommending cleanup actions."
+          },
+          {
+            "title_zh": "Grok Bot 1.0 的新增功能",
+            "title_en": "What's new in Grok Bot 1.0",
+            "read_time": "11 MIN READ",
+            "url": "https://flaviocopes.com/grok-bot-1-0/?utm_source=tldrai",
+            "domain": "flaviocopes.com",
+            "highlight_kw": "What",
+            "summary_zh": "Grok Bot 1.0 添加了您可以发布和共享的团队机器人、Slack 和 Microsoft Teams、Meet 和 Zoom 会议、共享连接器以及复习的学习内容。现在，它是一个个人助理，整个团队都可以在应用程序、Slack、Microsoft Teams 和视频通话中与之交谈。本文介绍了如何创建团队机器人并发布它、如何将机器人引入 Microsoft Teams、如何将机器人添加到会议等。它还着眼于新的管理控制以及无需团队即可实现的功能。",
+            "summary_en": "Grok Bot 1.0 adds Team Bots you can publish and share, Slack and Microsoft Teams, meetings on Meet and Zoom, shared connectors, and reviewed learnings. It is now a personal assistant that the whole team can talk to in the app, in Slack, in Microsoft Teams, and in video calls. This post covers how to create a Team Bot and publish it, how to bring the bot into Microsoft Teams, how to add a bot to a meeting, and more. It also looks at the new admin controls and what's possible without a team."
+          },
+          {
+            "title_zh": "Runway Praxis-1 现已推出：开放式重量机器人模型",
+            "title_en": "Runway Praxis-1 Is Now Available: Open-Weight Robotics Model",
+            "read_time": "3 MIN READ",
+            "url": "https://runway.com/news/company-news/praxis-1-is-now-available?utm_source=tldrai",
+            "domain": "runway.com",
+            "highlight_kw": "Runway Praxis-1",
+            "summary_zh": "Runway 的 Praxis-1 是一个 27B 参数开放式重量机器人模型，现已在 Apache 2.0 下提供。该模型在预测视频和动作方面表现出色，在 1,200 个片段中以 46.2% 的成功率位居 NVIDIA RoboLab-120 排行榜榜首。它可以在 GitHub 和 Hugging Face 上访问，支持全面和 LoRA 微调，与 NVIDIA 硬件兼容，并适用于各种机器人实施例。",
+            "summary_en": "Runway's Praxis-1, a 27B-parameter open-weight robotics model, is now available under Apache 2.0. The model excels in predicting video and actions, topping NVIDIA's RoboLab-120 leaderboard with a 46.2% success rate across 1,200 episodes. It's accessible on GitHub and Hugging Face, with support for full and LoRA fine-tuning, compatible with NVIDIA hardware, and adaptable for various robotic embodiments."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "逃离太空：第二部分",
+            "title_en": "Escaping SPACE: Part II",
+            "read_time": "28 MIN READ",
+            "url": "https://www.perplexity.ai/hub/blog/escaping-space-part-ii?utm_source=tldrai",
+            "domain": "perplexity.ai",
+            "highlight_kw": "Escaping SPACE",
+            "summary_zh": "Perplexity 针对其 SPACE 代理沙箱测试了 12 个模型：没有一​​个模型能够逃脱虚拟机主机隔离，但在缺陷得到修复之前，有几个模型通过 DNS 欺骗和共享 IP 漏洞绕过了网络控制。实验还发现，夺旗会促使特工分散注意力，远离正在测试的安全边界。",
+            "summary_en": "Perplexity tested 12 models against its SPACE agent sandbox: none escaped VM-host isolation, but several bypassed network controls through DNS spoofing and shared-IP exploitation before the flaws were fixed. The experiments also found that capture-the-flag prompts distracted agents from the security boundary being tested."
+          },
+          {
+            "title_zh": "MCP、CLI 与技能：各自的具体成本",
+            "title_en": "MCP vs CLI vs Skills: What Each Costs in Context",
+            "read_time": "11 MIN READ",
+            "url": "https://openrouter.ai/blog/insights/mcp-vs-cli-vs-skills/?utm_source=tldrai",
+            "domain": "openrouter.ai",
+            "highlight_kw": "MCP",
+            "summary_zh": "与 CLI 或技能方法不同，MCP 服务器显着增加了令牌的使用，为每个请求添加了数千个输入令牌。在 Sonnet 5.5 上，一个简单的任务显示 MCP 使用默认工具消耗了 59,417 个令牌，而 CLI 为 1,421 个，技能为 3,315 个，凸显了工具密集型 MCP 设置的高成本。实施工具搜索可以通过推迟工具定义来降低代币成本，将前期工具集成本减少到 600 个代币以下，从而实现最佳效率。",
+            "summary_en": "MCP servers significantly increase token use, adding thousands of input tokens per request, unlike CLI or skill methods. On Sonnet 5.5, a simple task showed MCP consuming 59,417 tokens with default tools against CLI's 1,421 and skill's 3,315, highlighting the high cost of tool-heavy MCP setups. Implementing Tool Search can cut token costs by deferring tool definitions, reducing upfront toolset costs to under 600 tokens for optimal efficiency."
+          },
+          {
+            "title_zh": "LLM 可以学习一些关于填充标记的多步骤推理，而不是可见的 CoT",
+            "title_en": "LLMs can learn some multi-step reasoning on filler tokens instead of visible CoT",
+            "read_time": "9 MIN READ",
+            "url": "https://www.lesswrong.com/posts/EHkwCDAmhWPAWEziM/llms-can-learn-some-multi-step-reasoning-on-filler-tokens-2?utm_source=tldrai",
+            "domain": "lesswrong.com",
+            "highlight_kw": "LLMs",
+            "summary_zh": "通过更改训练设置并将 LoRA 应用到 Qwen3.6-35B-A3B 和 gpt-oss-20b，研究人员教模型执行一些多步骤任务，同时仅发出填充标记，在七个任务中的三个上击败了仅回答基线。他们还绘制了理论层深度限制并展示了经验墙，其中一些任务学习了 60 个步骤，而其他任务在 1 到 3 个步骤后就失败了。这项工作的目的是在解释思想链时将填充令牌推理与隐写隐藏推理分开。",
+            "summary_en": "By changing the training setup and applying LoRAs to Qwen3.6-35B-A3B and gpt-oss-20b, researchers taught models to do some multi-step tasks while emitting only filler tokens, beating an answer-only baseline on three of seven tasks. They also mapped theoretical layer-depth limits and showed empirical walls, with some tasks learned out to 60 steps and others failing after one to three. The work is meant to separate filler-token reasoning from steganographic hidden reasoning when interpreting chain-of-thought."
+          },
+          {
+            "title_zh": "不要编写内核，而是派生它们",
+            "title_en": "Don't Write Kernels, Derive Them",
+            "read_time": "63 MIN READ",
+            "url": "https://muni.works/research/tang?utm_source=tldrai",
+            "domain": "muni.works",
+            "highlight_kw": "Don",
+            "summary_zh": "当前的模型依赖于特定于算子、芯片和融合的手写内核，限制了跨设备和场景的灵活性。 Tang 的 IR 能够通过视图和理解等构造动态派生内核，从而消除了对预定义内核的需要。",
+            "summary_en": "Current models rely on hand-written kernels specific to operators, chips, and fusions, limiting flexibility across devices and scenarios. Tang's IR enables on-the-fly derivation of kernels through constructs such as views and comprehensions, eliminating the need for pre-defined kernels."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "反重力中已开始使用浏览器",
+            "title_en": "Browser use has been rolling out in Antigravity",
+            "read_time": "1 MIN READ",
+            "url": "https://threadreaderapp.com/thread/2120556423474028576.html?utm_source=tldrai",
+            "domain": "threadreaderapp.com",
+            "highlight_kw": "Browser",
+            "summary_zh": "Antigravity 中的浏览器使用闭合了研究、编写代码和实时验证之间的循环。用户控制身份验证，下载会暂停，直到获得批准。代理可以使用浏览器同时运行多个任务。帖子中提供了视频演示。",
+            "summary_en": "Browser use in Antigravity closes the loop between researching, writing code, and verifying it live. Users control authentication, and downloads pause until they are approved. Agents can use the browser to run multiple tasks at once. A video demo is available in the post."
+          },
+          {
+            "title_zh": "AlphaGenome 2：预测 DNA 如何塑造细胞和疾病",
+            "title_en": "AlphaGenome 2: Predicting how DNA shapes cells and disease",
+            "read_time": "9 MIN READ",
+            "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/?utm_source=tldrai",
+            "domain": "deepmind.google",
+            "highlight_kw": "AlphaGenome",
+            "summary_zh": "AlphaGenome 2 改进了 DNA 变异对特定细胞类型影响的预测，有助于疾病的理解和研究。与前身相比，它的变异识别能力增加了一倍，并且无需重新训练即可适应分析新的细胞状态。该工具可用于非商业用途，连接遗传学和细胞生物学，精确定位原代人类细胞中与疾病相关的基因突变。",
+            "summary_en": "AlphaGenome 2 improves prediction of DNA variant effects on specific cell types, aiding in disease understanding and research. It doubles variant identification compared to its predecessor and adapts to analyze new cell states without retraining. Available for non-commercial use, the tool bridges genetics and cell biology, pinpointing disease-relevant genetic mutations in primary human cells."
+          },
+          {
+            "title_zh": "OpenAI 为 ChatGPT 原生插件开源 MCP 扩展",
+            "title_en": "OpenAI open-sources MCP Extensions for ChatGPT-native plugins",
+            "read_time": "1 MIN READ",
+            "url": "https://github.com/openai/mcp-extensions?utm_source=tldrai",
+            "domain": "github.com",
+            "highlight_kw": "OpenAI",
+            "summary_zh": "TypeScript 和 Python 包向 MCP 服务器和应用程序添加了特定于 ChatGPT 的功能，包括侧边栏入口点、自定义文件查看器、作曲家资源搜索和缩略图部分选择器。 SDK 附带 Bits & Bolts 演示插件和书面规范。",
+            "summary_en": "The TypeScript and Python packages add ChatGPT-specific features to MCP servers and apps, including sidebar entry points, custom file viewers, composer resource search, and thumbnail part pickers. The SDKs ship with a Bits & Bolts demo plugin and a written spec."
+          },
+          {
+            "title_zh": "A2UI 1.0：构建令人愉悦、快速、可靠、代理的体验",
+            "title_en": "A2UI 1.0: Build delightful, fast, reliable, agentic experiences",
+            "read_time": "11 MIN READ",
+            "url": "https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences/?utm_source=tldrai",
+            "domain": "developers.googleblog.com",
+            "highlight_kw": "A2UI 1.0",
+            "summary_zh": "A2UI 是一种用于生成 UI 的开放协议，可让客服人员通过交互式屏幕进行回答。开源渲染器 SDK 现在可用于 Web、Android、iOS，以及适用于 Python、TypeScript 和 Dart 的代理 SDK。 A2UI 使应用程序能够使用本机组件安全地绘制 UI。无论用户是在自己的应用程序中还是在托管 MCP 应用程序的第三方 AI 助手中联系公司代理，他们都可以获得相同的低延迟、高信任度和完全的本机保真度。",
+            "summary_en": "A2UI is an open protocol for generative UI that lets agents answer with interactive screens. Open-source renderer SDKs are now available for the web, Android, iOS, and agent SDKs for Python, TypeScript, and Dart. A2UI enables apps to draw UIs with native components, securely. Users get the same low latency, high trust, and complete native fidelity whether they reach a company's agent in its own app or in a third-party AI assistant that hosts MCP apps."
+          },
+          {
+            "title_zh": "Shopify 的生成发现模型",
+            "title_en": "Shopify's generative discovery model",
+            "read_time": "14 MIN READ",
+            "url": "https://shopify.engineering/generative-discovery?utm_source=tldrai",
+            "domain": "shopify.engineering",
+            "highlight_kw": "Shopify",
+            "summary_zh": "Shopify 部署了用于搜索和推荐的共享生成发现模型，利用语义 ID 令牌来增强产品个性化和相关性。该模型改进了线上和线下指标，例如转化率提升了 9.85%，搜索相关性显着提高。",
+            "summary_en": "Shopify deployed a shared generative discovery model for search and recommendation, leveraging semantic-ID tokens to enhance product personalization and relevance. The model improved online and offline metrics, such as a 9.85% lift in conversion rate and significant gains in search relevance."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "曼联采取行动阻止人工智能代理",
+            "title_en": "United moves to block AI agents",
+            "read_time": "2 MIN READ",
+            "url": "https://www.cnbc.com/2026/11/11/united-airlines-ai-agents.html?utm_source=tldrai",
+            "domain": "cnbc.com",
+            "highlight_kw": "United",
+            "summary_zh": "美国联合航空公司正在采取措施限制人工智能代理跨其平台和代理渠道的访问，理由是办理登机手续等任务存在凭证安全和责任风险。这些限制与 Expedia 和 Booking 等与代理商合作的旅游公司形成鲜明对比。",
+            "summary_en": "United Airlines is moving to restrict AI-agent access across its platforms and agency channels, citing credential security and liability risks around tasks such as check-in. The restrictions contrast with travel companies including Expedia and Booking that are partnering with agents."
+          },
+          {
+            "title_zh": "为什么连接在人工智能中更重要",
+            "title_en": "Why Connections Matter More in AI",
+            "read_time": "5 MIN READ",
+            "url": "https://www.jasonwei.net/blog/the-fall-of-what-you-can-do-and-the-rise-of-who-you-know?utm_source=tldrai",
+            "domain": "jasonwei.net",
+            "highlight_kw": "Why Connections",
+            "summary_zh": "随着编码代理将技术执行商品化、前沿研究需要更多计算资源、闭源开发使个人贡献更难以评估，专业关系在人工智能中变得越来越重要。",
+            "summary_en": "Professional relationships are becoming increasingly important in AI as coding agents commoditize technical execution, frontier research demands more compute resources, and closed-source development makes individual contributions harder to evaluate."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "谷歌桌面创建共享交互式规划空间",
+            "title_en": "Google Tabletop Creates Shared Interactive Planning Spaces",
+            "read_time": "1 MIN READ",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Google Tabletop",
+            "summary_zh": "Google 实验室的桌面将链接、文件和提示转变为交互式行程、民意调查、费用分配器和锦标赛分组。",
+            "summary_en": "Google Labs' Tabletop turns links, files, and prompts into interactive itineraries, polls, expense splitters, and tournament brackets."
+          },
+          {
+            "title_zh": "十一人工智能",
+            "title_en": "ElevenAI",
+            "read_time": "WEBSITE",
+            "url": "https://elevenlabs.io/elevenai?utm_source=tldrai",
+            "domain": "elevenlabs.io",
+            "highlight_kw": "ElevenAI",
+            "summary_zh": "ElevenAI 是一款桌面应用程序，可帮助使用代理放大工作。",
+            "summary_en": "ElevenAI is a desktop app that helps amplify work using agents."
+          },
+          {
+            "title_zh": "OpenAI 希望代理告诉网站您所在的位置",
+            "title_en": "OpenAI wants agents to tell websites where you are",
+            "read_time": "5 MIN READ",
+            "url": "https://joost.blog/agents-sharing-user-signals/?utm_source=tldrai",
+            "domain": "joost.blog",
+            "highlight_kw": "OpenAI",
+            "summary_zh": "两位 OpenAI 工程师最近分享了一项提案，建议进行一项更改，让代理将用户信息传递到网站，使他们看起来像普通访问者而不是机器人。",
+            "summary_en": "Two OpenAI engineers recently shared a proposal that suggests a change that will let agents pass user information along to websites to make them look like normal visitors rather than bots."
+          },
+          {
+            "title_zh": "据报道，英伟达董事会正准备罢免黄仁勋",
+            "title_en": "Nvidia board reportedly preparing to oust Huang",
+            "read_time": "3 MIN READ",
+            "url": "https://www.cbsnews.com/news/nvidia-board-ceo-jensen-huang-china/?utm_source=tldrai",
+            "domain": "cbsnews.com",
+            "highlight_kw": "Nvidia",
+            "summary_zh": "英伟达董事会正准备罢免首席执行官黄仁勋，此前他承认与美国情报机构认为是中国情报机构招募的一名女性有染。",
+            "summary_en": "Nvidia's board is preparing to oust CEO Jensen Huang following his admission of an affair with a woman US intelligence agencies believe was recruited by Chinese intelligence."
+          },
+          {
+            "title_zh": "Airbnb 的 AI 助手将每次预订的支持成本削减了 17%",
+            "title_en": "Airbnb's AI assistant cut support cost per booking 17%",
+            "read_time": "1 MIN READ",
+            "url": "https://www.customerexperiencedive.com/news/airbnb-reduces-customer-support-cost-per-booking-17/874307?utm_source=tldrai",
+            "domain": "customerexperiencedive.com",
+            "highlight_kw": "Airbnb",
+            "summary_zh": "Airbnb 的 AI 助手将每次预订的支持成本降低了 17% 以上，无需人工代理即可解决第三季度约 40% 的问题。",
+            "summary_en": "Airbnb's AI assistant cut support cost per booking by more than 17%, resolving about 40% of Q3 issues with no human agent."
+          },
+          {
+            "title_zh": "Databricks Genie 代理",
+            "title_en": "Databricks Genie Agents",
+            "read_time": "13 MIN READ",
+            "url": "https://www.databricks.com/blog/enterprise-context-action-genie-agents-now-analyze-more-data-sources-transform-your-work?utm_source=tldrai",
+            "domain": "databricks.com",
+            "highlight_kw": "Databricks Genie",
+            "summary_zh": "Databricks Genie Agents 现在可以分析非结构化文档以及数据库表，连接到企业工具，并通过治理控制在外部共享见解。",
+            "summary_en": "Databricks Genie Agents can now analyze unstructured documents alongside database tables, connect to enterprise tools, and share insights externally with governance controls."
+          }
+        ]
+      }
+    ]
+  },
+  '2026-11-11': {
+    "date": "2026-11-11",
+    "weekday": "WED · 周三",
+    "issueNo": "VOL. 2026.11.11",
+    "headline_zh": "Gemini 4 Carbon ⚡、Claude Sheets 📊、反重力群 🤖",
+    "headline_en": "Gemini 4 Carbon ⚡, Claude Sheets 📊, Antigravity Swarm 🤖",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "使用 Claude 表格、白板和交互式连接器",
+            "title_en": "Working with Claude Sheets, Whiteboards, and Interactive Connectors",
+            "read_time": "5 MIN READ",
+            "url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors?utm_source=tldrai",
+            "domain": "claude.com",
+            "highlight_kw": "Working",
+            "summary_zh": "Anthropic 推出了 Claude Sheets、Whiteboards 和 Data，这些新的工件类型让团队可以使用 Claude 构建电子表格、组织想法以及创建仪表板，而无需切换应用程序。交互式连接器现在将 Adob​​e 和 Atlassian 等合作伙伴应用程序直接嵌入到 Claude 中，Salesforce、NetSuite 和 Workday（测试版）的插件提供了用于销售、财务和人力资源工作的内置技能。克劳德会议即将推出，克劳德将通过电话记录笔记和更新文件。",
+            "summary_en": "Anthropic introduced Claude Sheets, Whiteboards, and Data, new artifact types that let teams build spreadsheets, organize ideas, and create dashboards with Claude without switching apps. Interactive connectors now embed partner apps like Adobe and Atlassian directly in Claude, and plugins from Salesforce, NetSuite, and Workday (in beta) ship with built-in skills for sales, finance, and HR work. Claude Meetings, which will bring Claude into calls to take notes and update documents, is coming soon."
+          },
+          {
+            "title_zh": "ChatGPT 中的企业和业务代理",
+            "title_en": "Businesses and Business Agents in ChatGPT",
+            "read_time": "3 MIN READ",
+            "url": "https://openai.com/index/introducing-businesses-chatgpt/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "Businesses",
+            "summary_zh": "OpenAI 在 ChatGPT 中引入了 Businesses，允许公司声明其个人资料、更新业务信息、提供产品提要以及定价和可用性，并跟踪客户参与度。美国符合条件的电子商务和在线服务企业还可以启动业务代理来回答问题并帮助客户在 ChatGPT 内探索他们的产品。该发布处于测试阶段。",
+            "summary_en": "OpenAI introduced Businesses in ChatGPT, allowing companies to claim their profiles, update business information, provide product feeds with pricing and availability, and track customer engagement. Eligible e-commerce and online service businesses in the US can also launch Business Agents that answer questions and help customers explore their offerings inside ChatGPT. The launch is in beta."
+          },
+          {
+            "title_zh": "Gemini 4 Carbon 现已上市",
+            "title_en": "Gemini 4 Carbon is now available",
+            "read_time": "12 MIN READ",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Gemini",
+            "summary_zh": "谷歌最强大的模型现已通过 AI Studio 和 Gemini for Business 中的 API 向所有付费开发者和企业开放，并且正在反重力、Gemini 应用程序和搜索中的 AI 模式中向 Google AI Ultra 订阅者推出。谷歌表示，Carbon 在 CursorBench 4.0、Perplexity 的 WANDR 和 Zapier 的 AutomationBench 上排名第一，每项任务的成本比次佳外部模型低 2 倍以上，每百万输入/输出代币价格与 Gemini 4 Argon 相同，为 2/10 美元。该版本通过 Fairwind 计划增加了前沿网络安全功能，并预览了反重力中的多代理模式 /swarm。",
+            "summary_en": "Google's strongest model is now available to all paying developers and enterprises through the API in AI Studio and Gemini for business, and is rolling out to Google AI Ultra subscribers in Antigravity, the Gemini app, and AI Mode in Search. Google says Carbon ranks first on CursorBench 4.0, Perplexity's WANDR, and Zapier's AutomationBench at more than 2x lower cost per task than the next best external model, at the same $2/$10 per million input/output token price as Gemini 4 Argon. The release adds frontier cybersecurity capabilities through the Fairwind Program and previews /swarm, a multi-agent mode in Antigravity."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "通过模型权重算法抑制奖励黑客行为",
+            "title_en": "Suppressing Reward Hacking Through Model Weight Arithmetic",
+            "read_time": "3 MIN READ",
+            "url": "https://x.com/KunhaoZ/status/2120172863734849903?utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "Suppressing Reward",
+            "summary_zh": "研究人员减去经过宽松和严格奖励训练的代码模型，以确定控制低效解决方案的方向。在没有额外训练的情况下，超越严格模型的外推将资源限制失败率从 14.5% 减少到 8%，尽管过度外推会破坏输出，而且更严格的奖励可能会损害正确性。",
+            "summary_en": "Researchers subtract code models trained with loose and strict rewards to identify a direction controlling inefficient solutions. Extrapolating beyond the strict model reduced resource-limit failures from 14.5% to 8% without additional training, though excessive extrapolation breaks outputs and stricter rewards can hurt correctness."
+          },
+          {
+            "title_zh": "为什么本能感觉就像个人助理",
+            "title_en": "Why Instinct Feels Like a Personal Assistant",
+            "read_time": "20 MIN READ",
+            "url": "https://x.com/nizzyabi/status/2120194267066863738?utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "Why Instinct",
+            "summary_zh": "对一次《本能》对话进行的为期十二周的分析将其吸引力归因于短信、快速确认、主动跟进以及购买或推广之前的批准检查。拆解表明，协调的任务代理和持久记忆支撑着体验，同时暴露了保留和交付验证失败。",
+            "summary_en": "A twelve-week analysis of one Instinct conversation attributes its appeal to short messages, quick acknowledgments, proactive follow-ups, and approval checks before purchases or outreach. The teardown suggests coordinated task agents and persistent memory underpin the experience, while exposing retention and delivery-verification failures."
+          },
+          {
+            "title_zh": "神经元作为可解释的基础",
+            "title_en": "Neurons as an Interpretable Basis",
+            "read_time": "15 MIN READ",
+            "url": "https://www.goodfire.com/research/neurons-as-an-interpretable-basis?utm_source=tldrai",
+            "domain": "goodfire.com",
+            "highlight_kw": "Neurons",
+            "summary_zh": "古德菲尔认为，单个语言模型神经元比通常假设的更容易解释。其神经元科学家代理生成并测试神经元功能的描述，这表明研究人员可以直接研究模型计算，而不必总是依赖稀疏自动编码器来提取可解释的特征。",
+            "summary_en": "Goodfire argues that individual language-model neurons are more interpretable than commonly assumed. Its Neuron Scientist agents generate and test descriptions of neuron functions, suggesting researchers can study model computations directly without always relying on sparse autoencoders to extract interpretable features."
+          },
+          {
+            "title_zh": "Q3.5 时间表更新：看来智能爆炸终究会在 2027 年发生",
+            "title_en": "Q3.5 Timelines Update: Looks Like the Intelligence Explosion Will Happen in 2027 After All",
+            "read_time": "125 MIN READ",
+            "url": "https://blog.aifutures.org/p/q35-timelines-update-looks-like-the?utm_source=tldrai",
+            "domain": "blog.aifutures.org",
+            "highlight_kw": "Q3.5 Timelines",
+            "summary_zh": "假设发展没有大幅故意放缓，超人人工智能研究员 (SAR) 预计将在 2027 年某个时候到来。预计可以自动化所有白领工作的人工智能将在 2028 年之前到来。公司目前尚未走上调整 SAR 的轨道，并且使用未调整的 SAR 进行递归自我改进将产生负面后果。如果在不久的将来训练SAR，中国可能能够窃取训练配方，甚至模型权重。",
+            "summary_en": "A Superhuman AI Researcher (SAR) is predicted to arrive at some point in 2027, assuming there is no substantial deliberate slowdown in development. AIs that can automate all white-collar work are predicted to arrive before 2028. Companies are currently not on track to align an SAR, and using a misaligned SAR to do recursive self-improvement will have negative consequences. China will probably be able to steal the training recipe and maybe even the model weights if an SAR is trained in the near future."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "蜂群（/蜂群）",
+            "title_en": "Swarm (/swarm)",
+            "read_time": "10 MIN READ",
+            "url": "https://antigravity.google/docs/swarm/?utm_source=tldrai",
+            "domain": "antigravity.google",
+            "highlight_kw": "Swarm",
+            "summary_zh": "Google Antigravity 中的 /swarm 命令运行一组指定代理，这些代理负责分割任务、同时处理各个部分，并在一个共享留言板上进行协调。它可用于将任务清晰地划分为单独的文件、包或问题，或者当需要第二个代理在人类看到更改之前检查和测试更改时。 /swarm 命令可在 Google Antigravity App 和 Antigravity CLI 中的 Google AI Pro 和 Google AI Ultra 计划上使用。每个工作人员都是自己的代理，因此群体使用配额的速度比单个对话快得多。",
+            "summary_en": "The /swarm command in Google Antigravity runs a team of named agents that split tasks, work on the pieces at the same time, and coordinate on one shared message board. It can be used for tasks that divide cleanly across separate files, packages, or questions, or when a second agent is needed to review and test the changes before a human sees it. The /swarm command is available on Google AI Pro and Google AI Ultra plans in the Google Antigravity App and Antigravity CLI. Every worker is its own agent, so swarms use quotas much faster than single conversations."
+          },
+          {
+            "title_zh": "Meta 发布更快的 K-Means 替代方案",
+            "title_en": "Meta Releases Faster K-Means Alternative",
+            "read_time": "GITHUB REPO",
+            "url": "https://github.com/facebookresearch/faiss/tree/main/contrib/e_means?utm_source=tldrai",
+            "domain": "github.com",
+            "highlight_kw": "Meta Releases",
+            "summary_zh": "Meta FAIR 发布了 e-means，它是 k-means 的直接替代品，可收敛到更低的损失，同时将 epoch 减少 10 倍，并且在 CPU 和 GPU 上运行时间更快。",
+            "summary_en": "Meta FAIR released e-means, a drop-in replacement for k-means that converges to lower losses with up to 10x fewer epochs and faster runtimes on CPUs and GPUs."
+          },
+          {
+            "title_zh": "MAI-转录-2",
+            "title_en": "MAI-Transcribe-2",
+            "read_time": "125 MIN READ",
+            "url": "https://microsoft.ai/news/mai-transcribe-2-is-the-fastest-most-accurate-and-cheapest-speech-recognition-model-in-the-world/?utm_source=tldrai",
+            "domain": "microsoft.ai",
+            "highlight_kw": "MAI-Transcribe-2",
+            "summary_zh": "MAI-Transcribe-2 是世界上最快、最准确、最便宜的语音识别模型。它具有分类、可配置转录样式和单词级时间戳等新功能。与 Gemini 3.5 Transcribe、GPT-Transcribe、Whisper V3-Large 和 ScribeV2 等领先型号相比，MAI-Transcribe-2 可以处理更广泛的现实世界音频。该模型每小时音频费用仅为 0.10 美元。",
+            "summary_en": "MAI-Transcribe-2 is the fastest, most accurate, and cheapest speech recognition model in the world. It has new features like diarization, configurable transcription styles, and word-level timestamps. MAI-Transcribe-2 can handle a broader range of real-world audio than leading models like Gemini 3.5 Transcribe, GPT-Transcribe, Whisper V3-Large, and ScribeV2. The model costs just $0.10 per hour of audio."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "OpenAI 收购 Sonder 创始人创建的旅游初创公司 Odessia",
+            "title_en": "OpenAI acquires Odessia, travel startup created by Sonder founder",
+            "read_time": "3 MIN READ",
+            "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/?utm_source=tldrai",
+            "domain": "techcrunch.com",
+            "highlight_kw": "OpenAI",
+            "summary_zh": "OpenAI 收购了一家名为 Odessia 的人工智能旅行社。这笔交易似乎是一项收购聘用。 OpenAI 尚未宣布新的旅行专用产品或计划，但它有多家与旅行相关的公司作为客户或合作伙伴。 Odessia 的创始人在 2014 年还是一名大学生时就创立了一家名为 Sonder 的旅游初创公司，专注于高档公寓的短期租赁。",
+            "summary_en": "OpenAI has acquired an AI travel agent called Odessia. The deal appears to be an acqui-hire. OpenAI has not announced new travel-specific products or plans, but it has several travel-related companies as customers or partners. Odessia's founder previously founded a travel startup called Sonder, focused on short-term leasing of upscale apartments, as a college student in 2014."
+          },
+          {
+            "title_zh": "Anthropic 的 IPO 路演",
+            "title_en": "Anthropic's IPO Roadshow",
+            "read_time": "2 MIN READ",
+            "url": "https://www.anthropic.com/news/roadshow-launch?utm_source=tldrai",
+            "domain": "anthropic.com",
+            "highlight_kw": "Anthropic",
+            "summary_zh": "Anthropic 为其拟议的 IPO 启动了路演，计划以每股 70 至 78 美元的价格发行 8.25 亿股股票。该公司申请在纳斯达克上市，股票代码为 ANT，新发行股票的大部分收益将流向 Anthropic。",
+            "summary_en": "Anthropic launched the roadshow for its proposed IPO, planning to offer 825 million shares at $70–$78 each. The company applied to list on Nasdaq under the ticker ANT, with most proceeds from newly issued shares going to Anthropic."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "超过 35,000 个 Grok 构建的应用程序向任何知道链接的人开放，其中包括 SpaceXSI 自己的应用程序",
+            "title_en": "More than 35,000 Grok-built apps were open to anyone with the link, including SpaceXSI's own",
+            "read_time": "16 MIN READ",
+            "url": "https://blog.claroc.io/ghostshares-grok-build-apps?utm_source=tldrai",
+            "domain": "blog.claroc.io",
+            "highlight_kw": "More",
+            "summary_zh": "超过 35,000 个 Grok 构建的应用程序向任何知道链接的人公开，其中包括 SpaceXSI 员工工具和 ICU 患者的实验室结果。",
+            "summary_en": "Over 35,000 Grok-built apps were public to anyone with the link, including SpaceXSI staff tools and an ICU patient's lab results."
+          },
+          {
+            "title_zh": "介绍 Gemini 的医疗保健功能",
+            "title_en": "Introducing Gemini for healthcare",
+            "read_time": "13 MIN READ",
+            "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-for-healthcare?utm_source=tldrai",
+            "domain": "cloud.google.com",
+            "highlight_kw": "Introducing Gemini",
+            "summary_zh": "Google Cloud 推出了 Gemini for Healthcare，这是其 Gemini 代理的预览版，具有专门构建的医疗保健技能、EHR 和索赔系统的连接器，以及针对提供商和付款人的 HIPAA 支持治理。",
+            "summary_en": "Google Cloud announced Gemini for healthcare, a preview release of its Gemini agent with purpose-built healthcare skills, connectors to EHR and claims systems, and HIPAA-supporting governance for providers and payers."
+          },
+          {
+            "title_zh": "ExecuTorch WebGPU：浏览器中 GPU 上的 PyTorch 模型",
+            "title_en": "ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser",
+            "read_time": "6 MIN READ",
+            "url": "https://pytorch.org/blog/executorch-webgpu-pytorch-models-on-the-gpu-in-the-browser/?utm_source=tldrai",
+            "domain": "pytorch.org",
+            "highlight_kw": "ExecuTorch WebGPU",
+            "summary_zh": "ExecuTorch 使 PyTorch 模型能够在 GPU 上的 Web 浏览器中运行，而无需转换为其他框架的格式。",
+            "summary_en": "ExecuTorch enables PyTorch models to run in the web browser on the GPU without conversion to another framework's format."
+          },
+          {
+            "title_zh": "谷歌 DeepMind 使用人工智能验证信号的安全性",
+            "title_en": "Google DeepMind Uses AI to Verify Signal's Security",
+            "read_time": "6 MIN READ",
+            "url": "https://deepmind.google/blog/introducing-alphaproof-code/?utm_source=tldrai",
+            "domain": "deepmind.google",
+            "highlight_kw": "Google DeepMind",
+            "summary_zh": "谷歌 DeepMind 推出了 AlphaProof Code，这是一个多代理人工智能框架，可以在实现层面上对 Signal 加密协议的关键安全属性进行数学验证。",
+            "summary_en": "Google DeepMind introduced AlphaProof Code, a multi-agent AI framework that mathematically verified key security properties of Signal's cryptographic protocol at the implementation level."
+          }
+        ]
+      }
+    ]
+  },
+  '2026-11-10': {
+    "date": "2026-11-10",
+    "weekday": "TUE · 周二",
+    "issueNo": "VOL. 2026.11.10",
+    "headline_zh": "Claude Fable 5.2 ✨、Meta Ember 🤖、Google 的新 TPU ⚡",
+    "headline_en": "Claude Fable 5.2 ✨, Meta Ember 🤖, Google’s new TPUs ⚡",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "谷歌的新 TPU 系列",
+            "title_en": "Google's New TPU Lineup",
+            "read_time": "4 MIN READ",
+            "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Google",
+            "summary_zh": "谷歌推出了 TPU 8i Max 来实现海量上下文窗口和更高的计算密度，同时推出 TPU 8tx 来实现安全和保密的推理。",
+            "summary_en": "Google introduced TPU 8i Max for massive context windows and higher compute density, alongside TPU 8tx for secure and confidential inference."
+          },
+          {
+            "title_zh": "元灰烬简介",
+            "title_en": "Introducing Meta Ember",
+            "read_time": "3 MIN READ",
+            "url": "https://research.meta.ai/blog/muse-ember?utm_source=tldrai",
+            "domain": "research.meta.ai",
+            "highlight_kw": "Introducing Meta",
+            "summary_zh": "Meta 推出了 Muse Ember，这是一个针对工具调用、编码和文档解析等代理任务进行优化的小型推理模型。 Meta 声称它可以与 Claude Haiku 5.5 的最高推理得分相媲美，而成本大约是 Claude Haiku 5.5 的三分之一，并且在推理设置上优于 GPT-6 Luna。",
+            "summary_en": "Meta introduced Muse Ember, a small reasoning model optimized for agent tasks such as tool calling, coding, and document parsing. Meta claims it matches Claude Haiku 5.5's highest reasoning score at roughly one-third the cost and outperforms GPT-6 Luna across reasoning settings."
+          },
+          {
+            "title_zh": "克劳德寓言 5.2 和神话 5.2",
+            "title_en": "Claude Fable 5.2 and Mythos 5.2",
+            "read_time": "12 MIN READ",
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2?utm_source=tldrai",
+            "domain": "anthropic.com",
+            "highlight_kw": "Claude Fable",
+            "summary_zh": "Anthropic 发布了 Claude Fable 5.2 和 Mythos 5.2，其特点是编码、推理和视觉方面的改进，输出生成速度提高了 30%，并且定价更低。这些模型共享相同的底层架构。",
+            "summary_en": "Anthropic released Claude Fable 5.2 and Mythos 5.2, featuring improvements in coding, reasoning, and vision, with up to 30% faster output generation and lower pricing. The models share the same underlying architecture."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "美国什么时候成为代币净进口国？",
+            "title_en": "When Does the US Become a Net Importer of Tokens?",
+            "read_time": "3 MIN READ",
+            "url": "https://tomtunguz.com/when-does-the-us-become-a-net-importer-of-tokens?utm_source=tldrai",
+            "domain": "tomtunguz.com",
+            "highlight_kw": "When Does",
+            "summary_zh": "美国可能在 2028 年至 2030 年间成为人工智能代币的净进口国。随着需求增长更快或取消数据中心项目将计算推向海外，国内容量可容纳大约 2.5 倍的年度代币增长。",
+            "summary_en": "The US could become a net importer of AI tokens between 2028 and 2030. Domestic capacity can accommodate roughly 2.5x annual token growth, with faster demand growth or canceled data center projects pushing computation overseas."
+          },
+          {
+            "title_zh": "AI 研发正在加速实现 2027 年潜在 RSI",
+            "title_en": "AI R&D Is Accelerating Towards Potential RSI in 2027",
+            "read_time": "62 MIN READ",
+            "url": "https://thezvi.substack.com/p/ai-r-and-d-is-accelerating-towards?utm_source=tldrai",
+            "domain": "thezvi.substack.com",
+            "highlight_kw": "AI",
+            "summary_zh": "AI 正在加速 Anthropic 的 AI 研发。该公司目前预计比 AI 2027 时间表提前了几个月。我们距离完全 RSI 可能还不到一年的时间，并且在此过程中没有明显的瓶颈。我们现在需要为 2027 年或 2028 年发生重大事件的情况做好准备。",
+            "summary_en": "AI is accelerating AI R&D at Anthropic. The company is now estimated to be several months ahead of the AI 2027 timeline. We may be less than a year away from full RSI, and there are no clear bottlenecks in the way. We now need to prepare for scenarios where critical events happen in 2027 or 2028."
+          },
+          {
+            "title_zh": "Anthropic 会成长为它的计算账单吗？",
+            "title_en": "Will Anthropic Grow Into Its Compute Bill?",
+            "read_time": "13 MIN READ",
+            "url": "https://x.com/OrnnExchange/status/2119839768355778637?utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "Will Anthropic",
+            "summary_zh": "按照目前的支出比率，Anthropic 预计需要大约 2000 亿美元的年收入来支持其到 2030 年的平均计算承诺。其 8950 亿美元的承诺总额使其面临着需求短缺、利润压缩、交付延迟以及需求超出预期时昂贵的短期产能等问题。",
+            "summary_en": "Anthropic needs an estimated roughly $200 billion in annual revenue to support its average compute commitments through 2030 at current spending ratios. Its $895 billion commitment total exposes it to demand shortfalls, margin compression, delivery delays, and expensive short-term capacity when demand exceeds forecasts."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "推理解决的目标是什么？",
+            "title_en": "What objective is reasoning solving?",
+            "read_time": "12 MIN READ",
+            "url": "https://alexwang.ai/posts/reasoning-as-pathfinding/?utm_source=tldrai",
+            "domain": "alexwang.ai",
+            "highlight_kw": "What",
+            "summary_zh": "推理是在符号空间中寻找路径。从问题到正确答案有很多条路径，模型用每个样本遍历每条路径。一条路径并不能保证收敛到正确的答案——只有在路径分布的总体上，我们才能获得很高的成功概率。强化学习训练直接提高了成功概率。 “思考得更久”所带来的收益来自于训练期间而不是推理期间的搜索。",
+            "summary_en": "Reasoning is pathfinding in token space. There are many paths from the problem to a correct answer, and the model traverses each of them with each sample. A path is not guaranteed to converge to the correct answer - it's only in aggregate, over the distribution of paths, do we get a high probability of success. RL training directly raises the success probability. The gains credited to 'thinking longer' come from the search paid for during training rather than at inference."
+          },
+          {
+            "title_zh": "两种测试时间缩放",
+            "title_en": "Two Kinds of Test-Time Scaling",
+            "read_time": "28 MIN READ",
+            "url": "https://www.forethought.org/research/two-kinds-of-test-time-scaling?utm_source=tldrai",
+            "domain": "forethought.org",
+            "highlight_kw": "Two Kinds",
+            "summary_zh": "测试时缩放交易计算测试时的性能。测试时间扩展有两种类型：一种允许研究人员用更多的计算来换取每项任务的更高性能，但仅限于训练期间使用的每任务计算的最大数量；另一个让研究人员用更多的计算来换取每项任务的更高性能，并让他们达到训练期间从未出现过的计算量和性能。允许后一种变化的缩放方法将比简单考虑的测试时间缩放产生更大的影响。本文描述了这可能如何影响世界。",
+            "summary_en": "Test-time scaling trades compute for performance at test time. There are two types of test-time scaling: one allows researchers to trade more compute for more performance per task, but only up to the maximum quantity of per-task compute used during training; and the other lets researchers trade more compute for more performance per task, and lets them do so up to quantities of compute and performance that never occurred during training. Scaling methods that permit the latter change will have a larger impact than test-time scaling considered simply. This essay describes how this may impact the world."
+          },
+          {
+            "title_zh": "NVIDIA 推出硬件感知 LLM 压缩",
+            "title_en": "NVIDIA Introduces Hardware-Aware LLM Compression",
+            "read_time": "24 MIN READ",
+            "url": "https://arxiv.org/abs/2611.08290?utm_source=tldrai",
+            "domain": "arxiv.org",
+            "highlight_kw": "NVIDIA Introduces",
+            "summary_zh": "NVIDIA 的 AutoCompress 框架针对特定于硬件的延迟、吞吐量和内存限制（而不是单独的参数计数）优化 LLM 修剪。它将 Nemotron 3.5 Super 从 120B 参数压缩到 74B，同时保留其性能。",
+            "summary_en": "NVIDIA's AutoCompress framework optimizes LLM pruning for hardware-specific latency, throughput, and memory constraints rather than parameter counts alone. It compressed Nemotron 3.5 Super from 120B to 74B parameters while retaining its performance."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "Apple 在 Logic Pro 中推出 50 美元的 AI 使用包",
+            "title_en": "Apple Introduces $50 AI Usage Packs in Logic Pro",
+            "read_time": "2 MIN READ",
+            "url": "https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro?utm_source=tldrai",
+            "domain": "theverge.com",
+            "highlight_kw": "Apple Introduces",
+            "summary_zh": "Apple 现在以 49.99 美元的价格出售 Logic Pro 中的智能使用包，以在用户达到极限后扩展对基于云的 AI 功能的访问。未使用的容量会按月滚动，但会在 12 个月后过期，并且无法通过“家人共享”共享购买的内容。",
+            "summary_en": "Apple now sells $49.99 Intelligence Usage Packs in Logic Pro to extend access to cloud-based AI features after users reach their limits. Unused capacity rolls over monthly but expires after 12 months, and purchases cannot be shared through Family Sharing."
+          },
+          {
+            "title_zh": "Anthropic 购买 34 亿美元的燃气发电机",
+            "title_en": "Anthropic Buys $3.4 Billion in Gas Generators",
+            "read_time": "2 MIN READ",
+            "url": "https://techcrunch.com/2026/11/09/anthropic-joins-ais-natural-gas-frenzy-buys-3-4b-worth-of-turbines/?utm_source=tldrai",
+            "domain": "techcrunch.com",
+            "highlight_kw": "Anthropic Buys",
+            "summary_zh": "据报道，Anthropic 以 34 亿美元的价格获得了 1.7 吉瓦卡特彼勒燃气发电机，接管了供应商 OnePWR 的设备订单。由于电力短缺和冗长的电网连接队列限制了数据中心的扩展，此次收购使人工智能实验室更深入地了解物理基础设施。",
+            "summary_en": "Anthropic reportedly secured 1.7 gigawatts of Caterpillar gas generators for $3.4 billion, taking over equipment orders from supplier OnePWR. The purchase moves the AI lab deeper into physical infrastructure as power shortages and lengthy grid connection queues constrain data center expansion."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "OpenAI 的控制室可以停止研究模型输出",
+            "title_en": "OpenAI's Control Room Can Halt Research Model Output",
+            "read_time": "6 MIN READ",
+            "url": "https://openai.com/index/control-room/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "OpenAI",
+            "summary_zh": "OpenAI 的控制室集中授权研究推理请求，并可以在干预后 35 秒内停止工作负载的模型输出。",
+            "summary_en": "OpenAI's Control Room centrally authorizes research inference requests and can stop a workload's model output within 35 seconds of intervention."
+          },
+          {
+            "title_zh": "2026年10月安全事件更新",
+            "title_en": "Update on October 2026 security incident",
+            "read_time": "4 MIN READ",
+            "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident-update?utm_source=tldrai",
+            "domain": "fireworks.ai",
+            "highlight_kw": "Update",
+            "summary_zh": "10 月 6 日发生的涉及未经授权使用内部 Fireworks 凭据的安全事件可追溯到一个出于经济动机的网络犯罪威胁组织，该组织向非法路由网关出售对大型语言模型的未经授权的访问。",
+            "summary_en": "The security incident involving unauthorized use of internal Fireworks credentials on October 6 has been traced to a financially motivated cybercriminal threat actor group that sells unauthorized access to large language models to illicit routing gateways."
+          },
+          {
+            "title_zh": "GR00T 2",
+            "title_en": "GR00T 2",
+            "read_time": "28 MIN READ",
+            "url": "https://research.nvidia.com/labs/gear/gr00t-2/?utm_source=tldrai",
+            "domain": "research.nvidia.com",
+            "highlight_kw": "GR00T",
+            "summary_zh": "GR00T 2 是新一代的基础世界动作模型，可以共同预测未来的视频和机器人动作。",
+            "summary_en": "GR00T 2 is a new generation of foundation world-action models that can predict future video and robot actions together."
+          },
+          {
+            "title_zh": "Opus 5.5 被削弱了吗？",
+            "title_en": "Is Opus 5.5 nerfed?",
+            "read_time": "2 MIN READ",
+            "url": "https://threadreaderapp.com/thread/2119192075505893695.html?utm_source=tldrai",
+            "domain": "threadreaderapp.com",
+            "highlight_kw": "Is Opus",
+            "summary_zh": "测试表明 Opus 5.5 的推理方式可能已经改变。",
+            "summary_en": "Testing shows that the way Opus 5.5 does reasoning may have changed."
+          },
+          {
+            "title_zh": "AWS Marketplace 上的 ChatGPT Enterprise",
+            "title_en": "ChatGPT Enterprise on AWS Marketplace",
+            "read_time": "1 MIN READ",
+            "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "ChatGPT Enterprise",
+            "summary_zh": "OpenAI 通过 AWS Marketplace 提供 ChatGPT Enterprise，允许组织通过现有的 AWS 计费关系购买和管理订阅，并将符合条件的支出用于 AWS 承诺。",
+            "summary_en": "OpenAI made ChatGPT Enterprise available through AWS Marketplace, allowing organizations to purchase and manage subscriptions through existing AWS billing relationships and apply eligible spending toward AWS commitments."
+          }
+        ]
+      }
+    ]
+  },
+  '2026-11-09': {
+    "date": "2026-11-09",
+    "weekday": "MON · 周一",
+    "issueNo": "VOL. 2026.11.09",
+    "headline_zh": "AI 研发加速 📈，OpenAI 价格为 1.25T 💰，GitHub 的多人游戏工具 🤖",
+    "headline_en": "AI R&D accelerates 📈, OpenAI at $1.25T 💰, GitHub’s multiplayer harness 🤖",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "据报道 OpenAI 融资 110 亿美元，估值 1.25 万亿美元",
+            "title_en": "OpenAI Reportedly Raises $11 Billion at $1.25 Trillion Valuation",
+            "read_time": "3 MIN READ",
+            "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/?utm_source=tldrai",
+            "domain": "techcrunch.com",
+            "highlight_kw": "OpenAI Reportedly",
+            "summary_zh": "据报道，OpenAI 在新一轮融资中获得了 110 亿美元的融资，估值为 1.25 万亿美元，该轮融资在结束前可能达到 200 亿美元。由于投资者对人工智能估值的不确定性日益增加，该金额未达到此前公布的 300 亿美元融资目标。",
+            "summary_en": "OpenAI reportedly secured $11 billion in a new funding round at a $1.25 trillion valuation, with the round potentially reaching $20 billion before closing. The amount fell short of its previously reported $30 billion fundraising target, amid growing investor uncertainty around AI valuations."
+          },
+          {
+            "title_zh": "人工智能目前正在极大地加速人工智能研究",
+            "title_en": "AI is dramatically accelerating AI research right now",
+            "read_time": "17 MIN READ",
+            "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai?utm_source=tldrai",
+            "domain": "planned-obsolescence.org",
+            "highlight_kw": "AI",
+            "summary_zh": "Anthropic 声称，它可能很快就会达到“由于人工智能而大幅加速进步”的门槛。一些研究人员认为该公司已经跨过了这个门槛。这可能是人类面临的最大的人工智能风险。该行业尚未准备好安全地处理这一问题。",
+            "summary_en": "Anthropic claims it may imminently meet its own threshold of 'dramatically accelerated progress due to AI'. Some researchers believe the company has already crossed that threshold. This may be the biggest AI risk humanity has faced. The industry is not prepared to handle this safely."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "Anthropic 如何构建智能体记忆",
+            "title_en": "How Anthropic Builds Agent Memory",
+            "read_time": "14 MIN READ",
+            "url": "https://www.anthropic.com/research/components-of-agent-memory?utm_source=tldrai",
+            "domain": "anthropic.com",
+            "highlight_kw": "How Anthropic",
+            "summary_zh": "Anthropic 探索了人工智能代理如何通过捕捉交互过程中的经验并在空闲期间通过一个称为“做梦”的过程重新组织它们来建立有效的长期记忆。这篇文章探讨了不同的记忆成分如何有助于组织和保留有用的信息。",
+            "summary_en": "Anthropic explored how AI agents can build effective long-term memory by capturing experiences during interactions and reorganizing them during idle periods through a process called “dreaming.” The post examines how different memory components contribute to organizing and retaining useful information."
+          },
+          {
+            "title_zh": "在 Meta 担任 RSI 研究工程师一年",
+            "title_en": "A year as a Research Engineer working on RSI at Meta",
+            "read_time": "8 MIN READ",
+            "url": "https://x.com/tomasmann1878/status/2119346730458038678?s=12&utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "Research Engineer",
+            "summary_zh": "这篇文章详细介绍了一位在 Meta 教学代理中从事 RSI 工作的研究工程师通过代币和计算解决世界上最困难的问题的经验。他们的作用是教人工智能代理如何训练下一代模型和自我进化。这篇文章详细介绍了如何进入人工智能研究、研究工程中哪些技能很重要等等。",
+            "summary_en": "This post details the experience of a research engineer working on RSI at Meta teaching agents to solve the world's hardest problems with tokens and compute. Their role is to teach AI agents how to train the next generation of models and self-evolve. The post details how to get into AI research, what skills matter in research engineering, and more."
+          },
+          {
+            "title_zh": "OpenAI 内部 AI 研发时间范围到底是怎么回事",
+            "title_en": "What the heck is going on with OpenAI internal AI R&D time horizons",
+            "read_time": "7 MIN READ",
+            "url": "https://threadreaderapp.com/thread/2119541238856663473.html?utm_source=tldrai",
+            "domain": "threadreaderapp.com",
+            "highlight_kw": "What",
+            "summary_zh": "OpenAI 关于其自身研究自动化的报告显示，模型很难完成其研发工作。递归自我改进被认为是未来几年最重要的人工智能发展之一。智能体越来越多地为研究人员解决更复杂的任务，但可靠性仍然很低。这篇文章探讨了一些可能的原因。",
+            "summary_en": "OpenAI's report on its own research automation shows that models struggle to do its R&D work. Recursive self-improvement is supposed to be one of the most consequential AI developments in the next few years. Agents are increasingly solving more complex tasks for researchers, but reliability is still low. This post looks at some possible explanations for why."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "Aaronson-Ambainis 猜想的证明",
+            "title_en": "A proof of the Aaronson-Ambainis conjecture",
+            "read_time": "9 MIN READ",
+            "url": "https://psi.inc/research/aaronson-ambainis/?utm_source=tldrai",
+            "domain": "psi.inc",
+            "highlight_kw": "Aaronson-Ambainis",
+            "summary_zh": "Aaronson-Ambainis 猜想是量子复杂性理论中的一个关键开放问题，已被 PSI 使用人择模型开发的研究系统证明。这一证明表明，与经典计算机相比，量子计算机在随机输入上的速度并没有呈指数级增长，从而解决了有关量子加速的一个重要问题。",
+            "summary_en": "The Aaronson-Ambainis conjecture, a key open problem in quantum complexity theory, has been proven by a research system developed at PSI using an Anthropic model. This proof shows quantum computers are not exponentially faster on random inputs compared to classical ones, resolving a significant question about quantum speedups."
+          },
+          {
+            "title_zh": "介绍新的自动和自动代码路由器",
+            "title_en": "Introducing the New Auto and Auto Code Routers",
+            "read_time": "11 MIN READ",
+            "url": "https://openrouter.ai/blog/announcements/auto-and-auto-code-routers/?utm_source=tldrai",
+            "domain": "openrouter.ai",
+            "highlight_kw": "Introducing",
+            "summary_zh": "OpenRouter 推出了下一代自动路由器，其性能比旧路由器高出 4 倍。此次发布的产品包括 Auto Code，这是一款专门用于编码工作的新型路由器。新的自动路由器和自动代码通过权衡每个请求的 11 个因素并将其与实时定价、提供商运行状况和缓存状态相结合来选择模型。用户可以应用任何治理策略，自动路由器从可用模型中做出有效选择。",
+            "summary_en": "OpenRouter has launched the next generation of Auto Router, which outperforms the old router by up to 4x. The launch includes Auto Code, a new router specialized for coding work. The new Auto Router and Auto Code choose models by weighing eleven factors about each request and combining them with live pricing, provider health, and cache status. Users can apply any governance policies, and Auto Router makes efficient choices from the models available."
+          },
+          {
+            "title_zh": "高手",
+            "title_en": "Ace",
+            "read_time": "WEBSITE",
+            "url": "https://ace.githubnext.com/?utm_source=tldrai",
+            "domain": "ace.githubnext.com",
+            "highlight_kw": "Ace",
+            "summary_zh": "Ace 是一种在本地共同构建软件的工具。它允许开发人员在自己的机器上与代理及其团队进行协作。代理以运行主机的用户的权限运行，并且可以执行 shell 命令并更改项目之外的文件。团队可以一起工作，而无需将任何内容暴露在公共互联网上。",
+            "summary_en": "Ace is a tool for building software together, locally. It allows developers to collaborate with agents and their teams, all from their own machine. Agents run with the privileges of the user running the host and can execute shell commands and change files beyond the project. Teams can work together without exposing anything to the public internet."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "人工智能前沿的终结",
+            "title_en": "The End of AI Frontiers",
+            "read_time": "4 MIN READ",
+            "url": "https://hunch.net/?p=13764006&amp;utm_source=tldrai",
+            "domain": "hunch.net",
+            "highlight_kw": "The End",
+            "summary_zh": "AI Frontiers 是微软研究院的一个子组织，积极尝试组织连贯的研究工作。它成功地开创了先河，大部分工作都集中在如何让代理发挥作用。 AI Frontiers 于 9 月初重组为 Microsoft AI。",
+            "summary_en": "AI Frontiers was a sub-organization within Microsoft Research that actively tried to organize coherent research efforts. It succeeded in pioneering things, with much of the work focused on how to make agents work. AI Frontiers was reorganized into Microsoft AI in early September."
+          },
+          {
+            "title_zh": "积极的人工智能未来是什么样的？",
+            "title_en": "What Does a Positive AI Future Look Like?",
+            "read_time": "3 MIN READ",
+            "url": "https://x.com/patrickc/status/2119495828683530519?utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "What Does",
+            "summary_zh": "帕特里克·科里森 (Patrick Collison) 质疑工作、资源分配和人类控制将如何在积极的人工智能未来中发挥作用。他还认为，赋予大量人工智能道德价值可能会压倒功利主义下的人类利益，从而引发有关人工智能社会愿景和公众支持的悬而未决的问题。",
+            "summary_en": "Patrick Collison questions how work, resource allocation, and human control would function in a positive AI future. He also argues that granting moral worth to vastly numerous AIs could overwhelm human interests under utilitarianism, raising unresolved questions about AI's societal vision and public support."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "法学硕士可以在培训时重新设计自己吗？",
+            "title_en": "Can LLMs redesign themselves as they train?",
+            "read_time": "18 MIN READ",
+            "url": "https://www.doubleai.com/research/can-llms-redesign-themselves-as-they-train?utm_source=tldrai",
+            "domain": "doubleai.com",
+            "highlight_kw": "Can LLMs",
+            "summary_zh": "法学硕士可以将编码代理集成到训练循环中，以重新设计其架构，以解决组合性和泛化性等限制。",
+            "summary_en": "LLMs can integrate coding agents into the training loop to redesign their architectures to address limitations like compositionality and generalization."
+          },
+          {
+            "title_zh": "Warp Sciences 为人工智能实验室筹集了 2.15 亿美元资金",
+            "title_en": "Warp Sciences raises $215M for AI-powered labs",
+            "read_time": "2 MIN READ",
+            "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519100037973401600/?utm_source=tldrai",
+            "domain": "linkedin.com",
+            "highlight_kw": "Warp Sciences",
+            "summary_zh": "Warp Sciences 筹集了由 Lightspeed 领投的 2.15 亿美元 A 轮融资，以利用人工智能和机器人加速药物发现。",
+            "summary_en": "Warp Sciences raised a $215M Series A led by Lightspeed to accelerate drug discovery with AI and robotics."
+          },
+          {
+            "title_zh": "Project EVE：克劳德玩 MMORPG",
+            "title_en": "Project EVE: Claude plays MMORPGs",
+            "read_time": "20 MIN READ",
+            "url": "https://www.anthropic.com/research/project-eve-claude-plays-mmorpgs?utm_source=tldrai",
+            "domain": "anthropic.com",
+            "highlight_kw": "Project EVE",
+            "summary_zh": "Anthropic 探索了 MMORPG 中的人工智能参与，使用 Claude 来测试 EVE Online 和 EVE Frontier 中的复杂决策。",
+            "summary_en": "Anthropic explored AI participation in MMORPGs, using Claude to test complex decision-making in EVE Online and EVE Frontier."
+          },
+          {
+            "title_zh": "围绕人类和人工智能建立的共生公司",
+            "title_en": "Symbiotic Firms Built Around Humans and AI",
+            "read_time": "4 MIN READ",
+            "url": "https://x.com/johnjnay/status/2118377267495649448?utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "Symbiotic Firms",
+            "summary_zh": "企业从一开始就应该围绕人类专家和人工智能代理开展业务。",
+            "summary_en": "Firms should build operations around human experts and AI agents from inception."
+          },
+          {
+            "title_zh": "Meta 在 Muse 中引入自定义空间",
+            "title_en": "Meta Introduces Custom Spaces in Muse",
+            "read_time": "3 MIN READ",
+            "url": "https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/?utm_source=tldrai",
+            "domain": "about.fb.com",
+            "highlight_kw": "Meta Introduces",
+            "summary_zh": "Meta 在其 Muse 应用程序中引入了 Spaces，允许用户通过描述他们想要的内容来创建个性化的交互体验，例如礼物追踪器、游戏或项目规划器。",
+            "summary_en": "Meta introduced Spaces in its Muse app, allowing users to create personalized interactive experiences by describing what they want, such as gift trackers, games, or project planners."
+          },
+          {
+            "title_zh": "衡量人工智能代理如何处理日常湿实验室科学",
+            "title_en": "Measuring how AI agents handle everyday wet-lab science",
+            "read_time": "13 MIN READ",
+            "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "Measuring",
+            "summary_zh": "OpenAI 推出了 BioBasicsBench，这是一个评估 AI 在解释 100 个常规湿实验室科学任务的原始实验数据方面的性能的基准。",
+            "summary_en": "OpenAI introduced BioBasicsBench, a benchmark to evaluate AI performance in interpreting raw experimental data from 100 routine wet-lab science tasks."
+          }
+        ]
+      }
+    ]
+  },
+  '2026-11-06': {
+    "date": "2026-11-06",
+    "weekday": "FRI · 周五",
+    "issueNo": "VOL. 2026.11.06",
+    "headline_zh": "Anthropic 研发加速📈、GPT-6 Cyber​​ 🔐、Inkling 2 Small 🧠",
+    "headline_en": "Anthropic R&D accelerates 📈, GPT-6 Cyber 🔐, Inkling 2 Small 🧠",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "GPT-6 网络",
+            "title_en": "GPT-6 Cyber",
+            "read_time": "13 MIN READ",
+            "url": "https://openai.com/index/introducing-gpt-6-cyber/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "GPT-6 Cyber",
+            "summary_zh": "OpenAI 推出了 GPT-6 Cyber​​，这是一种网络安全模型，旨在识别和验证可利用的漏洞，同时保持在研究人员定义的边界内。",
+            "summary_en": "OpenAI introduced GPT-6 Cyber, a cybersecurity model designed to identify and validate exploitable vulnerabilities while staying within researcher-defined boundaries."
+          },
+          {
+            "title_zh": "Inkling 2 小号简介",
+            "title_en": "Introducing Inkling 2 Small",
+            "read_time": "37 MIN READ",
+            "url": "https://thinkingmachines.ai/news/inkling-2-small/?utm_source=tldrai",
+            "domain": "thinkingmachines.ai",
+            "highlight_kw": "Introducing Inkling",
+            "summary_zh": "Inkling 2 Small 是一个混合专家模型，共有 594B 个参数，17B 个活动参数，支持图像输入和可变工作量。该模型的视觉和代理功能使其能够整合视觉反馈，以迭代方式构建和完善具有交互元素的网站、游戏和 3D 设计。最初将通过 Tinker 提供封闭权重。下周完成外部安全测试和红队后，完整权重将在 Apache 2.0 许可证下提供。",
+            "summary_en": "Inkling 2 Small is a Mixture-of-Experts model with 594B total parameters, 17B active, that supports image inputs and variable effort. The model's vision and agentic capabilities enable it to incorporate visual feedback to iteratively build and refine websites, games, and 3D designs with interactive elements. It will be initially available through Tinker with closed weights. Full weights will be available under an Apache 2.0 license next week after the completion of external safety testing and red-teaming."
+          },
+          {
+            "title_zh": "双子座 Omni 1.2 闪存",
+            "title_en": "Gemini Omni 1.2 Flash",
+            "read_time": "1 MIN READ",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Gemini Omni",
+            "summary_zh": "Google 推出 Gemini Omni 1.2 Flash，提高了 AI 模型的速度、成本效益并延长了剪辑长度。此更新旨在改进人工智能应用程序的开发人员工具和效率。",
+            "summary_en": "Google introduces Gemini Omni 1.2 Flash, enhancing speed, cost-efficiency, and extended clip lengths for AI models. This update aims to improve developer tools and effectiveness in AI applications."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "2026 年 10 月 Anthropic 人工智能研发加速独立评估",
+            "title_en": "Independent Assessment of AI R&D Acceleration at Anthropic in October 2026",
+            "read_time": "63 MIN READ",
+            "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/?utm_source=tldrai",
+            "domain": "metr.org",
+            "highlight_kw": "Independent Assessment",
+            "summary_zh": "Anthropic 的 AI 研发能力显着加速，在明确定义的任务上的模型性能提高速度大约是 2024-2025 年的两倍。这种加速主要是由于人工智能在研发中的作用日益增强，尽管 2025 年底有多种因素促成。",
+            "summary_en": "Anthropic's AI R&D capabilities accelerated significantly, improving model performance on well-defined tasks at roughly twice the rate compared to 2024-2025. This acceleration primarily results from AI's increasing role in R&D, though multiple factors contributed in late 2025."
+          },
+          {
+            "title_zh": "Cloudflare 的 AI 代理信任框架",
+            "title_en": "Cloudflare's Trust Framework for AI Agents",
+            "read_time": "4 MIN READ",
+            "url": "https://blog.cloudflare.com/trusted-agent-delegation?utm_source=tldrai",
+            "domain": "blog.cloudflare.com",
+            "highlight_kw": "Cloudflare",
+            "summary_zh": "Cloudflare 概述了网站面临的挑战，因为人工智能代理越来越多地代表用户行事，这使得验证身份、评估可信度和分配责任变得更加困难。",
+            "summary_en": "Cloudflare has outlined the challenges websites face as AI agents increasingly act on behalf of users, making it harder to verify identities, assess trustworthiness, and assign accountability."
+          },
+          {
+            "title_zh": "人工智能必须撒谎才能获胜的基准",
+            "title_en": "The benchmark where AIs have to lie to win",
+            "read_time": "23 MIN READ",
+            "url": "https://www.dwarkesh.com/p/clocktower?utm_source=tldrai",
+            "domain": "dwarkesh.com",
+            "highlight_kw": "The",
+            "summary_zh": "钟楼上的血是一款社交欺骗游戏。观看人工智能玩游戏可以揭示人工智能在一系列人工智能功能方面的进展情况，而其他基准测试无法清晰地展示这些功能。游戏需要AI凭借创造力、临场虚张声势和集体推理来执行计划。这篇文章探讨了当人工智能模型在游戏中相互对抗时会发生什么。",
+            "summary_en": "Blood on the Clocktower is a social deception game. Watching AI play the game unveils a lot about how AI is progressing on a set of AI capabilities that no other benchmark gives clear visibility into. The game requires AI to execute schemes with creativity, on-the-spot bluffing, and collective reasoning. This post looks at what happens when you pit AI models against each other in the game."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "NVIDIA 推出 VFlash",
+            "title_en": "NVIDIA Introduced VFlash",
+            "read_time": "5 MIN READ",
+            "url": "https://research.nvidia.com/labs/lpr/vflash/?utm_source=tldrai",
+            "domain": "research.nvidia.com",
+            "highlight_kw": "NVIDIA Introduced",
+            "summary_zh": "NVIDIA VFlash 是一种视觉模型，可以并行生成机器人轨迹和 3D 运动等几何预测，而不是逐个令牌。",
+            "summary_en": "NVIDIA VFlash is a vision model that generates geometric predictions like robot trajectories and 3D motion in parallel rather than token by token."
+          },
+          {
+            "title_zh": "用于交互式世界模拟的全新 NVIDIA Cosmos 3 开放模型",
+            "title_en": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+            "read_time": "7 MIN READ",
+            "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation?utm_source=tldrai",
+            "domain": "huggingface.co",
+            "highlight_kw": "New NVIDIA",
+            "summary_zh": "NVIDIA 的 Cosmos 3 平台现在提供四种用于交互式世界模拟和驾驶场景的开放权重模型，每个模型都有 160 亿个可训练参数。这些模型能够通过模拟器控制生成多传感器数据、同步观察和逼真视频，支持机器人和自动驾驶的高级研究。",
+            "summary_en": "NVIDIA's Cosmos 3 platform now offers four open-weight models for interactive world simulation and driving scenes, each with 16 billion trainable parameters. These models enable multi-sensor data generation, synchronized observations, and photorealistic video from simulator controls, supporting advanced research in robotics and autonomous driving."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "主要计算市场如何运作",
+            "title_en": "How Primary Compute Markets Work",
+            "read_time": "7 MIN READ",
+            "url": "https://x.com/OrnnExchange/status/2118372699093295482?utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "How Primary",
+            "summary_zh": "GPU 提供商通过预订、按需租赁和可中断现货合同来销售容量。预订可通过可预测的收入帮助确保融资，按需提供更高利率的灵活性，而现货则可将闲置产能货币化。 Ornn 的计算价格指数跟踪执行的按需交易，不包括预订和现货租赁。",
+            "summary_en": "GPU providers sell capacity through reservations, on-demand rentals, and interruptible spot contracts. Reservations help secure financing through predictable revenue, on-demand offers flexibility at higher rates, and spot monetizes idle capacity. Ornn's compute price indices track executed on-demand transactions, excluding reservations and spot rentals."
+          },
+          {
+            "title_zh": "克劳德的个人理财",
+            "title_en": "Personal Finance in Claude",
+            "read_time": "3 MIN READ",
+            "url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude?utm_source=tldrai",
+            "domain": "claude.com",
+            "highlight_kw": "Personal Finance",
+            "summary_zh": "Claude 中的 Anthropic Personal Finance 允许用户安全地连接银行和信用卡帐户，以询问有关余额、交易和支出的问题。",
+            "summary_en": "Anthropic Personal Finance in Claude allows users to securely connect bank and credit card accounts to ask questions about balances, transactions, and spending."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "教育部终极培训手册",
+            "title_en": "The Ultimate MoE Training Handbook",
+            "read_time": "1 MIN READ",
+            "url": "https://huggingface.co/spaces/huggingface/moe-blogpost?utm_source=tldrai",
+            "domain": "huggingface.co",
+            "highlight_kw": "The Ultimate",
+            "summary_zh": "Hugging Face 发布了《教育部终极培训手册》，这是一本关于训练混合专家模型的综合指南。",
+            "summary_en": "Hugging Face released \"The Ultimate MoE Training Handbook,\" a comprehensive guide on training mixture-of-experts models."
+          },
+          {
+            "title_zh": "缪斯之声",
+            "title_en": "Muse Voice",
+            "read_time": "3 MIN READ",
+            "url": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/?utm_source=tldrai",
+            "domain": "about.fb.com",
+            "highlight_kw": "Muse Voice",
+            "summary_zh": "Meta 宣布为其 Muse 应用程序提供语音对话和富有表现力的头像，让用户可以通过语音交互进行集思广益、计划旅行和完成任务。",
+            "summary_en": "Meta announced voice conversations and expressive avatars for its Muse app, allowing users to brainstorm, plan trips, and complete tasks through spoken interactions."
+          },
+          {
+            "title_zh": "您现在可以在 Cursor 中构建实时应用程序并通过链接共享它们",
+            "title_en": "You can now build live apps in Cursor and share them with a link",
+            "read_time": "1 MIN READ",
+            "url": "https://x.com/cursor_ai/status/2118458629091426304?utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "You",
+            "summary_zh": "用户只需描述他们想要的工具，Cursor 将构建它、设置数据库、运行确定性和代理安全检查并进行部署。",
+            "summary_en": "Users just have to describe the tool they want, and Cursor will build it, set up a database, run deterministic and agentic security checks, and deploy."
+          },
+          {
+            "title_zh": "德文评论2.0",
+            "title_en": "Devin Review 2.0",
+            "read_time": "5 MIN READ",
+            "url": "https://devin.ai/blog/devin-review-2?utm_source=tldrai",
+            "domain": "devin.ai",
+            "highlight_kw": "Devin Review",
+            "summary_zh": "自 8 月份以来，每个 PR 的 Devin 审核成本下降了 82%。",
+            "summary_en": "The cost of a Devin Review per PR has dropped by 82% since August."
+          }
+        ]
+      }
+    ]
+  },
   '2026-11-05': {
     date: '2026-11-05',
     weekday: 'THU · 周四',

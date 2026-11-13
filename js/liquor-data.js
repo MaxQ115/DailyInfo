@@ -4,7 +4,7 @@
  */
 window.PRESET_LIQUOR_LIST = [
   {
-    "id": 4636,
+    "id": 4649,
     "liquor_id": 1,
     "name": "贵州茅台酒（飞天）",
     "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-1.png",
@@ -19,15 +19,15 @@ window.PRESET_LIQUOR_LIST = [
     "sort": 1,
     "search_keywords": "茅台、飞天、涨",
     "symbols": "",
-    "price": 1766,
-    "price_change": -4,
+    "price": 1765,
+    "price_change": -1,
     "change_type": 2,
-    "change_text": "昨日降价 -4 元",
-    "price_date": "2026-11-12",
+    "change_text": "昨日降价 -1 元",
+    "price_date": "2026-11-13",
     "status": 1
   },
   {
-    "id": 4638,
+    "id": 4650,
     "liquor_id": 10,
     "name": "贵州茅台酒（精品）",
     "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-1.png",
@@ -39,15 +39,15 @@ window.PRESET_LIQUOR_LIST = [
     "sort": 2,
     "search_keywords": "飞天、茅台、涨",
     "symbols": "",
-    "price": 2420,
+    "price": 2415,
     "price_change": -5,
     "change_type": 2,
     "change_text": "昨日降价 -5 元",
-    "price_date": "2026-11-12",
+    "price_date": "2026-11-13",
     "status": 1
   },
   {
-    "id": 4639,
+    "id": 4651,
     "liquor_id": 11,
     "name": "茅台1935 ",
     "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-1.png",
@@ -59,15 +59,15 @@ window.PRESET_LIQUOR_LIST = [
     "sort": 3,
     "search_keywords": "茅台1935",
     "symbols": "",
-    "price": 685,
-    "price_change": 0,
-    "change_type": 0,
-    "change_text": "持平",
-    "price_date": "2026-11-12",
+    "price": 684,
+    "price_change": -1,
+    "change_type": 2,
+    "change_text": "昨日降价 -1 元",
+    "price_date": "2026-11-13",
     "status": 1
   },
   {
-    "id": 4640,
+    "id": 4652,
     "liquor_id": 2,
     "name": "五粮液普五八代",
     "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-2.png",
@@ -82,15 +82,15 @@ window.PRESET_LIQUOR_LIST = [
     "sort": 4,
     "search_keywords": "五粮液",
     "symbols": "SZ000858",
-    "price": 786,
+    "price": 789,
     "price_change": 3,
     "change_type": 1,
     "change_text": "昨日涨价 3 元",
-    "price_date": "2026-11-12",
+    "price_date": "2026-11-13",
     "status": 1
   },
   {
-    "id": 4641,
+    "id": 4653,
     "liquor_id": 12,
     "name": "五粮液1618",
     "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-2.png",
@@ -102,15 +102,15 @@ window.PRESET_LIQUOR_LIST = [
     "sort": 5,
     "search_keywords": "五粮液1618",
     "symbols": "",
-    "price": 817,
-    "price_change": 1,
+    "price": 820,
+    "price_change": 3,
     "change_type": 1,
-    "change_text": "昨日涨价 1 元",
-    "price_date": "2026-11-12",
+    "change_text": "昨日涨价 3 元",
+    "price_date": "2026-11-13",
     "status": 1
   },
   {
-    "id": 4642,
+    "id": 4654,
     "liquor_id": 7,
     "name": "青花汾20",
     "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-7.png",
@@ -129,11 +129,11 @@ window.PRESET_LIQUOR_LIST = [
     "price_change": 0,
     "change_type": 0,
     "change_text": "持平",
-    "price_date": "2026-11-12",
+    "price_date": "2026-11-13",
     "status": 1
   },
   {
-    "id": 4643,
+    "id": 4655,
     "liquor_id": 3,
     "name": "国窖1573",
     "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-3.png",
@@ -148,15 +148,15 @@ window.PRESET_LIQUOR_LIST = [
     "sort": 7,
     "search_keywords": "泸州老窖",
     "symbols": "SZ000568",
-    "price": 852,
-    "price_change": -6,
-    "change_type": 2,
-    "change_text": "昨日降价 -6 元",
-    "price_date": "2026-11-12",
+    "price": 859,
+    "price_change": 7,
+    "change_type": 1,
+    "change_text": "昨日涨价 7 元",
+    "price_date": "2026-11-13",
     "status": 1
   },
   {
-    "id": 4644,
+    "id": 4656,
     "liquor_id": 4,
     "name": "洋河梦之蓝M6+",
     "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-4.png",
@@ -171,15 +171,15 @@ window.PRESET_LIQUOR_LIST = [
     "sort": 8,
     "search_keywords": "洋河股份",
     "symbols": "SZ002304",
-    "price": 585,
-    "price_change": 5,
+    "price": 589,
+    "price_change": 4,
     "change_type": 1,
-    "change_text": "昨日涨价 5 元",
-    "price_date": "2026-11-12",
+    "change_text": "昨日涨价 4 元",
+    "price_date": "2026-11-13",
     "status": 1
   },
   {
-    "id": 4645,
+    "id": 4657,
     "liquor_id": 9,
     "name": "古井贡古20",
     "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-9.png",
@@ -194,15 +194,15 @@ window.PRESET_LIQUOR_LIST = [
     "sort": 9,
     "search_keywords": "古井贡",
     "symbols": "SZ000596",
-    "price": 510,
-    "price_change": 0,
-    "change_type": 0,
-    "change_text": "持平",
-    "price_date": "2026-11-12",
+    "price": 516,
+    "price_change": 6,
+    "change_type": 1,
+    "change_text": "昨日涨价 6 元",
+    "price_date": "2026-11-13",
     "status": 1
   },
   {
-    "id": 4646,
+    "id": 4658,
     "liquor_id": 6,
     "name": "习酒君品",
     "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-6.png",
@@ -217,15 +217,15 @@ window.PRESET_LIQUOR_LIST = [
     "sort": 10,
     "search_keywords": "习酒",
     "symbols": "",
-    "price": 612,
-    "price_change": 2,
+    "price": 613,
+    "price_change": 1,
     "change_type": 1,
-    "change_text": "昨日涨价 2 元",
-    "price_date": "2026-11-12",
+    "change_text": "昨日涨价 1 元",
+    "price_date": "2026-11-13",
     "status": 1
   },
   {
-    "id": 4647,
+    "id": 4659,
     "liquor_id": 8,
     "name": "青花郎",
     "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-8.png",
@@ -240,15 +240,15 @@ window.PRESET_LIQUOR_LIST = [
     "sort": 11,
     "search_keywords": "郎酒",
     "symbols": "",
-    "price": 653,
-    "price_change": -10,
-    "change_type": 2,
-    "change_text": "昨日降价 -10 元",
-    "price_date": "2026-11-12",
+    "price": 659,
+    "price_change": 6,
+    "change_type": 1,
+    "change_text": "昨日涨价 6 元",
+    "price_date": "2026-11-13",
     "status": 1
   },
   {
-    "id": 4648,
+    "id": 4660,
     "liquor_id": 5,
     "name": "水晶剑南春",
     "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-5.png",
@@ -264,10 +264,10 @@ window.PRESET_LIQUOR_LIST = [
     "search_keywords": "剑南春",
     "symbols": "",
     "price": 400,
-    "price_change": -1,
-    "change_type": 2,
-    "change_text": "昨日降价 -1 元",
-    "price_date": "2026-11-12",
+    "price_change": 0,
+    "change_type": 0,
+    "change_text": "持平",
+    "price_date": "2026-11-13",
     "status": 1
   }
 ];
@@ -275,7 +275,7 @@ window.PRESET_LIQUOR_LIST = [
 window.PRESET_LIQUOR_DETAILS = {
   "1": {
     "detail": {
-      "id": 4636,
+      "id": 4649,
       "liquor_id": 1,
       "name": "贵州茅台酒（飞天）",
       "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-1.png",
@@ -290,14 +290,20 @@ window.PRESET_LIQUOR_DETAILS = {
       "sort": 1,
       "search_keywords": "茅台、飞天、涨",
       "symbols": "",
-      "price": 1766,
-      "price_change": -4,
+      "price": 1765,
+      "price_change": -1,
       "change_type": 2,
-      "change_text": "昨日降价 -4 元",
-      "price_date": "2026-11-12",
+      "change_text": "昨日降价 -1 元",
+      "price_date": "2026-11-13",
       "status": 1
     },
     "history": [
+      {
+        "date": "2026-11-13",
+        "price": 1765,
+        "price_change": -1,
+        "unit": "元/瓶"
+      },
       {
         "date": "2026-11-12",
         "price": 1766,
@@ -488,7 +494,7 @@ window.PRESET_LIQUOR_DETAILS = {
   },
   "10": {
     "detail": {
-      "id": 4638,
+      "id": 4650,
       "liquor_id": 10,
       "name": "贵州茅台酒（精品）",
       "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-1.png",
@@ -500,14 +506,20 @@ window.PRESET_LIQUOR_DETAILS = {
       "sort": 2,
       "search_keywords": "飞天、茅台、涨",
       "symbols": "",
-      "price": 2420,
+      "price": 2415,
       "price_change": -5,
       "change_type": 2,
       "change_text": "昨日降价 -5 元",
-      "price_date": "2026-11-12",
+      "price_date": "2026-11-13",
       "status": 1
     },
     "history": [
+      {
+        "date": "2026-11-13",
+        "price": 2415,
+        "price_change": -5,
+        "unit": "元/瓶"
+      },
       {
         "date": "2026-11-12",
         "price": 2420,
@@ -698,7 +710,7 @@ window.PRESET_LIQUOR_DETAILS = {
   },
   "11": {
     "detail": {
-      "id": 4639,
+      "id": 4651,
       "liquor_id": 11,
       "name": "茅台1935 ",
       "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-1.png",
@@ -710,14 +722,20 @@ window.PRESET_LIQUOR_DETAILS = {
       "sort": 3,
       "search_keywords": "茅台1935",
       "symbols": "",
-      "price": 685,
-      "price_change": 0,
-      "change_type": 0,
-      "change_text": "持平",
-      "price_date": "2026-11-12",
+      "price": 684,
+      "price_change": -1,
+      "change_type": 2,
+      "change_text": "昨日降价 -1 元",
+      "price_date": "2026-11-13",
       "status": 1
     },
     "history": [
+      {
+        "date": "2026-11-13",
+        "price": 684,
+        "price_change": -1,
+        "unit": "元/瓶"
+      },
       {
         "date": "2026-11-12",
         "price": 685,
@@ -908,7 +926,7 @@ window.PRESET_LIQUOR_DETAILS = {
   },
   "2": {
     "detail": {
-      "id": 4640,
+      "id": 4652,
       "liquor_id": 2,
       "name": "五粮液普五八代",
       "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-2.png",
@@ -923,14 +941,20 @@ window.PRESET_LIQUOR_DETAILS = {
       "sort": 4,
       "search_keywords": "五粮液",
       "symbols": "SZ000858",
-      "price": 786,
+      "price": 789,
       "price_change": 3,
       "change_type": 1,
       "change_text": "昨日涨价 3 元",
-      "price_date": "2026-11-12",
+      "price_date": "2026-11-13",
       "status": 1
     },
     "history": [
+      {
+        "date": "2026-11-13",
+        "price": 789,
+        "price_change": 3,
+        "unit": "元/瓶"
+      },
       {
         "date": "2026-11-12",
         "price": 786,
@@ -1121,7 +1145,7 @@ window.PRESET_LIQUOR_DETAILS = {
   },
   "12": {
     "detail": {
-      "id": 4641,
+      "id": 4653,
       "liquor_id": 12,
       "name": "五粮液1618",
       "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-2.png",
@@ -1133,14 +1157,20 @@ window.PRESET_LIQUOR_DETAILS = {
       "sort": 5,
       "search_keywords": "五粮液1618",
       "symbols": "",
-      "price": 817,
-      "price_change": 1,
+      "price": 820,
+      "price_change": 3,
       "change_type": 1,
-      "change_text": "昨日涨价 1 元",
-      "price_date": "2026-11-12",
+      "change_text": "昨日涨价 3 元",
+      "price_date": "2026-11-13",
       "status": 1
     },
     "history": [
+      {
+        "date": "2026-11-13",
+        "price": 820,
+        "price_change": 3,
+        "unit": "元/瓶"
+      },
       {
         "date": "2026-11-12",
         "price": 817,
@@ -1331,7 +1361,7 @@ window.PRESET_LIQUOR_DETAILS = {
   },
   "7": {
     "detail": {
-      "id": 4642,
+      "id": 4654,
       "liquor_id": 7,
       "name": "青花汾20",
       "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-7.png",
@@ -1350,10 +1380,16 @@ window.PRESET_LIQUOR_DETAILS = {
       "price_change": 0,
       "change_type": 0,
       "change_text": "持平",
-      "price_date": "2026-11-12",
+      "price_date": "2026-11-13",
       "status": 1
     },
     "history": [
+      {
+        "date": "2026-11-13",
+        "price": 378,
+        "price_change": 0,
+        "unit": "元/瓶"
+      },
       {
         "date": "2026-11-12",
         "price": 378,
@@ -1544,7 +1580,7 @@ window.PRESET_LIQUOR_DETAILS = {
   },
   "3": {
     "detail": {
-      "id": 4643,
+      "id": 4655,
       "liquor_id": 3,
       "name": "国窖1573",
       "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-3.png",
@@ -1559,14 +1595,20 @@ window.PRESET_LIQUOR_DETAILS = {
       "sort": 7,
       "search_keywords": "泸州老窖",
       "symbols": "SZ000568",
-      "price": 852,
-      "price_change": -6,
-      "change_type": 2,
-      "change_text": "昨日降价 -6 元",
-      "price_date": "2026-11-12",
+      "price": 859,
+      "price_change": 7,
+      "change_type": 1,
+      "change_text": "昨日涨价 7 元",
+      "price_date": "2026-11-13",
       "status": 1
     },
     "history": [
+      {
+        "date": "2026-11-13",
+        "price": 859,
+        "price_change": 7,
+        "unit": "元/瓶"
+      },
       {
         "date": "2026-11-12",
         "price": 852,
@@ -1757,7 +1799,7 @@ window.PRESET_LIQUOR_DETAILS = {
   },
   "4": {
     "detail": {
-      "id": 4644,
+      "id": 4656,
       "liquor_id": 4,
       "name": "洋河梦之蓝M6+",
       "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-4.png",
@@ -1772,14 +1814,20 @@ window.PRESET_LIQUOR_DETAILS = {
       "sort": 8,
       "search_keywords": "洋河股份",
       "symbols": "SZ002304",
-      "price": 585,
-      "price_change": 5,
+      "price": 589,
+      "price_change": 4,
       "change_type": 1,
-      "change_text": "昨日涨价 5 元",
-      "price_date": "2026-11-12",
+      "change_text": "昨日涨价 4 元",
+      "price_date": "2026-11-13",
       "status": 1
     },
     "history": [
+      {
+        "date": "2026-11-13",
+        "price": 589,
+        "price_change": 4,
+        "unit": "元/瓶"
+      },
       {
         "date": "2026-11-12",
         "price": 585,
@@ -1970,7 +2018,7 @@ window.PRESET_LIQUOR_DETAILS = {
   },
   "9": {
     "detail": {
-      "id": 4645,
+      "id": 4657,
       "liquor_id": 9,
       "name": "古井贡古20",
       "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-9.png",
@@ -1985,14 +2033,20 @@ window.PRESET_LIQUOR_DETAILS = {
       "sort": 9,
       "search_keywords": "古井贡",
       "symbols": "SZ000596",
-      "price": 510,
-      "price_change": 0,
-      "change_type": 0,
-      "change_text": "持平",
-      "price_date": "2026-11-12",
+      "price": 516,
+      "price_change": 6,
+      "change_type": 1,
+      "change_text": "昨日涨价 6 元",
+      "price_date": "2026-11-13",
       "status": 1
     },
     "history": [
+      {
+        "date": "2026-11-13",
+        "price": 516,
+        "price_change": 6,
+        "unit": "元/瓶"
+      },
       {
         "date": "2026-11-12",
         "price": 510,
@@ -2183,7 +2237,7 @@ window.PRESET_LIQUOR_DETAILS = {
   },
   "6": {
     "detail": {
-      "id": 4646,
+      "id": 4658,
       "liquor_id": 6,
       "name": "习酒君品",
       "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-6.png",
@@ -2198,14 +2252,20 @@ window.PRESET_LIQUOR_DETAILS = {
       "sort": 10,
       "search_keywords": "习酒",
       "symbols": "",
-      "price": 612,
-      "price_change": 2,
+      "price": 613,
+      "price_change": 1,
       "change_type": 1,
-      "change_text": "昨日涨价 2 元",
-      "price_date": "2026-11-12",
+      "change_text": "昨日涨价 1 元",
+      "price_date": "2026-11-13",
       "status": 1
     },
     "history": [
+      {
+        "date": "2026-11-13",
+        "price": 613,
+        "price_change": 1,
+        "unit": "元/瓶"
+      },
       {
         "date": "2026-11-12",
         "price": 612,
@@ -2396,7 +2456,7 @@ window.PRESET_LIQUOR_DETAILS = {
   },
   "8": {
     "detail": {
-      "id": 4647,
+      "id": 4659,
       "liquor_id": 8,
       "name": "青花郎",
       "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-8.png",
@@ -2411,14 +2471,20 @@ window.PRESET_LIQUOR_DETAILS = {
       "sort": 11,
       "search_keywords": "郎酒",
       "symbols": "",
-      "price": 653,
-      "price_change": -10,
-      "change_type": 2,
-      "change_text": "昨日降价 -10 元",
-      "price_date": "2026-11-12",
+      "price": 659,
+      "price_change": 6,
+      "change_type": 1,
+      "change_text": "昨日涨价 6 元",
+      "price_date": "2026-11-13",
       "status": 1
     },
     "history": [
+      {
+        "date": "2026-11-13",
+        "price": 659,
+        "price_change": 6,
+        "unit": "元/瓶"
+      },
       {
         "date": "2026-11-12",
         "price": 653,
@@ -2609,7 +2675,7 @@ window.PRESET_LIQUOR_DETAILS = {
   },
   "5": {
     "detail": {
-      "id": 4648,
+      "id": 4660,
       "liquor_id": 5,
       "name": "水晶剑南春",
       "pic": "https://n.sinaimg.cn/finance/liquor/2025/logo-5.png",
@@ -2625,13 +2691,19 @@ window.PRESET_LIQUOR_DETAILS = {
       "search_keywords": "剑南春",
       "symbols": "",
       "price": 400,
-      "price_change": -1,
-      "change_type": 2,
-      "change_text": "昨日降价 -1 元",
-      "price_date": "2026-11-12",
+      "price_change": 0,
+      "change_type": 0,
+      "change_text": "持平",
+      "price_date": "2026-11-13",
       "status": 1
     },
     "history": [
+      {
+        "date": "2026-11-13",
+        "price": 400,
+        "price_change": 0,
+        "unit": "元/瓶"
+      },
       {
         "date": "2026-11-12",
         "price": 400,
