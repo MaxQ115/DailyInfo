@@ -56,6 +56,200 @@ const TLDR_SECTION_MAP = {
 };
 
 const PRESET_TLDR_ISSUES = {
+  '2026-11-16': {
+    "date": "2026-11-16",
+    "weekday": "MON · 周一",
+    "issueNo": "VOL. 2026.11.16",
+    "headline_zh": "ChatGPT 钱包 💳、Devin 应用程序 🛠️、永远在线的代理 ⚡",
+    "headline_en": "ChatGPT Wallet 💳, Devin Apps 🛠️, always-on agents ⚡",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "Devin Apps",
+            "title_en": "Devin Apps",
+            "read_time": "3 MIN READ",
+            "url": "https://devin.ai/blog/devin-apps?utm_source=tldrai",
+            "domain": "devin.ai",
+            "highlight_kw": "Devin Apps",
+            "summary_zh": "Devin 应用程序是 Devin 根据描述构建和托管的私有 Web 应用程序，例如仪表板和审批队列。应用程序可以使用团队现有的集成和代码库，并且查看者必须登录 Devin。",
+            "summary_en": "Devin Apps are private web apps that Devin builds and hosts from a description, such as dashboards and approval queues. Apps can use a team's existing integrations and codebase, and viewers must sign in to Devin."
+          },
+          {
+            "title_zh": "ChatGPT 钱包",
+            "title_en": "ChatGPT Wallet",
+            "read_time": "5 MIN READ",
+            "url": "https://openai.com/index/introducing-chatgpt-wallet/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "ChatGPT Wallet",
+            "summary_zh": "OpenAI 推出了 ChatGPT 钱包，允许人工智能代理在不访问用户实际卡详细信息的情况下进行购买，同时要求对每笔交易进行安全检查。",
+            "summary_en": "OpenAI introduced ChatGPT Wallet, allowing AI agents to make purchases without accessing users' actual card details while requiring a security check for every transaction."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "Quark：我们的整个训练堆栈，端到端，售价 4,200 美元",
+            "title_en": "Quark: our whole training stack, end to end, for $4,200",
+            "read_time": "7 MIN READ",
+            "url": "https://empero.org/writing/quark?utm_source=tldrai",
+            "domain": "empero.org",
+            "highlight_kw": "Quark",
+            "summary_zh": "Quark 是一种语言模型，拥有约 1.65 亿个参数，训练成本约为 4,200 美元（约 1,300 H-100 小时）。在类似代币预算训练的同等规模的开放模型中，它具有最佳的基准平均值。该模型的创建是为了在花费大量资金购买大型模型之前探索团队正在使用的训练堆栈的每个部分。这篇文章着眼于模型的数据、架构、大规模预训练、上下文扩展、强化学习、评估和发布。",
+            "summary_en": "Quark is a language model with about 165 million parameters trained for about $4,200 of compute (about 1,300 H-100-hours). It has the best benchmark average among open models of its size trained on similar token budgets. The model was created to explore every part of the training stack the team was using before spending serious money on a large model. This post looks at the model's data, architecture, pretraining at scale, context extension, reinforcement learning, evaluation, and release."
+          },
+          {
+            "title_zh": "论阿姆达尔定律的残酷性",
+            "title_en": "On the Brutality of Amdahl's Law",
+            "read_time": "12 MIN READ",
+            "url": "https://bosoncutter.substack.com/p/on-the-brutality-of-amdahls-law?utm_source=tldrai",
+            "domain": "bosoncutter.substack.com",
+            "highlight_kw": "On",
+            "summary_zh": "世界发展速度太慢，无法看到人工智能预计带来的两位数或更高的经济增长和经济巨变。智能并不是上个半世纪中唯一接近无限的技术曲线。电力、通信、计算机、交通和农业都经历了极大的增长和变革。尽管如此，近 150 年来我们的人均 GDP 只增长了 2%。",
+            "summary_en": "The world is far too slow to see the high double-digit or more economic growth and seismic transformations in the economy that AI is predicted to bring. Intelligence isn't the only technology curve to go quasi-infinite in the last century and a half. Electricity, communication, computers, transportation, and agriculture have all experienced extreme growth and transformation. Despite this, we've only seen 2% GDP per capita growth for nearly 150 years."
+          },
+          {
+            "title_zh": "端到端 4 位 AI 训练",
+            "title_en": "End-to-End 4-Bit AI Training",
+            "read_time": "9 MIN READ",
+            "url": "https://thinkingmachines.ai/blog/end-to-end-4-bit-training/?utm_source=tldrai",
+            "domain": "thinkingmachines.ai",
+            "highlight_kw": "End-to-End 4-Bit",
+            "summary_zh": "Thinking Machines 探索了使用 4 位精度训练语言模型的技术挑战，包括量化误差及其对模型准确性的影响。深入研究 BF16、MXFP8 和 NVFP4 格式。",
+            "summary_en": "Thinking Machines explored the technical challenges of training language models using 4-bit precision, including quantization errors and their effects on model accuracy. The deep dive examines BF16, MXFP8, and NVFP4 formats."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "BirdDreams：驾驶世界模型",
+            "title_en": "BirdDreams: A Driving World Model",
+            "read_time": "4 MIN READ",
+            "url": "https://research.nvidia.com/labs/sil/projects/birddreams/?utm_source=tldrai",
+            "domain": "research.nvidia.com",
+            "highlight_kw": "BirdDreams",
+            "summary_zh": "BirdDreams 是 Nvidia 的驾驶世界模型，可将单个摄像头图像转换为驾驶视频和场景鸟瞰图。",
+            "summary_en": "BirdDreams is an Nvidia driving world model that turns a single camera image into driving video and a bird's-eye view of the scene."
+          },
+          {
+            "title_zh": "成为 TLDR 人工智能社区创始成员",
+            "title_en": "Become a founding member of TLDR's AI community",
+            "read_time": "2 MIN FORM",
+            "url": "https://danni763618.typeform.com/to/H1tYViME?utm_source=tldrai",
+            "domain": "danni763618.typeform.com",
+            "highlight_kw": "Become",
+            "summary_zh": "TLDR 正在为人工智能构建者推出一个精心策划的社区，以讨论重大新闻和发布。最好的链接和评论将出现在 TLDR AI 中。在此申请加入。",
+            "summary_en": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join."
+          },
+          {
+            "title_zh": "恩布拉1号",
+            "title_en": "Embla 1",
+            "read_time": "5 MIN READ",
+            "url": "https://sevren.ai/blog/embla-1?utm_source=tldrai",
+            "domain": "sevren.ai",
+            "highlight_kw": "Embla",
+            "summary_zh": "Embla 1 是专为手机构建的推理模型。它的设计速度很快，并且每个答案使用很少的标记。该模型可以在手机上私下、离线、免费运行。在 4 位时，Embla 1 在 BFCL、IFBench、AA-Omniscience、GPQA 和 MATH-500 上的平均得分为 57.4，在 iPhone 18 Pro 上端到端的答对时间为 1.77 秒。",
+            "summary_en": "Embla 1 is a reasoning model built for phones. It is designed to be fast and to use few tokens per answer. The model can run on a phone, privately, offline, for free. At 4 bits, Embla 1 averages 57.4 on BFCL, IFBench, AA-Omniscience, GPQA, and MATH-500 and answers in 1.77 seconds end-to-end on an iPhone 18 Pro."
+          },
+          {
+            "title_zh": "Qwen4-Max：你的新队友已经到来",
+            "title_en": "Qwen4-Max: Your New Teammate Has Arrived",
+            "read_time": "16 MIN READ",
+            "url": "https://qwen.ai/blog?id=qwen4-max&amp;utm_source=tldrai",
+            "domain": "qwen.ai",
+            "highlight_kw": "Qwen4-Max",
+            "summary_zh": "Qwen4-Max可以在3D建模、游戏开发、精密制造、金融、法律、医疗保健和前沿科学发现等领域承担广泛的创意和专业工作。它展示了强大的3D创建能力，可以使用Blender进行几何建模、场景组装、材质设置、灯光和渲染。该模型与领先的游戏引擎流畅配合，可以处理场景构建、游戏逻辑、外部资源集成、材质设置、HUD设计和视觉效果，并交付可玩的游戏。该系列中较小的型号即将开源。",
+            "summary_en": "Qwen4-Max can take on a wide range of creative and professional work in the fields of 3D modeling, game development, precision manufacturing, finance, law, healthcare, and frontier scientific discovery. It demonstrates strong 3D creation capabilities and can use Blender to carry out geometry modeling, scene assembly, material setup, lighting, and rendering. The model works fluently with leading game engines and can handle scene construction, gameplay logic, integration of external assets, material setup, HUD design, and visual effects, and deliver a playable game. Smaller models in the family are coming to open source."
+          },
+          {
+            "title_zh": "多模态模型中的 Meta 视觉编码器",
+            "title_en": "Meta's Vision Encoders in Multimodal Models",
+            "read_time": "7 MIN READ",
+            "url": "https://unbundling.github.io/?utm_source=tldrai",
+            "domain": "unbundling.github.io",
+            "highlight_kw": "Meta",
+            "summary_zh": "Meta 研究人员探索了视觉编码器的哪些组件对于多模态模型至关重要，发现专用的视觉处理能力比预训练更重要。",
+            "summary_en": "Meta researchers explored which components of vision encoders are essential for multimodal models, finding that dedicated visual processing capacity matters more than pretraining."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "发布个人代理协议1.0",
+            "title_en": "Releasing Personal Agent Protocol 1.0",
+            "read_time": "5 MIN READ",
+            "url": "https://sierra.ai/blog/releasing-poppy?utm_source=tldrai",
+            "domain": "sierra.ai",
+            "highlight_kw": "Releasing Personal",
+            "summary_zh": "个人代理协议使个人代理能够通过业务代理、网站和 API 与公司进行交互。该协议 v.0 现已推出。该协议定义了个人代理如何与实施该协议的公司联系。客户可以控制个人代理可以做什么和不能做什么，并且可以随着时间的推移管理他们的访问权限。",
+            "summary_en": "The Personal Agent Protocol enables personal agents to interact with companies through business agents, websites, and APIs. v.0 of the protocol is now available. The protocol defines how personal agents connect with companies that implement it. Customers control what personal agents can and can't do, and can manage their access over time."
+          },
+          {
+            "title_zh": "GPT-6 Astra 解决了一个基本的物理问题",
+            "title_en": "GPT-6 Astra Tackles a Fundamental Physics Problem",
+            "read_time": "15 MIN READ",
+            "url": "https://openai.com/index/step-toward-defining-the-standard-model/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "GPT-6 Astra",
+            "summary_zh": "物理学家 Nathaniel Craig 与 GPT-6 Astra 合作开发了标准模型的候选晶格公式，解决了在不依赖微扰近似的情况下定义理论的长期挑战。 Astra 帮助构建了数学框架并开发了支持所提出方法的详细证明。",
+            "summary_en": "Physicist Nathaniel Craig worked with GPT-6 Astra to develop a candidate lattice formulation of the Standard Model, addressing a longstanding challenge in defining the theory without relying on perturbative approximations. Astra helped construct the mathematical framework and develop a detailed proof supporting the proposed approach."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "我们对 Claude Code 中的项目进行了一些重大更新！",
+            "title_en": "We've made some big updates to Projects in Claude Code!",
+            "read_time": "3 MIN READ",
+            "url": "https://threadreaderapp.com/thread/2121375309287301360.html?utm_source=tldrai",
+            "domain": "threadreaderapp.com",
+            "highlight_kw": "We",
+            "summary_zh": "协调员现在更加主动，可以回答项目聊天中的问题，同时提供有关正在进行的线程状态的更新。",
+            "summary_en": "The coordinator is now more proactive and can answer questions in the project chat while providing updates on the status of ongoing threads."
+          },
+          {
+            "title_zh": "请愿书要求英伟达恢复黄仁勋的职位",
+            "title_en": "Petition Calls for Nvidia to Reinstate Jensen Huang",
+            "read_time": "1 MIN READ",
+            "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/?utm_source=tldrai",
+            "domain": "techcrunch.com",
+            "highlight_kw": "Petition Calls",
+            "summary_zh": "埃隆·马斯克 (Elon Musk) 和其他科技高管签署了一份请愿书，要求英伟达恢复前首席执行官黄仁勋 (Jensen Huang) 的职务，后者因涉嫌涉嫌中国间谍而辞职。",
+            "summary_en": "Elon Musk and other technology executives signed a petition calling for Nvidia to reinstate former CEO Jensen Huang following his resignation amid allegations involving a suspected Chinese spy."
+          },
+          {
+            "title_zh": "建立永远在线的代理",
+            "title_en": "Building always-on agents",
+            "read_time": "13 MIN READ",
+            "url": "https://claude.com/resources/articles/building-always-on-agents?utm_source=tldrai",
+            "domain": "claude.com",
+            "highlight_kw": "Building",
+            "summary_zh": "最近的进步使永远在线的代理得以复兴，现在管理上下文并在没有直接监督的情况下执行操作，在通过事件收件箱、计时器、内存、权限和发件箱增强的核心循环上运行。",
+            "summary_en": "Always-on agents, revived by recent advancements, now manage context and act without direct supervision, running on a core loop enhanced with event inboxes, timers, memory, permissions, and outboxes."
+          },
+          {
+            "title_zh": "建立强有力的安全评估",
+            "title_en": "Building strong safety evaluations",
+            "read_time": "23 MIN READ",
+            "url": "https://www.anthropic.com/research/building-strong-safety-evaluations?utm_source=tldrai",
+            "domain": "anthropic.com",
+            "highlight_kw": "Building",
+            "summary_zh": "Anthropic 强调对人工智能模型进行稳健的安全评估的重要性，这为部署和培训决策提供了信息。",
+            "summary_en": "Anthropic emphasizes the importance of robust safety evaluations for AI models, which inform deployment and training decisions."
+          }
+        ]
+      }
+    ]
+  },
   '2026-11-13': {
     "date": "2026-11-13",
     "weekday": "FRI · 周五",
