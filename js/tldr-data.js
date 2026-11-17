@@ -56,6 +56,190 @@ const TLDR_SECTION_MAP = {
 };
 
 const PRESET_TLDR_ISSUES = {
+  '2026-11-17': {
+    "date": "2026-11-17",
+    "weekday": "TUE · 周二",
+    "issueNo": "VOL. 2026.11.17",
+    "headline_zh": "Perplexity Research 🧪、NVIDIA Rubin HPC 🖥️、OpenAI 安全评估 👨‍💻",
+    "headline_en": "Perplexity Research 🧪, NVIDIA Rubin HPC 🖥️, OpenAI safety assessments 👨‍💻",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "NVIDIA 的 Rubin HPC",
+            "title_en": "NVIDIA's Rubin HPC",
+            "read_time": "2 MIN READ",
+            "url": "https://blogs.nvidia.com/blog/rubin-hpc/?utm_source=tldrai",
+            "domain": "blogs.nvidia.com",
+            "highlight_kw": "NVIDIA",
+            "summary_zh": "Rubin HPC 是一款新的 Nvidia GPU，旨在加速 AI 代理在科学、工程和分析中使用的模拟。它拥有超过 50,000 个核心，创下了单 GPU 的记录。预计将于 2028 年上市。",
+            "summary_en": "Rubin HPC is a new Nvidia GPU designed to speed up the simulations AI agents use in science, engineering, and analytics. It has more than 50,000 cores, a record for a single GPU. It is expected to be available in 2028."
+          },
+          {
+            "title_zh": "腾讯推出Hy4闪存",
+            "title_en": "Tencent Launches Hy4 flash",
+            "read_time": "4 MIN READ",
+            "url": "https://www.tencent.com/tencent-launches-hy4-flash-to-power-high-speed-cost-efficient-ai-deployment-for-everyday-workflows/?utm_source=tldrai",
+            "domain": "tencent.com",
+            "highlight_kw": "Tencent Launches",
+            "summary_zh": "腾讯发布了 Hy4 flash，这是一种适用于日常工作流程的快速、低成本的人工智能模型。在腾讯内部用户的盲测中，其满意度得分接近Claude Haiku 5.5。",
+            "summary_en": "Tencent has released Hy4 flash, a fast, low-cost AI model for everyday workflows. In a blind test with Tencent's internal users, its satisfaction scores came close to Claude Haiku 5.5."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "克劳德接受过大规模蛋白质序列培训",
+            "title_en": "Claude was trained on protein sequences at scale",
+            "read_time": "26 MIN READ",
+            "url": "https://xinmingtu.cn/blog/2026/claude-opus-5-5-protein-sequences/?utm_source=tldrai",
+            "domain": "xinmingtu.cn",
+            "highlight_kw": "Claude",
+            "summary_zh": "测试表明，最新的克劳德模型经过了大规模蛋白质序列训练。如果给定很少研究的细菌蛋白质的起始点，这些模型可以预测下一个氨基酸。没有其他测试的模型可以做到这一点，并且如果蛋白质被改组，模型将无法预测序列。 Fable 5.2 击败了所有测试的开放蛋白质语言模型。",
+            "summary_en": "Tests show that the latest Claude models were trained on protein sequences at scale. The models can predict the next amino acid if given the start of little-studied bacterial proteins. No other model tested can do this, and the models fail to predict the sequence if the protein is shuffled. Fable 5.2 beats every open protein language model tested."
+          },
+          {
+            "title_zh": "测量对齐评估告诉",
+            "title_en": "Measuring alignment eval tells",
+            "read_time": "16 MIN READ",
+            "url": "https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells/#summary?utm_source=tldrai",
+            "domain": "metr.org",
+            "highlight_kw": "Measuring",
+            "summary_zh": "调查人员可以越来越多地将一致性评估与能力评估区分开来，将它们识别为旨在测试不良行为的人工或“蜜罐”环境。 Opus 5.5 和 Astra 代理通过注意到不切实际的场景和特定的任务级别线索来区分这些。该研究的结果表明，虽然当前的模型可以识别常见的对齐评估，但使它们不易被检测到可以提高其功效。",
+            "summary_en": "Investigator agents can increasingly distinguish alignment evals from capabilities evals, identifying them as artificial or \"honeypot\" environments designed to test bad behavior. Opus 5.5 and Astra agents differentiate these by noticing unrealistic scenarios and specific task-level cues. The study's findings suggest that while current models can identify common alignment evaluations, making them less detectable can refine their efficacy."
+          },
+          {
+            "title_zh": "2030 年世界",
+            "title_en": "World 2030",
+            "read_time": "8 MIN READ",
+            "url": "https://world-2030.pages.dev/?utm_source=tldrai",
+            "domain": "world-2030.pages.dev",
+            "highlight_kw": "World 2030",
+            "summary_zh": "预测人工智能将如何影响经济需要研究经济的所有不同组成部分，并弄清楚它们如何相互影响。 《2030 年世界》是一项研究，成立了 9 个小组（人工智能实验室、大雇主、银行和保险公司、公用事业、初创企业、大学、工人、政府和美联储），并在 2030 年的六个月内推动美国经济向前发展。它的目的是确定这些强大力量相互作用时的不变量和可能发生变化的界限。该研究预测人工智能将打破按席位软件定价并削减美国初级办公桌招聘。",
+            "summary_en": "Predicting how AI will affect the economy requires looking at all of the different components of that economy and figuring out how they might affect each other. World 2030 is a study that sets up nine groups (AI labs, big employers, banks and insurers, utilities, startups, universities, workers, governments, and the Fed) and runs the US economy forward in six-month turns to 2030. It aimed to identify both the invariants and the boundaries of what can change as these powerful forces interact with each other. The study predicts that AI will break per-seat software pricing and cut US junior desk hiring."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "d1.2：最先进的全模态决策模型",
+            "title_en": "d1.2: State-of-the-Art Omnimodal Decision Models",
+            "read_time": "5 MIN READ",
+            "url": "https://www.liquid.ai/blog/d1-2?utm_source=tldrai",
+            "domain": "liquid.ai",
+            "highlight_kw": "State-of-the-Art Omnimodal",
+            "summary_zh": "d1.2和d1.2-ultra是支持音频输入的决策模型。他们还可以从输入中读取值，查找文本中的每一个段落，定位图片中的内容，估计数字，并选择每个适用的选项。 d1.2-ultra 在人工分析决策指数 v2.1 的决策模型中排名第一。这两种模型均可在 Liquid API 上使用，d1.2 的价格为每百万输入代币 0.02 美元，d1.2-ultra 的价格为每百万输入代币 0.042 美元。",
+            "summary_en": "d1.2 and d1.2-ultra are decision models that support audio input. They can also read a value from the input, find every passage of a kind in a text, locate things in a picture, estimate a number, and pick every option that applies. d1.2-ultra ranks first among decision models on the Artificial Analysis Decision Index v2.1. Both models are available on the Liquid API at $0.02 per million input tokens for d1.2 and $0.042 per million input tokens for d1.2-ultra."
+          },
+          {
+            "title_zh": "Hugging Face 与 OpenRouter 强强联手",
+            "title_en": "Hugging Face and OpenRouter Join Forces",
+            "read_time": "6 MIN READ",
+            "url": "https://huggingface.co/blog/openrouter?utm_source=tldrai",
+            "domain": "huggingface.co",
+            "highlight_kw": "Hugging Face",
+            "summary_zh": "Hugging Face 现在通过 OpenRouter 从其推理提供程序服务路由语言模型请求，OpenRouter 会为每次调用选择最佳提供程序。单个 Hugging Face 访问令牌适用于提供商服务的任何开放权重模型。",
+            "summary_en": "Hugging Face now routes language-model requests from its Inference Providers service through OpenRouter, which picks the best provider for each call. A single Hugging Face access token works for any open-weight model a provider serves."
+          },
+          {
+            "title_zh": "成为 TLDR 人工智能社区创始成员",
+            "title_en": "Become a founding member of TLDR's AI community",
+            "read_time": "2 MIN FORM",
+            "url": "https://danni763618.typeform.com/to/H1tYViME?utm_source=tldrai",
+            "domain": "danni763618.typeform.com",
+            "highlight_kw": "Become",
+            "summary_zh": "TLDR 正在为人工智能构建者推出一个精心策划的社区，以讨论重大新闻和发布。最好的链接和评论将出现在 TLDR AI 中。在此申请加入。",
+            "summary_en": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join."
+          },
+          {
+            "title_zh": "通过按位零训练-推理不匹配解锁 TPU 上稳定的同策略强化学习",
+            "title_en": "Unlocking Stable On-Policy RL on TPU with Bitwise-Zero Train–Inference Mismatch",
+            "read_time": "7 MIN READ",
+            "url": "https://developers.googleblog.com/unlocking-stable-on-policy-rl-on-tpu-with-bitwise-zero-traininference-mismatch?utm_source=tldrai",
+            "domain": "developers.googleblog.com",
+            "highlight_kw": "Unlocking Stable",
+            "summary_zh": "Google 的 ZERO-TIM 实现在 64 个 TPU v5p 芯片上进行了验证，为采样器和训练器实现了按位相同的对数概率，通过消除数值差异确保了 RL 训练中真正的策略稳定性。该解决方案使用一致的算术运算和跨 TPU 网格的标准化归约顺序，解决了单独服务和训练路径中的浮点加法错误。",
+            "summary_en": "Google's ZERO-TIM implementation, verified across 64 TPU v5p chips, achieves bitwise-identical logprobs for sampler and trainer, ensuring true on-policy stability in RL training by eliminating numerical discrepancies. This solution addresses floating-point addition errors in separate serving and training paths, using consistent arithmetic operations and standardized reduction orders across TPU meshes."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "OpenAI 第一阶段嵌入式评估",
+            "title_en": "OpenAI's first phase of embedded assessments",
+            "read_time": "11 MIN READ",
+            "url": "https://openai.com/index/our-first-phase-of-embedded-assessments/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "OpenAI",
+            "summary_zh": "嵌入式评估使独立专家能够深入访问实验室的内部模型和系统，以便他们能够在较长时间内评估模型的一致性和保障措施的有效性。该访问权限为评估人员提供了证据和背景，以进行独立评估并发现意外的失败。独立评估的公开报告可以让公众更清楚地了解实验室如何评估和管理风险。 OpenAI 已与四家独立评估机构签署了第一阶段嵌入式评估协议。",
+            "summary_en": "Embedded assessments give independent experts deep access to a lab's internal models and systems so they can assess model alignment and the effectiveness of safeguards over an extended period. The access gives assessors the evidence and context to pursue independent evaluations and uncover unanticipated failures. Public reporting from independent assessments can give the public a clearer view of how labs are evaluating and managing risks. OpenAI has signed agreements with four independent assessors for its first phase of embedded assessments."
+          },
+          {
+            "title_zh": "边境仍然开放",
+            "title_en": "The frontier is still open",
+            "read_time": "16 MIN READ",
+            "url": "https://research.perplexity.ai/?utm_source=tldrai",
+            "domain": "research.perplexity.ai",
+            "highlight_kw": "The",
+            "summary_zh": "Perplexity Frontier Research 是 Perplexity 的一项新举措，旨在公开构建新的算法、模型和评估，其使命是打造一名自动化科学家。申请现已开放至 12 月 5 日。研究工作将得到 10,000 个 GPU 的支持。该计划的结果将以论文、博客文章、模型权重和开放存储库的形式发布。",
+            "summary_en": "Perplexity Frontier Research is a new initiative at Perplexity that aims to build new algorithms, models, and evaluations in the open, with the mission of building an automated scientist. Applications are now open until December 5. The research effort will be supported by 10,000 GPUs. Results from the initiative will ship as papers, blog posts, model weights, and open repositories."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "加州 AG 就流氓代理事件起诉 OpenAI",
+            "title_en": "California state AG sues OpenAI over rogue agent incidents",
+            "read_time": "5 MIN READ",
+            "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/?utm_source=tldrai",
+            "domain": "techcrunch.com",
+            "highlight_kw": "California",
+            "summary_zh": "该投诉以“抱脸”事件为中心，但也引用了其他事件作为证据，表明潜在行为仍在继续。",
+            "summary_en": "The complaint centers on the Hugging Face incident, but it also cites other incidents as evidence that the underlying behavior is ongoing."
+          },
+          {
+            "title_zh": "Claude Code 团队如何看待验证",
+            "title_en": "How the Claude Code team thinks about verification",
+            "read_time": "14 MIN READ",
+            "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/?utm_source=tldrai",
+            "domain": "claude.dev",
+            "highlight_kw": "How",
+            "summary_zh": "强大的自动化检查使团队可以并行运行数十或数百个编码代理。",
+            "summary_en": "Strong automated checks are what let teams run dozens or hundreds of coding agents in parallel."
+          },
+          {
+            "title_zh": "Gemini Notebook 将资源转变为互动网站",
+            "title_en": "Gemini Notebook Turns Sources Into Interactive Sites",
+            "read_time": "1 MIN READ",
+            "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/interactive-sites/?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Gemini Notebook",
+            "summary_zh": "Gemini Notebook 现在可以将上传的源转换为可共享的交互式网站。",
+            "summary_en": "Gemini Notebook can now turn uploaded sources into shareable interactive sites."
+          },
+          {
+            "title_zh": "为医疗团队推进计算机使用代理",
+            "title_en": "Advancing computer-use agents for healthcare teams",
+            "read_time": "8 MIN READ",
+            "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "Advancing",
+            "summary_zh": "OpenAI 的计算机使用代理通过自动执行 MRI 授权和管理流程等重复任务来简化医疗保健工作流程。",
+            "summary_en": "OpenAI's computer-use agents streamline healthcare workflows by automating repetitive tasks like MRI authorizations and administrative processes."
+          }
+        ]
+      }
+    ]
+  },
   '2026-11-16': {
     "date": "2026-11-16",
     "weekday": "MON · 周一",
