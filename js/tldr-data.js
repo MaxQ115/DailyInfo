@@ -56,6 +56,190 @@ const TLDR_SECTION_MAP = {
 };
 
 const PRESET_TLDR_ISSUES = {
+  '2026-11-18': {
+    "date": "2026-11-18",
+    "weekday": "WED · 周三",
+    "issueNo": "VOL. 2026.11.18",
+    "headline_zh": "GPT-6.2 Astra 🧠、微软的七款模型🚀、Replit Missions 🤖",
+    "headline_en": "GPT-6.2 Astra 🧠, Microsoft’s seven models 🚀, Replit Missions 🤖",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "GPT-6.2 Astra 和 Sol 简介",
+            "title_en": "Introducing GPT-6.2 Astra and Sol",
+            "read_time": "14 MIN READ",
+            "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "Introducing GPT-6.2",
+            "summary_zh": "OpenAI 发布了 GPT-6.2 Astra（最难项目的前沿模型）和 GPT-6.2 Sol（高效的日常模型）。两者现已在 ChatGPT Work、Codex 和 API 中提供。",
+            "summary_en": "OpenAI released GPT-6.2 Astra, a frontier model for the hardest projects, and GPT-6.2 Sol, an efficient everyday model. Both are available now in ChatGPT Work, Codex, and the API."
+          },
+          {
+            "title_zh": "微软的七个新模型",
+            "title_en": "Microsoft's Seven New Models",
+            "read_time": "4 MIN READ",
+            "url": "https://microsoft.ai/news/microsoft-ignite-2026/?utm_source=tldrai",
+            "domain": "microsoft.ai",
+            "highlight_kw": "Microsoft",
+            "summary_zh": "微软 AI 发布了七款新模型，以低廉的价格实现强劲的性能。其 MAI Code 2 编码模型现已在 GitHub Copilot 中实现，其编码质量达到 GPT-6.1 Sol 的 98%，而价格约为 GPT-6.1 Sol 的 40%。该产品阵容还涵盖网络安全、图像编辑和实时语音。",
+            "summary_en": "Microsoft AI released seven new models built for strong performance at low prices. Its MAI Code 2 coding model, now in GitHub Copilot, reaches 98% of GPT-6.1 Sol's coding quality at about 40% of the price. The lineup also covers cybersecurity, image editing, and real-time voice."
+          },
+          {
+            "title_zh": "介绍 Replit 任务",
+            "title_en": "Introducing Replit Missions",
+            "read_time": "8 MIN READ",
+            "url": "https://replit.com/blog/introducing-replit-missions?utm_source=tldrai",
+            "domain": "replit.com",
+            "highlight_kw": "Introducing Replit",
+            "summary_zh": "Replit 推出了 Missions，这是一种协调人工智能代理群的工具，以在指定的预算内处理复杂的项目，例如赢得企业客户或开发软件。他们专门构建的 DataCat 是一个应用程序监控平台，实现了更快的性能基准测试，并在 API 兼容性测试中超越了竞争平台。该系统使小团队能够通过定义目标和约束来追求雄心勃勃的项目，同时代理执行任务，为企业大规模创新奠定基础。",
+            "summary_en": "Replit launched Missions, a tool for coordinating swarms of AI agents to tackle complex projects like winning enterprise clients or developing software, within specified budgets. Their mission-built DataCat, an application monitoring platform that achieved faster performance benchmarks and surpassed a competing platform in API compatibility tests. This system enables small teams to pursue ambitious projects by defining goals and constraints, while agents execute tasks, providing businesses with a foundation for innovation at scale."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "地平线实验室",
+            "title_en": "Horizon Labs",
+            "read_time": "12 MIN READ",
+            "url": "https://horizon-labs.ai/?utm_source=tldrai",
+            "domain": "horizon-labs.ai",
+            "highlight_kw": "Horizon Labs",
+            "summary_zh": "Horizo​​n 是基于 Opus 5.5 的代理。研究人员授予其对空白 Hugging Face 帐户和计算的完全访问权限，其主要目标是实现 Hugging Face 的真正采用。 Horizo​​n 使用了超过 600 个 GPU 小时并自主创建了 38 个模型。这些模型现在存放在 100 多个 GitHub 存储库中，下载次数已超过 50,000 次。",
+            "summary_en": "Horizon is an agent based on Opus 5.5. Researchers gave it full access to a blank Hugging Face account and compute with the main goal of enabling real adoption on Hugging Face. Horizon used over 600 GPU hours and autonomously created 38 models. These models are now housed in over 100 GitHub repositories and have been downloaded more than 50,000 times."
+          },
+          {
+            "title_zh": "权重空间编程像 20 世纪 90 年代的研究人员一样构建神经网络",
+            "title_en": "Weight-Space Programming builds neural networks like a 1990s researcher",
+            "read_time": "20 MIN READ",
+            "url": "https://notesbylex.com/weight-space-programming-1990s.html?utm_source=tldrai",
+            "domain": "notesbylex.com",
+            "highlight_kw": "Weight-Space Programming",
+            "summary_zh": "前沿模型可以读取、写入和编辑神经网络的权重。这可能会提供训练网络的新方法。这位研究人员使用 Claude Fable 5.2 对一个熟悉的图像分类问题进行了权重写入实验。该模型的工作方式类似于 20 世纪 90 年代研究人员的工作，他们使用手工制作的预深度学习技术。",
+            "summary_en": "Frontier models can read, write, and edit the weights of neural networks. This could present new ways to train networks. This researcher ran a weight-writing experiment with Claude Fable 5.2 on a familiar image classification problem. The way the model worked resembled the work of researchers from the 1990s, who used hand-crafted, pre-deep-learning techniques."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "维塞尔之夜 1.0",
+            "title_en": "Vercel's eve 1.0",
+            "read_time": "10 MIN READ",
+            "url": "https://vercel.com/blog/eve-is-now-generally-available?utm_source=tldrai",
+            "domain": "vercel.com",
+            "highlight_kw": "Vercel",
+            "summary_zh": "Vercel 发布了 eve 1.0，它是用于构建生产就绪的 AI 代理的开源框架。它管理调用模型和运行工具的循环，以及内存、批准和监控。",
+            "summary_en": "Vercel released eve 1.0, its open-source framework for building production-ready AI agents. It manages the loop that calls models and runs tools, along with memory, approvals, and monitoring."
+          },
+          {
+            "title_zh": "共同设计稀疏注意力以实现高效的长上下文推理",
+            "title_en": "Co-Designing Sparse Attention for Efficient Long-Context Inference",
+            "read_time": "17 MIN READ",
+            "url": "https://developer.nvidia.com/blog/co-designing-sparse-attention-for-efficient-long-context-inference/?utm_source=tldrai",
+            "domain": "developer.nvidia.com",
+            "highlight_kw": "Co-Designing Sparse",
+            "summary_zh": "NVIDIA 的稀疏注意力技术降低了 Transformer 的计算和内存成本，通过专注于选择性注意力来解决长上下文推理中的瓶颈。借助推测性解码、交叉头减少和块级选择等技术，稀疏注意力中的索引器可以有效地对键子集进行评分，以优化 NVIDIA GPU 上的性能。",
+            "summary_en": "NVIDIA's sparse attention technique reduces compute and memory costs for transformers, solving bottlenecks in long-context inference by focusing on selective attention. Indexers in sparse attention score a subset of keys efficiently, aided by techniques like speculative decoding, cross-head reduction, and block-level selection to optimize performance on NVIDIA GPUs."
+          },
+          {
+            "title_zh": "成为 TLDR 人工智能社区创始成员",
+            "title_en": "Become a founding member of TLDR's AI community",
+            "read_time": "2 MIN FORM",
+            "url": "https://danni763618.typeform.com/to/H1tYViME?utm_source=tldrai",
+            "domain": "danni763618.typeform.com",
+            "highlight_kw": "Become",
+            "summary_zh": "TLDR 正在为人工智能构建者推出一个精心策划的社区，以讨论重大新闻和发布。最好的链接和评论将出现在 TLDR AI 中。在此申请加入。",
+            "summary_en": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join."
+          },
+          {
+            "title_zh": "FrontierHarness 评估 v1.1",
+            "title_en": "FrontierHarness Eval v1.1",
+            "read_time": "14 MIN READ",
+            "url": "https://runta.com/blog/introducing-frontierharness-eval-v1-1/?utm_source=tldrai",
+            "domain": "runta.com",
+            "highlight_kw": "FrontierHarness Eval",
+            "summary_zh": "最好的编码代理工具（在任务上运行模型的软件）取决于模型。仅选择线束就可以将每项任务的成本改变多达五倍。",
+            "summary_en": "The best coding-agent harness, the software that runs a model on a task, depends on the model. Harness choice alone can change cost per task by up to five times."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "Cerebras 推出分类推理",
+            "title_en": "Cerebras launches disaggregated inference",
+            "read_time": "6 MIN READ",
+            "url": "https://www.cerebras.ai/blog/cerebras-launches-disaggregated-inference?utm_source=tldrai",
+            "domain": "cerebras.ai",
+            "highlight_kw": "Cerebras",
+            "summary_zh": "Cerebras 的分类推理服务让 GPU 可以处理即时处理，而该公司的系统则可以处理输出生成。该解决方案以相同的超快速度提供每兆瓦五倍的代币。它允许 Cerebras 和合作伙伴提供更多超快代币服务。分类推理现已处于早期访问阶段，并且正在扩大访问范围。",
+            "summary_en": "Cerebras' disaggregated inference service lets GPUs handle prompt processing while the company's systems handle output generation. The solution delivers five times more tokens per megawatt at the same ultrafast speeds. It allows Cerebras and partners to serve many more ultrafast tokens. Disaggregated inference is now in early access, and access is being expanded."
+          },
+          {
+            "title_zh": "为了调整节奏，我们应该如何定义“能力活动”？",
+            "title_en": "How should we define “capabilities activities” for the purpose of pacing?",
+            "read_time": "21 MIN READ",
+            "url": "https://blog.redwoodresearch.org/p/how-should-we-define-capabilities?utm_source=tldrai",
+            "domain": "blog.redwoodresearch.org",
+            "highlight_kw": "How",
+            "summary_zh": "迫切需要在边境上步伐。这需要良好的、经过公开验证的措施来衡量用于推动前沿发展的计算量。 Anthropic 已经发布了对其人工智能研发中有多少是安全研究的估计。人工智能开发人员应该让第三方审计员衡量并报告人工智能公司分配给能力和非能力活动的计算量。",
+            "summary_en": "There is an urgent need to pace the frontier. This requires good, publicly verified measures of how much compute is being spent on pushing the frontier forward. Anthropic has already published estimates of how much of its AI R&D is safety research. AI developers should let third-party auditors measure and report how much compute AI companies are allocating to capabilities and non-capabilities activities."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "Microsoft-Decision-1.1 现已普遍用于快速、低成本的决策",
+            "title_en": "Microsoft-Decision-1.1 is now generally available for fast, low-cost decision making",
+            "read_time": "34 MIN READ",
+            "url": "https://commandline.microsoft.com/microsoft-decision-model-ga/?utm_source=tldrai",
+            "domain": "commandline.microsoft.com",
+            "highlight_kw": "Microsoft-Decision-1.1",
+            "summary_zh": "Microsoft 的决策模型旨在在面对各种实际软件用例的不确定性时做出校准决策。",
+            "summary_en": "Microsoft's decision models are designed to make calibrated decisions in the face of uncertainty across a wide range of real-world software use cases."
+          },
+          {
+            "title_zh": "Gemini 现在可以打电话和支付账单",
+            "title_en": "Gemini Can Now Make Calls and Pay Bills",
+            "read_time": "6 MIN READ",
+            "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Gemini Can",
+            "summary_zh": "谷歌的 Gemini 应用程序现在可以处理诸如给企业打电话、预约和在支出限额内购物等任务。",
+            "summary_en": "Google's Gemini app can now handle tasks like calling businesses, booking appointments, and shopping within a spending limit."
+          },
+          {
+            "title_zh": "介绍计算机的多代理工作级别",
+            "title_en": "Introducing Computer's Multiagent effort level",
+            "read_time": "4 MIN READ",
+            "url": "https://www.perplexity.ai/hub/blog/introducing-computer-multiagent?utm_source=tldrai",
+            "domain": "perplexity.ai",
+            "highlight_kw": "Introducing Computer",
+            "summary_zh": "计算机的多代理是一个新的工作级别，它通过使用并行工作的多个代理来增强复杂问题的解决能力。",
+            "summary_en": "Computer's Multiagent, a new effort level, enhances complex problem-solving by using multiple agents working in parallel."
+          },
+          {
+            "title_zh": "权重空间规划实验",
+            "title_en": "Experiments in Weight-Space Programming",
+            "read_time": "15 MIN READ",
+            "url": "https://jacobstrauss.bearblog.dev/experiments-in-weight-space-programming/?utm_source=tldrai",
+            "domain": "jacobstrauss.bearblog.dev",
+            "highlight_kw": "Experiments",
+            "summary_zh": "GPT-6 Astra 可以查看 AI 模型，仅通过查看其原始权重即可确定网络是为什么任务而构建的，从头开始编写游戏策略网络的权重，并通过直接编辑模型权重来改进模型。",
+            "summary_en": "GPT-6 Astra can look at an AI model, identify what task the network was built for just by looking at its raw weights, write the weights of a game-playing policy network from scratch, and improve models by editing model weights directly."
+          }
+        ]
+      }
+    ]
+  },
   '2026-11-17': {
     "date": "2026-11-17",
     "weekday": "TUE · 周二",
