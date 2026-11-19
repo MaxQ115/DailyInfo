@@ -56,6 +56,210 @@ const TLDR_SECTION_MAP = {
 };
 
 const PRESET_TLDR_ISSUES = {
+  '2026-11-19': {
+    "date": "2026-11-19",
+    "weekday": "THU · 周四",
+    "issueNo": "VOL. 2026.11.19",
+    "headline_zh": "Gemini 4 Neon 🚀、Genie 4 worlds 🌍、AI 设计芯片 🔬",
+    "headline_en": "Gemini 4 Neon 🚀, Genie 4 worlds 🌍, AI designs chips 🔬",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "双子座 4 霓虹灯",
+            "title_en": "Gemini 4 Neon",
+            "read_time": "12 MIN READ",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Gemini",
+            "summary_zh": "Google 推出了 Gemini 4 Neon，这是一种用于复杂编码、知识工作和科学任务的快速前沿模型。它在人工智能分析指数上得分为 61，定价为每百万输入代币 3 美元，每百万输出代币 15 美元。讨论 TLDR →",
+            "summary_en": "Google introduced Gemini 4 Neon, a fast, frontier-level model for complex coding, knowledge work, and science tasks. It scored 61 on the Artificial Analysis Intelligence Index and is priced at $3 per million input tokens and $15 per million output tokens.Discuss on TLDR →"
+          },
+          {
+            "title_zh": "精灵4",
+            "title_en": "Genie 4",
+            "read_time": "7 MIN READ",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Genie",
+            "summary_zh": "谷歌向 Genie 项目中符合条件的 Google AI Ultra 订阅者开放了 Genie 4，它用于生成交互式世界的模型。用户可以在探索世界时通过输入提示来编辑世界。",
+            "summary_en": "Google opened Genie 4, its model for generating interactive worlds, to eligible Google AI Ultra subscribers in Project Genie. Users can edit a world by typing prompts while exploring it."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "为什么 Gemini 4 Carbon 需要这么长时间？",
+            "title_en": "Why is Gemini 4 Carbon taking so long?",
+            "read_time": "4 MIN READ",
+            "url": "https://kernel.dev/blog/why-is-gemini-4-carbon-taking-so-long/?utm_source=tldrai",
+            "domain": "kernel.dev",
+            "highlight_kw": "Why",
+            "summary_zh": "在私人基准测试中，Gemini 4 Carbon 花了近一个小时修复错误，而 Claude Opus 5.5 和 GPT-6 Astra 在几分钟内就完成了。 Carbon 的步骤大约是 Astra 的七倍，其中一半是不必要的。",
+            "summary_en": "In a private benchmark, Gemini 4 Carbon spent close to an hour on bug fixes that Claude Opus 5.5 and GPT-6 Astra finished in minutes. Carbon took about seven times as many steps as Astra, and half were unnecessary."
+          },
+          {
+            "title_zh": "为什么反重力会快速消耗每周配额 - 以及我的测量结果",
+            "title_en": "Why Antigravity Eats Weekly Quota Fast - and What I Measured",
+            "read_time": "17 MIN READ",
+            "url": "https://asubedi.com.np/blog/why-antigravity-eats-weekly-quota-fast/?utm_source=tldrai",
+            "domain": "asubedi.com.np",
+            "highlight_kw": "Why Antigravity",
+            "summary_zh": "如果有 5 分钟的暂停，Google Antigravity 会擦除用户的提示缓存。在过期之前刷新缓存可以正常工作，但仅限 3 次 ping。即使是 5 个单词的提示也以 13,800 到 16,800 多个系统指令、MCP 模式和技能标记开始。禁用未使用的 MCP 服务器和插件可以减少冷转和缓存未命中。",
+            "summary_en": "Google Antigravity wipes users' prompt caches if there is a 5-minute pause. Refreshing the cache just before expiry works, but only for 3 pings. Even a 5-word prompt starts with 13,800 to 16,800+ tokens of system instructions, MCP schemas, and skills. Disabling unused MCP servers and plugins shrinks cold turns and cache misses."
+          },
+          {
+            "title_zh": "在谈话中切换法学硕士是一个滑雪租赁问题",
+            "title_en": "Switching LLMs mid-conversation is a ski-rental problem",
+            "read_time": "30 MIN READ",
+            "url": "https://www.edgee.ai/blog/posts/switching-llms-mid-conversation-is-a-ski-rental-problem?utm_source=tldrai",
+            "domain": "edgee.ai",
+            "highlight_kw": "Switching LLMs",
+            "summary_zh": "大多数关于语言模型之间路由的工作都集中在确保正确的模型处理正确的请求。分类器对请求进行评分，如果简单，则将请求路由到廉价模型，如果困难，则将请求路由到前沿模型。对于编码代理来说，这只是问题的一半。问题的后半部分是知道正在运行的会话何时应该更改模型。这篇文章讨论的这个问题有一个经典的形式：滑雪租赁问题。讨论 TLDR →",
+            "summary_en": "Most work on routing between language models is centered on making sure the right model handles the right request. A classifier scores the request, then the request is routed to a cheap model if it is easy, and a frontier model if it is hard. For coding agents, this is only half of the problem. The second half of the problem is knowing when a running session should change model. This problem, which this post discusses, has a classic form: the ski-rental problem.Discuss on TLDR →"
+          },
+          {
+            "title_zh": "利用 OpenAI 模型推进芯片设计",
+            "title_en": "Advancing chip design with OpenAI models",
+            "read_time": "8 MIN READ",
+            "url": "https://openai.com/index/advancing-chip-design-with-our-models/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "Advancing",
+            "summary_zh": "OpenAI 模型提出的设计变更将 Jalapeo AI 芯片关键部分的电路面积减少了约 10% 至 13%。对于 AMD，同样的方法使 AMD 旗舰 GPU 设计提升了 14%。讨论 TLDR →",
+            "summary_en": "Design changes proposed by OpenAI's models cut the circuit area of key parts of its Jalapeño AI chip by an estimated 10% to 13%. With AMD, the same approach delivered up to 14% improvements on AMD's flagship GPU designs.Discuss on TLDR →"
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "成为 TLDR 人工智能社区创始成员",
+            "title_en": "Become a founding member of TLDR's AI community",
+            "read_time": "2 MIN FORM",
+            "url": "https://danni763618.typeform.com/to/H1tYViME?utm_source=tldrai",
+            "domain": "danni763618.typeform.com",
+            "highlight_kw": "Become",
+            "summary_zh": "TLDR 正在为人工智能构建者推出一个精心策划的社区，以讨论重大新闻和发布。最好的链接和评论将出现在 TLDR AI 中。在此申请加入。",
+            "summary_en": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join."
+          },
+          {
+            "title_zh": "OpenAI 研究加速的最新进展",
+            "title_en": "An update on the state of research acceleration at OpenAI",
+            "read_time": "20 MIN READ",
+            "url": "https://openai.com/index/research-acceleration-jagged-frontier/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "An",
+            "summary_zh": "OpenAI 的代理现在可以独立完成近一半的两到四个小时的研究任务。然而，人类仍然是人工智能发展的核心。代理的使用量正在激增，并且最重的用户正在进一步领先。研究人员正在投入越来越多的人力来确保安全和协调。",
+            "summary_en": "OpenAI's agents now complete nearly half of two-to-four-hour research tasks on their own. However, humans are still central to AI development. Agent use is surging, and the heaviest users are pulling further ahead. Researchers are devoting increasing human effort to Safety and alignment."
+          },
+          {
+            "title_zh": "Context API 从任何网页中提取完整的上下文",
+            "title_en": "Context API extracts full context from any web page",
+            "read_time": "6 MIN READ",
+            "url": "https://www.perplexity.ai/hub/blog/context-api-extracts-full-context-from-any-web-page?utm_source=tldrai",
+            "domain": "perplexity.ai",
+            "highlight_kw": "Context API",
+            "summary_zh": "Perplexity Context API 可以从任何网页中提取完整的上下文，并返回干净的 Markdown、链接和相关段落。它一次最多可以读取 10 个 URL。代理可以指定每个请求的新鲜度并验证每个结果的来源。每个成功的结果还包括页面的元数据，例如标题、描述、语言、作者和发布日期。",
+            "summary_en": "The Perplexity Context API can extract the full context from any webpage and return clean Markdown, links, and relevant passages. It can read up to 10 URLs at once. Agents can specify the freshness of each request and validate the source of each result. Every successful result also includes metadata for the page such as the title, description, language, author, and date of publication."
+          },
+          {
+            "title_zh": "模型工厂介绍",
+            "title_en": "Introducing Model Factory",
+            "read_time": "8 MIN READ",
+            "url": "https://www.primeintellect.ai/blog/introducing-model-factory?utm_source=tldrai",
+            "domain": "primeintellect.ai",
+            "highlight_kw": "Introducing Model",
+            "summary_zh": "模型工厂是一个培训循环，允许任何公司在生产中培训、部署和持续改进模型。它将强化学习、监督微调、预训练和推理整合到一个控制平面中。它还提供运行状况检查、自动节点更换以及从最新检查点恢复以进行长时间运行的实验。模型工厂已经部署在金融自动化、计算机使用、科学发现、芯片设计和其他行业的团队中。",
+            "summary_en": "Model Factory is a training loop that lets any company train, deploy, and continuously improve models in production. It brings reinforcement learning, supervised fine-tuning, pre-training, and inference together into one control plane. It also offers health checks, automatic node replacement, and recovery from the latest checkpoint for long-running experiments. Model Factory has already been deployed for teams working on finance automation, computer use, scientific discovery, chip design, and other industries."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "快点，没时间",
+            "title_en": "Quickly, There's No Time",
+            "read_time": "38 MIN READ",
+            "url": "https://thezvi.substack.com/p/quickly-theres-no-time?utm_source=tldrai",
+            "domain": "thezvi.substack.com",
+            "highlight_kw": "Quickly",
+            "summary_zh": "许多事情都表明超级智能明年出现的可能性很大。任何为此做好准备的计划都必须为人工智能研发的全面自动化做好准备，这将导致人工智能能力迅速提升到超越人类水平。它需要包括减缓由此产生的能力增长的机制。",
+            "summary_en": "Many things point to the substantial possibility of superintelligence arriving next year. Any plan to prepare for this has to be ready for the full automation of AI R&D, which will result in the rapid advancement of AI abilities beyond human levels. It will need to include mechanisms to slow down the resulting growth in capabilities."
+          },
+          {
+            "title_zh": "沉默的共识",
+            "title_en": "The Silent Consensus",
+            "read_time": "15 MIN READ",
+            "url": "https://www.hyperdimensional.co/p/the-silent-consensus?utm_source=tldrai",
+            "domain": "hyperdimensional.co",
+            "highlight_kw": "The Silent",
+            "summary_zh": "人工智能带来的最常见的未来愿景并不完全是积极的。它常常不言而喻，只能通过暗示、沉默的共识来辨别。人类做出的决定很可能会导致一个人们丧失对大部分文明的有效权威的世界。即使我们在人工智能安全和一致性方面取得了非凡的进步，我们仍然可能发现自己已经屈服于机器实体。",
+            "summary_en": "The most common vision for the future that AI brings isn't totally positive. It is often left unsaid, discernible only by implication, a silent consensus. The decisions humans make will likely lead to a world in which people have forfeited effective authority over much of our civilization. Even if we make extraordinary progress on AI safety and alignment, we could still find ourselves having submitted to a machine entity."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "Codex 沙箱内部",
+            "title_en": "Inside the Codex sandbox",
+            "read_time": "28 MIN READ",
+            "url": "https://openai.com/index/inside-the-codex-sandbox/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "Inside",
+            "summary_zh": "Codex 沙箱允许 OpenAI 的编码代理在用户自己的计算机上运行命令，且文件和网络限制用户控制。",
+            "summary_en": "The Codex sandbox lets OpenAI's coding agent run commands on a user's own machine within file and network limits the user controls."
+          },
+          {
+            "title_zh": "Meta 如何使用 AI 代理在广告排名模型中扩展 ML 创新",
+            "title_en": "How Meta Uses AI Agents to Scale ML Innovations Across Ads Ranking Models",
+            "read_time": "12 MIN READ",
+            "url": "https://engineering.fb.com/2026/11/18/ml-applications/ai-agents-to-scale-ml-innovations-across-ads-ranking-models/?utm_source=tldrai",
+            "domain": "engineering.fb.com",
+            "highlight_kw": "How Meta",
+            "summary_zh": "Meta 使用 AI 代理在不同的广告排名模型中有效传播 ML 技术的改进。",
+            "summary_en": "Meta uses AI agents to efficiently propagate ML technique improvements across diverse ads ranking models."
+          },
+          {
+            "title_zh": "ResolveAI 推出 SRE-1，适合各种预算的最准确的生产模型",
+            "title_en": "ResolveAI Introduces SRE-1, the Most Accurate Model for Production at Every Budget",
+            "read_time": "1 MIN READ",
+            "url": "https://resolve.ai/news/introduces-SRE-1-model-and-primary-on-call?utm_source=tldrai",
+            "domain": "resolve.ai",
+            "highlight_kw": "ResolveAI Introduces",
+            "summary_zh": "SRE-1 为各种预算的生产提供无与伦比的准确性。",
+            "summary_en": "SRE-1 offers unmatched accuracy for production across various budgets."
+          },
+          {
+            "title_zh": "Anthropic 的计算支出每年增长 4 倍，超过 OpenAI 的 3 倍",
+            "title_en": "Anthropic's compute spending is increasing by 4x per year, outpacing OpenAI's 3x",
+            "read_time": "6 MIN READ",
+            "url": "https://epoch.ai/data-insights/anthropic-openai-compute-spend-growth?utm_source=tldrai",
+            "domain": "epoch.ai",
+            "highlight_kw": "Anthropic",
+            "summary_zh": "2026 年第三季度，Anthropic 在计算和基础设施上花费了近 100 亿美元。",
+            "summary_en": "Anthropic spent nearly $10 billion on compute and infrastructure in the third quarter of 2026."
+          },
+          {
+            "title_zh": "Stitch Loop 简介：构建和发展产品的新方法",
+            "title_en": "Introducing Stitch Loop: A new way to build and evolve products",
+            "read_time": "1 MIN READ",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Introducing Stitch",
+            "summary_zh": "Stitch Loop 是 Google 实验室的一款新工具，旨在促进迭代产品开发。",
+            "summary_en": "Stitch Loop is a new tool from Google Labs designed to facilitate iterative product development."
+          }
+        ]
+      }
+    ]
+  },
   '2026-11-18': {
     "date": "2026-11-18",
     "weekday": "WED · 周三",
