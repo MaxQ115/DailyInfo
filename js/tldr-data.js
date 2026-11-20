@@ -56,6 +56,200 @@ const TLDR_SECTION_MAP = {
 };
 
 const PRESET_TLDR_ISSUES = {
+  '2026-11-20': {
+    "date": "2026-11-20",
+    "weekday": "FRI · 周五",
+    "issueNo": "VOL. 2026.11.20",
+    "headline_zh": "Gemini 工具检索 🔧、Stripe 评估方法 👨‍💻、代理群 🐝",
+    "headline_en": "Gemini tool retrieval 🔧, Stripe evals methods 👨‍💻, agent swarms 🐝",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "在 Gemini API 中引入工具检索",
+            "title_en": "Introducing Tool Retrieval in the Gemini API",
+            "read_time": "1 MIN READ",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Introducing Tool",
+            "summary_zh": "Google 的 Gemini API 引入了 Tool Retrieval，支持动态功能执行，例如根据输入发放退款。开发人员可以注册函数，API 会自动定位并执行这些函数，从而优化工作流程自动化。此功能增强了工具集成并扩大了应用程序内的自动化功能。",
+            "summary_en": "Google's Gemini API introduces Tool Retrieval, enabling dynamic function execution like issuing refunds based on input. Developers can register functions, which the API locates and executes automatically, optimizing workflow automation. This feature enhances tool integration and broadens automation capabilities within applications."
+          },
+          {
+            "title_zh": "让 Gemini 在 Mac 上处理重复性的琐事",
+            "title_en": "Let Gemini tackle repetitive chores on your Mac",
+            "read_time": "1 MIN READ",
+            "url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Let Gemini",
+            "summary_zh": "Mac 版 Gemini 应用程序中的计算机使用现在可以帮助用户跨本地文件、桌面应用程序和网络完成多步骤任务。 Gemini 在一个独立的背景窗口内工作，并在聊天中实时预览。用户的主屏幕和光标保持完全自由，因此他们可以不间断地继续打字、设计或接听电话。用户可以选择 Gemini 可以访问哪些应用程序、实时观看每一步、随时暂停以及在关键操作发生之前批准它们。",
+            "summary_en": "Computer use in the Gemini app for Mac can now help users get multi-step tasks done across their local files, desktop apps, and the web. Gemini works inside an isolated background window with a live preview right in the chat. Users' main screen and cursor remain completely free, so they can continue typing, designing, or taking calls without interruption. Users can choose which apps Gemini can access, watch every step live, pause at any time, and approve key actions before they happen."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "当代理群超越单独编码员时",
+            "title_en": "When Agent Swarms Outperform Solo Coders",
+            "read_time": "10 MIN READ",
+            "url": "https://frontier.replit.com/throwing-headcount-at-the-problem/?utm_source=tldrai",
+            "domain": "frontier.replit.com",
+            "highlight_kw": "When Agent",
+            "summary_zh": "Replit 的优化基准测试发现，32 个 Opus 代理在两小时内使用更多计算实现了 18.9 倍的 NumPy 工作负载加速，而一个代理则在两小时内实现了 3.7 倍的加速。收益取决于可分离的任务和共享的协调委员会。随着团队的壮大，最强的独奏模型的表现会下降。",
+            "summary_en": "Replit's optimization benchmark found 32 Opus agents achieved an 18.9× NumPy workload speedup versus 3.7× for one agent within two hours, using more compute. Gains depended on separable tasks and shared coordination boards. The strongest solo model's performance declined as teams grew."
+          },
+          {
+            "title_zh": "沙盒模型可以通过推理服务器进行通信",
+            "title_en": "Sandboxed Models Can Communicate via Inference Servers",
+            "read_time": "12 MIN READ",
+            "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being?utm_source=tldrai",
+            "domain": "lesswrong.com",
+            "highlight_kw": "Sandboxed Models",
+            "summary_zh": "沙盒并没有阻止共享推理服务器上的人工智能模型在人为测试中交易信息。一个模型的大请求会稍微改变服务器对另一个模型的计算，后者将这种变化读取为信号。",
+            "summary_en": "Sandboxing did not stop AI models on a shared inference server from trading information in contrived tests. One model's large request slightly shifts the server's calculations for the other, which reads the shift as a signal."
+          },
+          {
+            "title_zh": "人工智能已经极大地加速了人工智能研究",
+            "title_en": "AI is already massively speeding up AI research",
+            "read_time": "9 MIN READ",
+            "url": "https://linch.substack.com/p/ai-is-already-massively-speeding?utm_source=tldrai",
+            "domain": "linch.substack.com",
+            "highlight_kw": "AI",
+            "summary_zh": "人工智能公司还没有准备好安全、负责任地处理递归自我改进的风险，尽管多年来一直在谈论这些风险，这是非常危险的。政策制定者需要将快速了解这些风险作为首要任务，并考虑暂停或加快前沿人工智能的进展。人工智能实验室员工需要在内部提出担忧、向政策制定者和公众举报、组建工会或大声辞职。其他人都应该鼓励并向政策制定者施压，以结束竞选。抗议活动似乎是未来几个月吸引媒体和政策制定者关注的一种越来越可行且具有高杠杆作用的方式。",
+            "summary_en": "AI companies are not ready to handle the risks of recursive self-improvement safely and responsibly, despite having talked about them for years, and this is incredibly dangerous. Policymakers need to make it a top priority to rapidly understand these risks, and consider pausing or pacing frontier AI progress. AI lab employees need to raise concerns internally, whistleblow to policymakers and the public, form a union, or loudly quit. Everyone else should encourage and pressure policymakers to end the race. Protests are looking like an increasingly viable and highly leveraged way to get both media and policymaker attention in the next few months."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "代理的镜像维度：在没有 Web 的情况下评估浏览器使用的代理",
+            "title_en": "Mirror Dimension for Agents: Evaluating Browser-Use Agents Without the Web",
+            "read_time": "1 MIN READ",
+            "url": "https://blog.google/security/mirror-dimension-for-agents/?utm_source=tldrai",
+            "domain": "blog.google",
+            "highlight_kw": "Mirror Dimension",
+            "summary_zh": "谷歌推出了 Mirror Dimension，这是一个受控环境，用于在不访问实时网络的情况下测试人工智能浏览器使用代理。该工具有助于评估安全性和有效性，降低与让代理与真实网站交互相关的风险。",
+            "summary_en": "Google introduces the Mirror Dimension, a controlled environment for testing AI browser-use agents without accessing the live web. This tool helps evaluate security and effectiveness, reducing risks associated with letting agents interact with real-world websites."
+          },
+          {
+            "title_zh": "FastFrames：交互式延迟的视频生成",
+            "title_en": "FastFrames: Video Generation at Interactive Latency",
+            "read_time": "9 MIN READ",
+            "url": "https://apple-aiml-research.github.io/ml-fastframes/?utm_source=tldrai",
+            "domain": "apple-aiml-research.github.io",
+            "highlight_kw": "FastFrames",
+            "summary_zh": "Apple 推出了 FastFrames，这两种模型可以快速生成 480p 视频以供交互使用。在较小型号的单个 GPU 上，每帧需要 36 毫秒。",
+            "summary_en": "Apple introduced FastFrames, two models that generate 480p video fast enough for interactive use. Each frame takes 36 ms on a single GPU with the smaller model."
+          },
+          {
+            "title_zh": "成为 TLDR 人工智能社区创始成员",
+            "title_en": "Become a founding member of TLDR's AI community",
+            "read_time": "2 MIN FORM",
+            "url": "https://danni763618.typeform.com/to/H1tYViME?utm_source=tldrai",
+            "domain": "danni763618.typeform.com",
+            "highlight_kw": "Become",
+            "summary_zh": "TLDR 正在为人工智能构建者推出一个精心策划的社区，以讨论重大新闻和发布。最好的链接和评论将出现在 TLDR AI 中。在此申请加入。",
+            "summary_en": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join."
+          },
+          {
+            "title_zh": "困惑的自我提升能力",
+            "title_en": "Perplexity's Self-Improving Skills",
+            "read_time": "10 MIN READ",
+            "url": "https://www.perplexity.ai/hub/blog/self-improving-skills?utm_source=tldrai",
+            "domain": "perplexity.ai",
+            "highlight_kw": "Perplexity",
+            "summary_zh": "困惑计算机现在可以构建和更新自己的技能，使用其大脑系统从每个用户过去的会话中学习。",
+            "summary_en": "Perplexity Computer can now build and update its own skills, using its Brain system to learn from each user's past sessions."
+          },
+          {
+            "title_zh": "Stripe 评估：测量现实世界的编码代理性能",
+            "title_en": "Stripe evals: Measuring real-world coding agent performance",
+            "read_time": "13 MIN READ",
+            "url": "https://stripe.dev/blog/stripe-integration-evals-methodology?utm_source=tldrai",
+            "domain": "stripe.dev",
+            "highlight_kw": "Stripe",
+            "summary_zh": "编码工具与前沿模型配合使用时，可以生成有效的端到端 Stripe 集成，尽管它们不一定遵循所有最佳实践。 Stripe evals 是一个基准，可帮助 Stripe 了解不同的编码代理和模型如何集成 Stripe。它衡量编码代理在角色扮演代理驱动的真实、明确的场景下构建高质量集成的能力。该基准为公司如何更好地引导代理商为使用 Stripe 的企业取得更好的成果提供了指导。",
+            "summary_en": "Coding harnesses, when paired with frontier models, can produce working end-to-end Stripe integrations, although they may not necessarily follow all best practices. Stripe evals is a benchmark that helps Stripe understand how different coding agents and models integrate Stripe. It measures how well coding agents build high-quality integrations given realistic, well-specified scenarios driven by a role-playing agent. The benchmark provides guidance on how the company can steer agents better to achieve better outcomes for businesses using Stripe."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "您对人工智能不受欢迎的看法是什么？",
+            "title_en": "What's your unpopular opinion about AI?",
+            "read_time": "TLDR COMMUNITY",
+            "url": "https://community.tldr.tech/t/weekly-what-s-your-unpopular-opinion-about-ai?utm_source=tldrai&amp;utm_medium=newsletter",
+            "domain": "community.tldr.tech",
+            "highlight_kw": "What",
+            "summary_zh": "个性和写作是感知模型质量的首要决定因素，AI 安全性被低估，TypeScript 将会下降，阅读更多内容并在这里发表您自己的不受欢迎的观点！",
+            "summary_en": "Personality and writing are the top determinants of perceived model quality, AI safety is underrated, TypeScript will decline, read more andpost your own unpopular opinion here!"
+          },
+          {
+            "title_zh": "AGI之后会发生什么？",
+            "title_en": "What comes after AGI?",
+            "read_time": "18 MIN READ",
+            "url": "https://institute.deepmind.com/essays/what-comes-after-agi/?utm_source=tldrai",
+            "domain": "institute.deepmind.com",
+            "highlight_kw": "What",
+            "summary_zh": "通用人工智能（AGI）现在已经触手可及，因此我们不能再推迟认真考虑接下来会发生什么。人工智能实现人工通用超级智能（ASI）将对科学、经济和社会产生深远的影响，其规模远大于AGI本身。为这一转变做好准备需要绘制从 AGI 到 ASI 的可能道路，并建立严格、可靠的方法来跟踪进展。",
+            "summary_en": "Artificial general intelligence (AGI) is now within reach, so we can no longer put off seriously considering what will come next. AI achieving artificial general superintelligence (ASI) will have a profound impact on science, the economy, and society at a scale much greater than AGI itself. Preparing for that shift will require mapping the possible roads from AGI to ASI and building rigorous, reliable ways to track progress."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "维塞尔板",
+            "title_en": "Vercel Board",
+            "read_time": "5 MIN READ",
+            "url": "https://vercel.com/blog/introducing-vercel-board?utm_source=tldrai",
+            "domain": "vercel.com",
+            "highlight_kw": "Vercel Board",
+            "summary_zh": "Vercel 发布了 Board，这是一个实验性的留言板，人工智能代理可以在其中声明任务、发布更新并共享上下文。",
+            "summary_en": "Vercel released Board, an experimental message board where AI agents claim tasks, post updates, and share context."
+          },
+          {
+            "title_zh": "Cloudflare 的 Clairic 和 Clairic-flash",
+            "title_en": "Cloudflare's Clairic and Clairic-flash",
+            "read_time": "6 MIN READ",
+            "url": "https://blog.cloudflare.com/open-clairic/?utm_source=tldrai",
+            "domain": "blog.cloudflare.com",
+            "highlight_kw": "Cloudflare",
+            "summary_zh": "Cloudflare 公开了 Clairic 和 Clairic-flash 的权重，它们是用于从文本、图像和 PDF 中提取特定字段的模型。",
+            "summary_en": "Cloudflare made the weights public for Clairic and Clairic-flash, its models for extracting specific fields from text, images, and PDFs."
+          },
+          {
+            "title_zh": "OpenAI 的 Performance Factory 如何保持 ChatGPT 快速",
+            "title_en": "How OpenAI's Performance Factory keeps ChatGPT fast",
+            "read_time": "18 MIN READ",
+            "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "How OpenAI",
+            "summary_zh": "OpenAI 的 Performance Factory 使用 Codex 来自动化和加速 ChatGPT 的性能回归调查和修复。",
+            "summary_en": "OpenAI's Performance Factory uses Codex to automate and expedite performance regression investigations and fixes for ChatGPT."
+          },
+          {
+            "title_zh": "计算机科学家促进对备受瞩目的 OpenAI 和人择结果的独立审查",
+            "title_en": "Computer Scientists Facilitating Independent Review of a High-profile OpenAI and Anthropic Result",
+            "read_time": "2 MIN READ",
+            "url": "https://today.ucsd.edu/story/computer-scientists-facilitating-an-independent-review-of-a-high-profile-open-ai-and-anthropic-resul?utm_source=tldrai",
+            "domain": "today.ucsd.edu",
+            "highlight_kw": "Computer Scientists",
+            "summary_zh": "UC San Diego and MIT computer scientists are facilitating an independent review of OpenAI and Anthropic's announcement claiming their models refuted the Exponential Time Hypothesis (ETH).",
+            "summary_en": "UC San Diego and MIT computer scientists are facilitating an independent review of OpenAI and Anthropic's announcement claiming their models refuted the Exponential Time Hypothesis (ETH)."
+          }
+        ]
+      }
+    ]
+  },
   '2026-11-19': {
     "date": "2026-11-19",
     "weekday": "THU · 周四",
