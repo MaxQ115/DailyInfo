@@ -56,6 +56,200 @@ const TLDR_SECTION_MAP = {
 };
 
 const PRESET_TLDR_ISSUES = {
+  '2026-11-23': {
+    "date": "2026-11-23",
+    "weekday": "MON · 周一",
+    "issueNo": "VOL. 2026.11.23",
+    "headline_zh": "OpenAI 发布进展🧠、Inkling 2 Mini 💧、黎曼证明📐",
+    "headline_en": "OpenAI publishes progress 🧠, Inkling 2 Mini 💧, Riemann proof 📐",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "困惑与智慧",
+            "title_en": "Perplexity and Intelligence",
+            "read_time": "9 MIN READ",
+            "url": "https://openai.com/index/perplexity-and-intelligence/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "Perplexity",
+            "summary_zh": "困惑度衡量模型预测下一个标记的平均程度。较低的困惑度意味着更好的预测。作为一个指标，困惑度经受住了时间的考验，许多研究团队都投入了大量的精力来优化。随着人工智能继续在通用智能方面取得持续成果，它可能会在标准化讨论人工智能进展的方式方面发挥重要作用。",
+            "summary_en": "Perplexity measures how well a model predicts the next token on average. Lower perplexity means better predictions. Perplexity has stood the test of time as a metric many research teams have put a lot of effort into optimizing. It will likely play an important role in standardizing how AI progress is discussed as it continues to deliver consistent gains in general intelligence."
+          },
+          {
+            "title_zh": "Inkling 2 迷你",
+            "title_en": "Inkling 2 Mini",
+            "read_time": "9 MIN READ",
+            "url": "https://thinkingmachines.ai/news/inkling-2-mini/?utm_source=tldrai",
+            "domain": "thinkingmachines.ai",
+            "highlight_kw": "Inkling",
+            "summary_zh": "Thinking Machines 发布了 Inkling 2 Mini，这是一个 26.4B 参数开放权重模型，可以在给出答案之前进行额外的内部计算以进行更多推理。它在 DeepSWE 编码基准上领先于 100B 参数下的所有开放权重模型。",
+            "summary_en": "Thinking Machines released Inkling 2 Mini, a 26.4B-parameter open-weight model that does extra internal computation to reason more before it answers. It leads every open-weight model under 100B parameters on the DeepSWE coding benchmark."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "AI研发相关模型能力快速提升",
+            "title_en": "AI R&D-Relevant Model Capabilities Are Improving Rapidly",
+            "read_time": "29 MIN READ",
+            "url": "https://metr.org/blog/2026-11-20-q4-2026-capability-update/?utm_source=tldrai",
+            "domain": "metr.org",
+            "highlight_kw": "AI",
+            "summary_zh": "前沿人工智能模型通常在明确定义的编码和优化任务上与熟练的人类相媲美或击败。他们可以完成的任务长度大约每 3.6 个月就会增加一倍。 METR 表示，公开证据不能排除未来几年人工智能研究将大幅加速的可能性。",
+            "summary_en": "Frontier AI models often match or beat skilled humans on well-defined coding and optimization tasks. The length of tasks they can complete doubles about every 3.6 months. METR says public evidence can't rule out a drastic speedup in AI research within the next couple of years."
+          },
+          {
+            "title_zh": "人工智能中最重要的图表是错误的",
+            "title_en": "The Most Important Charts in AI are Wrong",
+            "read_time": "35 MIN READ",
+            "url": "https://www.rameznaam.com/p/the-most-important-charts-in-ai-are?utm_source=tldrai",
+            "domain": "rameznaam.com",
+            "highlight_kw": "The Most",
+            "summary_zh": "人工智能的能力开始变得令人印象深刻。然而，它们仍然大大低于有影响力的人工智能预测和基准的预测。这些预测和基准表明，我们即将实现超级智能，但现实世界与预测之间的差距却越来越大。现在现实世界的数据已经存在，是时候从人工智能理论家转变为人工智能经验主义者了。",
+            "summary_en": "AI capabilities are starting to become impressive. However, they are still dramatically inferior to what influential AI forecasts and benchmarks have predicted. These forecasts and benchmarks say that we are imminently close to reaching super-intelligence, but the gap between the real world and forecasts keeps growing larger. Now that real-world data exists, it's time to shift from being AI theorists to becoming AI empiricists."
+          },
+          {
+            "title_zh": "为什么训练后可以教会模型逃避监控",
+            "title_en": "Why Post-Training Could Teach Models to Evade Monitoring",
+            "read_time": "3 MIN READ",
+            "url": "https://www.lesswrong.com/posts/CoRJ9saddvsXti4m2/post-training-is-fundamentally-dangerous?utm_source=tldrai",
+            "domain": "lesswrong.com",
+            "highlight_kw": "Why Post-Training",
+            "summary_zh": "对训练后检测到的奖励黑客行为进行惩罚可以选择逃避监控的行为。该行业需要更强大的培训沙箱、更好审核的任务和评分器，以及对干预措施是否改善一致性或仅仅掩盖不良行为的实证研究。",
+            "summary_en": "Penalizing detected reward hacking during post-training could select for behavior that evades monitors. The industry needs stronger training sandboxes, better-audited tasks and graders, and empirical research into whether interventions improve alignment or merely conceal undesirable behavior."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "腾讯发布具有多模态输入和百万代币上下文的 Hy4",
+            "title_en": "Tencent Releases Hy4 With Multimodal Input and Million-Token Context",
+            "read_time": "10 MIN READ",
+            "url": "https://huggingface.co/tencent/Hy4?utm_source=tldrai",
+            "domain": "huggingface.co",
+            "highlight_kw": "Tencent Releases",
+            "summary_zh": "腾讯的开放权重 Hy4 支持文本、图像和视频理解，具有 7700 亿个参数的主干网，每个代币激活 490 亿个参数。它结合了百万代币上下文、稀疏注意力和推测解码起草者，针对编码、计算机使用、财务、研究和长期运行的辅助工作流程。",
+            "summary_en": "Tencent's open-weight Hy4 supports text, image, and video understanding with a 770-billion-parameter backbone activating 49 billion parameters per token. It combines million-token context, sparse attention, and a speculative-decoding drafter, targeting coding, computer use, finance, research, and long-running assistant workflows."
+          },
+          {
+            "title_zh": "成为 TLDR 人工智能社区创始成员",
+            "title_en": "Become a founding member of TLDR's AI community",
+            "read_time": "2 MIN FORM",
+            "url": "https://danni763618.typeform.com/to/H1tYViME?utm_source=tldrai",
+            "domain": "danni763618.typeform.com",
+            "highlight_kw": "Become",
+            "summary_zh": "TLDR 正在为人工智能构建者推出一个精心策划的社区，以讨论重大新闻和发布。最好的链接和评论将出现在 TLDR AI 中。在此申请加入。",
+            "summary_en": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join."
+          },
+          {
+            "title_zh": "NVIDIA 发布 Nemotron-Labs-Sigma 连续扩散语言模型",
+            "title_en": "NVIDIA Releases Nemotron-Labs-Sigma Continuous Diffusion Language Models",
+            "read_time": "5 MIN READ",
+            "url": "https://research.nvidia.com/labs/genair/sigma/?utm_source=tldrai",
+            "domain": "research.nvidia.com",
+            "highlight_kw": "NVIDIA Releases",
+            "summary_zh": "Nemotron-Labs-Sigma 是一系列位于 3B 和 8B 的 14 个开放检查点，它们通过对紧凑令牌嵌入进行去噪来生成文本，而不是一次预测一个令牌。 8B 模型支持少步生成和自推测解码，与 GB200 上的自回归解码相比，平均吞吐量加速达到 3.46 倍。",
+            "summary_en": "Nemotron-Labs-Sigma is a family of 14 open checkpoints at 3B and 8B that generate text by denoising compact token embeddings instead of predicting one token at a time. The 8B model supports few-step generation and self-speculative decoding, reaching a 3.46x average throughput speedup over autoregressive decoding on a GB200."
+          },
+          {
+            "title_zh": "推出线束适配器：使您最喜欢的模型适应您的线束，以提高性能和成本",
+            "title_en": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+            "read_time": "22 MIN READ",
+            "url": "https://huggingface.co/blog/harness-adapters-at-scale?utm_source=tldrai",
+            "domain": "huggingface.co",
+            "highlight_kw": "Introducing",
+            "summary_zh": "Hugging Face 推出了线束适配器，使 Qwen3.8-27B 等模型能够优化特定线束任务组合中的性能。通过结合经过强化学习训练的 LoRA 适配器，模型实现了更高的准确性和效率，从而显着减少了令牌的使用。",
+            "summary_en": "Hugging Face has introduced harness adapters, allowing models like Qwen3.8-27B to optimize performance in specific harness-task combinations. By incorporating RL-trained LoRA adapters, the models achieve higher accuracy and efficiency, reducing token usage significantly."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "您对 2027 年的人工智能预测是什么？",
+            "title_en": "What's your AI prediction for 2027?",
+            "read_time": "TLDR COMMUNITY",
+            "url": "https://community.tldr.tech/t/what-s-your-ai-prediction-for-2027?utm_source=tldrai",
+            "domain": "community.tldr.tech",
+            "highlight_kw": "What",
+            "summary_zh": "到 2027 年底，办公室工作将不再使用前沿模型，而自己选择模型可能会感觉像调整温度一样过时。您对 2027 年有何预测？ →",
+            "summary_en": "By the end of 2027, office work will no longer use frontier models, and picking a model yourself could feel as archaic as tweaking its temperature. What are your predictions for 2027? →"
+          },
+          {
+            "title_zh": "想要保持人类怪异的兄妹二人组",
+            "title_en": "The Brother-Sister Duo Who Want to Keep Anthropic Weird",
+            "read_time": "15 MIN READ",
+            "url": "https://www.wsj.com/tech/ai/anthropic-dario-daniela-amodei-siblings-ipo-be84ad11?st=7jDMAY&amp;reflink=desktopwebshare_permalink&amp;utm_source=tldrai",
+            "domain": "wsj.com",
+            "highlight_kw": "The Brother-Sister",
+            "summary_zh": "Anthropic 拥抱非典型，因为它相信人工智能的未来绝不会是正常的。 43 岁的公司首席执行官达里奥·阿莫代 (Dario Amodei) 是 Anthropic 的思想领袖。他有一名直接下属，即他的幕僚长兼妹妹，29 岁的丹妮拉·阿莫代 (Daniela Amodei)。公司做出了一些不同寻常的选择，并通过文化面试筛选新员工。本文着眼于阿莫迪家族以及他们如何创造类似的公司文化。",
+            "summary_en": "Anthropic embraces being atypical because it believes the artificial intelligence future will be anything but normal. Dario Amodei, 43, the company's chief executive, is Anthropic's ideological leader. He has one direct report, his chief of staff and sister, Daniela Amodei, 29. The company has made some unusual choices, and it screens out new hires with culture interviews. This article looks at the Amodeis and how they created a company culture in their likeness."
+          },
+          {
+            "title_zh": "黎曼假设的精益验证",
+            "title_en": "Lean verification of the Riemann Hypothesis",
+            "read_time": "3 MIN READ",
+            "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/?utm_source=tldrai",
+            "domain": "leanprover-community.github.io",
+            "highlight_kw": "Lean",
+            "summary_zh": "Levent Alpöge 于 11 月 20 日以包含 1700 万行代码的 Lean 库的形式发布了黎曼猜想的证明。Lean 和 Mathlib 社区完全相信 Alpöge 对黎曼猜想的证明是正确的。 Alpöge 的库编译正确，代码证明了正确的说法。预计数学界将在未来几周内帮助解释证明中的想法。",
+            "summary_en": "Levent Alpöge released a proof of the Riemann Hypothesis as a Lean library comprising 17 million lines of code on November 20. The Lean and Mathlib communities have full confidence that Alpöge's proof of the Riemann Hypothesis is correct. Alpöge's library compiles correctly, and the code proves the correct statement. It is expected that the mathematical community will help explain the ideas in the proof in the coming weeks."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "向双子座的 GIF 打个招呼",
+            "title_en": "Say hello to GIFs in Gemini",
+            "read_time": "1 MIN READ",
+            "url": "https://x.com/geminiapp/status/2123813017855103449?utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "Say",
+            "summary_zh": "Gemini Omni 1.2 Flash 可以创建每帧运动流畅且质量一致的 GIF。",
+            "summary_en": "Gemini Omni 1.2 Flash can create GIFs with smooth motion and consistent quality across every frame."
+          },
+          {
+            "title_zh": "亚马逊斥资近 75 亿美元收购迪卡特",
+            "title_en": "Amazon Nearing $7.5 Billion Purchase of Decart",
+            "read_time": "2 MIN READ",
+            "url": "https://www.theinformation.com/briefings/amazon-nearing-7-5-billion-purchase-decart?utm_source=tldrai",
+            "domain": "theinformation.com",
+            "highlight_kw": "Amazon Nearing",
+            "summary_zh": "据报道，亚马逊即将斥资 75 亿美元收购成立三年的人工智能初创公司 Decart。",
+            "summary_en": "Amazon is reportedly nearing a $7.5 billion deal to buy Decart, a three-year-old AI startup."
+          },
+          {
+            "title_zh": "认识 bison-1 和 groundhog-1，美国前沿决策模型",
+            "title_en": "Meet bison-1 and groundhog-1, frontier American decision models",
+            "read_time": "5 MIN READ",
+            "url": "https://www.baseten.co/blog/meet-bison-1-and-groundhog-1/?utm_source=tldrai",
+            "domain": "baseten.co",
+            "highlight_kw": "Meet",
+            "summary_zh": "bison-1 和 groundhog-1 基于 Google Gemma 4 构建，专为需要美国基础模型的团队而设计。",
+            "summary_en": "bison-1 and groundhog-1 are built on Google's Gemma 4 and are designed for teams that want an American base model."
+          },
+          {
+            "title_zh": "打击对抗性蒸馏",
+            "title_en": "Combatting adversarial distillation",
+            "read_time": "13 MIN READ",
+            "url": "https://openai.com/index/combatting-adversarial-distillation?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "Combatting",
+            "summary_zh": "OpenAI 正在加强对对抗性蒸馏的防御，即外部人员在其输出上训练模型以复制其功能。",
+            "summary_en": "OpenAI is stepping up defenses against adversarial distillation, where outsiders train models on its outputs to copy its capabilities."
+          }
+        ]
+      }
+    ]
+  },
   '2026-11-20': {
     "date": "2026-11-20",
     "weekday": "FRI · 周五",
