@@ -56,6 +56,180 @@ const TLDR_SECTION_MAP = {
 };
 
 const PRESET_TLDR_ISSUES = {
+  '2026-11-24': {
+    "date": "2026-11-24",
+    "weekday": "TUE · 周二",
+    "issueNo": "VOL. 2026.11.24",
+    "headline_zh": "GLM-5.4 循环🔁，Claude 发布🚢，OpenAI 拿下 Linux 🔒",
+    "headline_en": "GLM-5.4 loops 🔁, Claude Ship 🚢, OpenAI secures Linux 🔒",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "隆重推出自然语音",
+            "title_en": "Introducing Natural Voice",
+            "read_time": "8 MIN READ",
+            "url": "https://www.natural.com/blog/voice?utm_source=tldrai",
+            "domain": "natural.com",
+            "highlight_kw": "Introducing Natural",
+            "summary_zh": "Natural Voice 使语音客服人员能够在通话中安全地处理支付，无需进行带外转接，并减少客户流失。通过处理 PCI 合规性，它使企业能够提供无缝的支付体验，而无需承担额外的合规负担。这项创新将支付处理直接集成到语音互动中，从而提高了转化率和运营效率，使餐饮、医疗保健和汽车服务等行业受益。",
+            "summary_en": "Natural Voice enables voice agents to securely process payments during calls, eliminating the need for out-of-band transfers and reducing customer drop-off. By handling PCI compliance, it allows businesses to offer seamless payment experiences without additional compliance burdens. This innovation benefits industries like restaurants, healthcare, and auto services by integrating payment processing directly into voice interactions, enhancing conversion rates and operational efficiency."
+          },
+          {
+            "title_zh": "克劳德号船",
+            "title_en": "Claude Ship",
+            "read_time": "3 MIN READ",
+            "url": "https://code.claude.com/docs/en/claude-ship?utm_source=tldrai",
+            "domain": "code.claude.com",
+            "highlight_kw": "Claude Ship",
+            "summary_zh": "Claude Ship是一组Anthropic代理，可帮助GitHub拉取请求做好合并准备。Code Review 会标记问题，PR Steward 会推送修复，而 Claude Approvals 会根据团队的审批政策检查变更。",
+            "summary_en": "Claude Ship is a set of Anthropic agents that help get GitHub pull requests ready to merge. Code Review flags issues, PR Steward pushes fixes, and Claude Approvals checks changes against a team's approval policy."
+          },
+          {
+            "title_zh": "GLM-5.4",
+            "title_en": "GLM-5.4",
+            "read_time": "5 MIN READ",
+            "url": "https://z.ai/blog/glm-5.4?utm_source=tldrai",
+            "domain": "z.ai",
+            "highlight_kw": "GLM-5.4",
+            "summary_zh": "Z.ai发布了其首款基于循环Transformer的旗舰模型GLM-5.4。该设计重复使用一个共享的层块，以便在不增加参数的情况下进行更深入的推理。Z.ai 表示，该模型的智能水平可与 2T 至 3T 参数模型媲美，目前已在 GLM Coding Plan 上提供。",
+            "summary_en": "Z.ai has released GLM-5.4, its first flagship model built on a Loop Transformer. The design reuses a shared block of layers to reason more deeply without adding parameters. Z.ai says it reaches intelligence comparable to 2T to 3T parameter models, and it is available now on the GLM Coding Plan."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "增压变压器残余连接",
+            "title_en": "Supercharging transformer residual connections",
+            "read_time": "4 MIN READ",
+            "url": "https://research.google/blog/supercharging-transformer-residual-connections/?utm_source=tldrai",
+            "domain": "research.google",
+            "highlight_kw": "Supercharging",
+            "summary_zh": "QUERY LENGTH LIMIT EXCEEDED. MAX ALLOWED QUERY : 500 CHARS",
+            "summary_en": "Google's DeepCrossAttention (DCA) enhances transformer residual connections by allowing each layer to dynamically select and route features from preceding layers, reducing information dilution and parameter count by 30-40%. Unlike traditional residual connections, DCA uses dynamic routing and depth-wise cross-attention mechanisms to achieve faster convergence and better quality with minimal parameter increase. Tested on large datasets like C4 and LM1B, DCA improves training efficiency and perplexity compared to standard models, proving a shift towards dynamic residual routing for scalable LLMs."
+          },
+          {
+            "title_zh": "我以前负责协调代理。现在我负责协调协调员",
+            "title_en": "I used to orchestrate agents. Now I orchestrate orchestrators",
+            "read_time": "24 MIN READ",
+            "url": "https://www.nijho.lt/post/orchestrating-orchestrators/?utm_source=tldrai",
+            "domain": "nijho.lt",
+            "highlight_kw": "Now",
+            "summary_zh": "MindRoom 将多个模型集成在一个房间中，可高效管理多达四十个并发会话，并实现无缝上下文切换，从而显著提升 AI 驱动的编码效率。这种方法使用最少的子代理，通过保持较低的令牌开销并提供一个紧凑的基于卡片的界面（按状态组织任务）来提高工作效率。",
+            "summary_en": "MindRoom significantly enhances AI-driven coding by integrating multiple models in one room, efficiently managing up to forty concurrent sessions with seamless context switching. This approach, which utilizes minimal sub-agents, boosts productivity by maintaining low token overhead and offering a compact, card-based interface that organizes tasks by status."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "OpenAI 和思科推出 Shirudo",
+            "title_en": "OpenAI and Cisco introduce Shirudo",
+            "read_time": "5 MIN READ",
+            "url": "https://openai.com/index/introducing-shirudo/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "OpenAI",
+            "summary_zh": "Shirudo 是 OpenAI 和思科推出的开源运行时，可在团队推出补丁时保护正在运行的 Linux 系统。它使团队能够部署临时防护，在不重启服务的情况下阻止漏洞攻击。",
+            "summary_en": "Shirudo is an open-source runtime from OpenAI and Cisco that protects running Linux systems while teams roll out patches. It lets teams deploy temporary shields that block exploits without restarting the service."
+          },
+          {
+            "title_zh": "递归自我编辑：LLM 对自身的权重进行编辑，以实现自我改进",
+            "title_en": "Recursive Self-Editing: LLMs Program Their Own Weight Edits for Self-Improvement",
+            "read_time": "1 MIN READ",
+            "url": "https://arxiv.org/abs/2611.29513?utm_source=tldrai",
+            "domain": "arxiv.org",
+            "highlight_kw": "Recursive Self-Editing",
+            "summary_zh": "QUERY LENGTH LIMIT EXCEEDED. MAX ALLOWED QUERY : 500 CHARS",
+            "summary_en": "Today's language models improve themselves through data, training recipes, or scaffolds. Whenever their weights change, gradient descent writes the update, not the model. SELFWRITE lets the model write its own weights. Each generation, the current model studies its own reasoning on fresh training problems, inspects its own weights and activations in a persistent Python session, and writes a program that constructs a low-rank weight edit for itself from white-box primitives. It can raise gate accuracy and accuracy on a held-out test split that the loop never sees without a single gradient step."
+          },
+          {
+            "title_zh": "成为TLDR人工智能社区的创始成员",
+            "title_en": "Become a founding member of TLDR's AI community",
+            "read_time": "2 MIN FORM",
+            "url": "https://danni763618.typeform.com/to/H1tYViME?utm_source=tldrai",
+            "domain": "danni763618.typeform.com",
+            "highlight_kw": "Become",
+            "summary_zh": "TLDR即将推出一个精心组织的社区，供人工智能开发者讨论重大新闻和产品发布。最优质的链接和评论将刊登在TLDR AI上。请在此处申请加入。",
+            "summary_en": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join."
+          },
+          {
+            "title_zh": "借助代理和形式化验证实现更快的量子算法",
+            "title_en": "Faster Quantum Algorithms with Agents and Formal Verification",
+            "read_time": "4 MIN READ",
+            "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/?utm_source=tldrai",
+            "domain": "deepmind.google",
+            "highlight_kw": "Faster Quantum",
+            "summary_zh": "Google DeepMind 使用 Gemini 4 代理团队来寻找已知量子算法的更廉价版本，每个结果都在 Lean 定理证明器中被证明是正确的。一个用于聚变能研究的电路将其计算成本降低了11.8倍。",
+            "summary_en": "Google DeepMind used teams of Gemini 4 agents to find cheaper versions of known quantum algorithms, with each result proven correct in the Lean theorem prover. One circuit for fusion energy research cut its computing cost by 11.8x."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "NVIDIA董事会恢复黄仁勋的总裁、首席执行官和董事会董事职务",
+            "title_en": "NVIDIA Board Reinstates Jensen Huang as President, CEO, and Board Director",
+            "read_time": "3 MIN READ",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director?utm_source=tldrai",
+            "domain": "nvidianews.nvidia.com",
+            "highlight_kw": "NVIDIA Board",
+            "summary_zh": "在董事会一致批准以及美国政府确认不存在国家安全风险后，英伟达恢复黄仁勋的总裁、首席执行官和董事会董事职务。一个由独立董事组成的委员会正在调查有关黄仁勋被外国情报机构盯上的指控，并将有法律顾问协助开展调查。NVIDIA正在组建国家安全与出口管制委员会，并将任命一名首席合规官，以加强监督。",
+            "summary_en": "NVIDIA reinstates Jensen Huang as President, CEO, and Board Director following unanimous Board approval and US government input confirming no national security risk. A committee of independent directors is investigating claims of Huang being targeted by foreign intelligence and will proceed with legal counsel's support. NVIDIA is forming a National Security and Export Control Committee and will appoint a Chief Compliance Officer to enhance oversight."
+          },
+          {
+            "title_zh": "亚马逊以75亿美元收购Decart的AI优化技术，为销售Trainium芯片做准备",
+            "title_en": "Amazon snaps up Decart's AI optimization tech for $7.5B as it prepares to sell Trainium chips",
+            "read_time": "1 MIN READ",
+            "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/?utm_source=tldrai",
+            "domain": "techcrunch.com",
+            "highlight_kw": "Amazon",
+            "summary_zh": "QUERY LENGTH LIMIT EXCEEDED. MAX ALLOWED QUERY : 500 CHARS",
+            "summary_en": "Amazon has acquired the technology behind the Decart Optimization Stack (DOS), as well as Decart's founding team and team of AI researchers and engineers, for $7.5 billion. Decart has made a name for itself by building interactive real-time models and AI video-generation tools. Its DOS software helps AI models run efficiently on Nvidia, Amazon, and Google's hardware. More efficient compute means better training, better reinforcement learning, faster inference, and better models for customers at a lower cost."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "OpenWorks",
+            "title_en": "OpenWorks",
+            "read_time": "6 MIN READ",
+            "url": "https://openai.com/openworks/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "OpenWorks",
+            "summary_zh": "OpenAI的OpenWorks计划将人工智能专家与美国小企业联系起来，提供免费的、实操性的人工智能支持。",
+            "summary_en": "OpenAI's OpenWorks initiative partners AI experts with US small businesses to offer free, hands-on AI support."
+          },
+          {
+            "title_zh": "Grok 机器人获取本地计算机使用情况",
+            "title_en": "Grok Bot to Get Local Computer Use",
+            "read_time": "2 MIN READ",
+            "url": "https://www.testingcatalog.com/grok-bot-to-get-local-computer-use-and-dictation-in-any-app/?utm_source=tldrai",
+            "domain": "testingcatalog.com",
+            "highlight_kw": "Grok Bot",
+            "summary_zh": "Grok Bot的Mac应用程序正在开发本地计算机使用功能，这将使其能够直接操作桌面应用程序，而不仅仅是云虚拟机。",
+            "summary_en": "Grok Bot's Mac app has local computer use in the works, which would let it operate desktop apps directly instead of only cloud virtual machines."
+          },
+          {
+            "title_zh": "微软 AI 的强化学习基础设施",
+            "title_en": "RL infrastructure at Microsoft AI",
+            "read_time": "15 MIN READ",
+            "url": "https://microsoft.ai/news/rl-infrastructure-at-microsoft-ai/?utm_source=tldrai",
+            "domain": "microsoft.ai",
+            "highlight_kw": "RL",
+            "summary_zh": "Rocket 是微软 AI 的内部强化学习框架，用于对具有三万亿参数的模型 MAI Base 2 进行训练后处理，而无需从第三方模型中提炼。",
+            "summary_en": "Rocket is Microsoft AI's in-house reinforcement learning framework for post-training MAI Base 2, a three-trillion-parameter model, without distilling from third-party models."
+          }
+        ]
+      }
+    ]
+  },
   '2026-11-23': {
     "date": "2026-11-23",
     "weekday": "MON · 周一",
