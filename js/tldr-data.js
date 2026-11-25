@@ -56,6 +56,200 @@ const TLDR_SECTION_MAP = {
 };
 
 const PRESET_TLDR_ISSUES = {
+  '2026-11-25': {
+    "date": "2026-11-25",
+    "weekday": "WED · 周三",
+    "issueNo": "VOL. 2026.11.25",
+    "headline_zh": "OpenAI 解决了矩阵数学 🔢、SWE-2.1 💻、群体限制 🐝",
+    "headline_en": "OpenAI solves matrix math 🔢, SWE-2.1 💻, swarm limitations 🐝",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "认知的SWE-2.1",
+            "title_en": "Cognition's SWE-2.1",
+            "read_time": "3 MIN READ",
+            "url": "https://cognition.com/blog/swe-2-1?utm_source=tldrai",
+            "domain": "cognition.com",
+            "highlight_kw": "Cognition",
+            "summary_zh": "Cognition 发布了 SWE-2.1，这是一种升级版编码和代理模型，在 Kimi K3 之上通过强化学习进行训练。它将 SWE-2 在 Terminal-Bench 4.1 编码基准上的得分大致提高了一倍，达到 50.0，并增加了更强大的安全技能。",
+            "summary_en": "Cognition released SWE-2.1, an upgraded coding and agent model trained with reinforcement learning on top of Kimi K3. It roughly doubles SWE-2's score on the Terminal-Bench 4.1 coding benchmark to 50.0 and adds stronger security skills."
+          },
+          {
+            "title_zh": "介绍 Ternary Bonsai 2.5 27B：为代理编码和私人知识工作提供动力",
+            "title_en": "Introducing Ternary Bonsai 2.5 27B: Powering Agentic Coding and Private Knowledge Work",
+            "read_time": "4 MIN READ",
+            "url": "https://prismml.com/news/bonsai-2-5-27b?utm_source=tldrai",
+            "domain": "prismml.com",
+            "highlight_kw": "Introducing Ternary",
+            "summary_zh": "Ternary Bonsai 2.5 27B 比其前身具有更强的代理编码、多轮工具使用和多步骤任务执行能力。它保留了先前版本的 5.9 GB 占用空间，同时显着提高了开发人员构建使用设备上的私有文件和工具的代理所需的功能。它是迄今为止针对代理工作负载的内存占用最强大的人工智能模型。",
+            "summary_en": "Ternary Bonsai 2.5 27B has substantially stronger agentic coding, multi-turn tool use, and multi-step task execution abilities than its predecessor. It retains the previous release's 5.9 GB footprint while significantly improving the capabilities developers need to build agents that work with private files and tools on-device. It is by far the strongest AI model of its memory footprint for agentic workloads."
+          },
+          {
+            "title_zh": "Claude Artifacts 成为 Mac 和 Windows 应用程序",
+            "title_en": "Claude Artifacts Become Mac and Windows Apps",
+            "read_time": "3 MIN READ",
+            "url": "https://claude.com/resources/articles/install-as-app?utm_source=tldrai",
+            "domain": "claude.com",
+            "highlight_kw": "Claude Artifacts",
+            "summary_zh": "Claude 工件现在可以作为 Mac 和 Windows 应用程序安装，所有计划均处于测试版状态。每个应用程序都有自己的图标和窗口，在工件更改时更新，并且可以共享。",
+            "summary_en": "Claude artifacts can now be installed as Mac and Windows apps, in beta on all plans. Each app gets its own icon and window, updates when the artifact changes, and can be shared."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "应特朗普总统之命，黄仁勋恢复担任 Nvidia 首席执行官",
+            "title_en": "Jensen Huang Reinstated As Nvidia CEO at Behest of President Trump",
+            "read_time": "45 MIN READ",
+            "url": "https://thezvi.substack.com/p/jensen-huang-reinstated-as-nvidia?utm_source=tldrai",
+            "domain": "thezvi.substack.com",
+            "highlight_kw": "Jensen Huang",
+            "summary_zh": "黄仁勋重新担任英伟达首席执行官是美国民主状况、该国自由市场经济和法治以及政府诚信的标志。未来几年，它将影响到股票市场上的每一个决策和每笔交易。英伟达可能会重新最大限度地增加向中国出售的芯片数量。由于调查仍在进行中，情况还远未结束。",
+            "summary_en": "Jensen Huang's reinstatement as Nvidia's CEO is a sign of the state of US democracy, the country's free market economy and rule of law, and the integrity of its government. It will factor into every decision made and every trade on the stock market for years to come. Nvidia will likely go back to maximizing how many chips it can sell to China. The situation is still far from over as there are ongoing investigations."
+          },
+          {
+            "title_zh": "蜂群尚未升起屋顶",
+            "title_en": "Swarms do not yet raise the roof",
+            "read_time": "46 MIN READ",
+            "url": "https://www.paradigm3.org/research/swarms?utm_source=tldrai",
+            "domain": "paradigm3.org",
+            "highlight_kw": "Swarms",
+            "summary_zh": "基于群的 LLM 配置、协调的代理组，与同等代币预算的单个代理相比，可以提供更快但效率较低的结果。向群中添加更多代理会带来性能损失，性能损失会随着规模的增加而增加，从而导致质量下降。实验表明，以前的“群体溢价”是由于单个代理随着时间的推移而变得陈旧的结果。考虑到新的环境重置，单个智能体的表现优于群体，这表明当前的群体策略主要是加速计算，而不是显着增强能力。",
+            "summary_en": "Swarm-based LLM configurations, coordinated groups of agents, deliver faster but less efficient results compared to single agents at equal token budgets. Adding more agents to a swarm introduces a performance penalty that grows with size, leading to quality degradation. Experiments reveal that previous \"swarm premiums\" result from single agents becoming stale over time. Given fresh context resets, single agents outperform swarms, suggesting that current swarm strategies primarily accelerate compute rather than significantly enhancing capabilities."
+          },
+          {
+            "title_zh": "VP ≠ VNP 是什么意思",
+            "title_en": "What VP ≠ VNP Means",
+            "read_time": "3 MIN READ",
+            "url": "https://www.friedgil.com/vpvnp?utm_source=tldrai",
+            "domain": "friedgil.com",
+            "highlight_kw": "What VP",
+            "summary_zh": "VP≠VNP 的人择证明意味着，如果我们仅限于输入大小的多项式大小的算术电路，则无法找到 0 和 1 矩阵的永久矩阵。这意味着要使 P 等于 NP，必须有一些技巧来在输入的位上使用 AND/OR/NOT 来计算永久数，这比加法和乘法更好。在许多问题上，使用布尔运算符会有所帮助，但尚不清楚它们如何帮助解决永久性问题。解决这个问题的奖金为 100 万美元。",
+            "summary_en": "The Anthropic proof that VP≠VNP means that there is no way to find the permanent of a matrix of 0s and 1s if we are limited to arithmetic circuits of size polynomial in the input-size. This means that for P to equal NP, there must be some trick to computing permanents using AND/OR/NOT on the bits of the input that is better than addition and multiplication. There are many problems where access to Boolean operators is helpful, but it isn't clear how they would help with the permanent. There is a $1 million prize for a solution to this problem."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "宣布 vLLM-GR：生成推荐的高效推理",
+            "title_en": "Announcing vLLM-GR: Efficient Inference for Generative Recommendation",
+            "read_time": "14 MIN READ",
+            "url": "https://vllm.ai/blog/2026-11-24-vllm-gr-announcement?utm_source=tldrai",
+            "domain": "vllm.ai",
+            "highlight_kw": "Announcing",
+            "summary_zh": "vLLM-GR 是一个增强 vLLM 的开源框架，可通过高效的波束搜索改进生成推荐模型的推理。它通过重用用户历史记录和优化缓存使用，在 NVIDIA GPU 和 Ascend NPU 上实现快速候选生成。",
+            "summary_en": "vLLM-GR is an open-source framework enhancing vLLM to improve inference for generative recommendation models with efficient beam searches. It enables rapid candidate generation on NVIDIA GPUs and Ascend NPUs by reusing user history and optimizing cache use."
+          },
+          {
+            "title_zh": "成为 TLDR AI 社区的创始成员",
+            "title_en": "Become a founding member of TLDR’s AI community",
+            "read_time": "2 MIN FORM",
+            "url": "https://danni763618.typeform.com/to/H1tYViME",
+            "domain": "danni763618.typeform.com",
+            "highlight_kw": "Become",
+            "summary_zh": "TLDR 正在为人工智能构建者推出一个精心策划的社区，以讨论重大新闻和发布。最好的链接和评论将出现在 TLDR AI 中。在此申请加入。",
+            "summary_en": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join."
+          },
+          {
+            "title_zh": "矩阵乘法指数是四分之九",
+            "title_en": "The matrix multiplication exponent is nine fourths",
+            "read_time": "6 HOUR READ",
+            "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf?utm_source=tldrai",
+            "domain": "github.com",
+            "highlight_kw": "The",
+            "summary_zh": "方阵乘法的指数在每个域上都是 9/4。较小的指数将压缩张量网络足以违反用于测试几个独立列表中的每个列表中的条目是否不同的下限。",
+            "summary_en": "The exponent of square matrix multiplication is 9/4 over every field. A smaller exponent would compress tensor networks enough to violate a lower bound for testing whether the entries in each of several independent lists are distinct."
+          },
+          {
+            "title_zh": "GPT-6 模型展示了内在的蛋白质设计能力",
+            "title_en": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+            "read_time": "13 MIN READ",
+            "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "GPT-6",
+            "summary_zh": "OpenAI 表示，其 GPT-6 模型可以仅使用推理和代码来设计新蛋白质，而无需调用专门的生物学模型。与研究合作伙伴的实验室测试证实，一些设计是有效的，尽管这项工作仍然依赖于专业工具来筛选候选人。",
+            "summary_en": "OpenAI said its GPT-6 models can design new proteins using reasoning and code alone, without calling specialized biology models. Lab tests with a research partner confirmed that some designs worked, though the work still relied on specialist tools to screen candidates."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "亚马逊表示，黑客的人工智能代理在几乎没有人类输入的情况下发现并利用了 0day",
+            "title_en": "Amazon says hackers' AI agents found and exploited 0-day with little human input",
+            "read_time": "5 MIN READ",
+            "url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/?utm_source=tldrai",
+            "domain": "arstechnica.com",
+            "highlight_kw": "Amazon",
+            "summary_zh": "亚马逊表示，在开源渗透测试框架 Cairn 上运行的人工智能代理发现并利用了大学服务器上的医学成像人工智能应用程序中的零日漏洞，除了目标提示之外，没有任何人为监督。 Palo Alto Networks 单独跟踪了一场 Cairn 活动，该活动针对半导体、国防和民间社会领域的至少 19 个组织进行了 25 次自主行动，突破了至少 10 次。亚马逊警告：代理进攻行动已经发生，防御者应该为其速度和持久性做好准备。",
+            "summary_en": "Amazon said AI agents running on Cairn, an open source penetration-testing framework, found and exploited a zero-day in a medical imaging AI app on a university server with no human oversight beyond a goal prompt. Palo Alto Networks separately tracked a Cairn campaign that ran 25 autonomous operations against at least 19 organizations in the semiconductor, defense, and civil society sectors, breaching at least 10. Amazon's warning: agentic offensive operations are already happening, and defenders should prepare for their speed and persistence."
+          },
+          {
+            "title_zh": "ML 编译器工程师，你的工作是 NP 难的",
+            "title_en": "ML compiler eng, your job is NP-hard",
+            "read_time": "4 MIN READ",
+            "url": "https://ianbarber.blog/2026/11/24/ml-compiler-eng-your-job-is-np-hard/?utm_source=tldrai",
+            "domain": "ianbarber.blog",
+            "highlight_kw": "ML",
+            "summary_zh": "布局搜索在计算上是困难的。然而，实际上，特定内核中通常只有几个地方可以进行转换。棘手的部分是选择一个选项，因为这需要依赖一个可能不准确的模型，即在给定后续软件堆栈和硬件本身的情况下，这些操作的成本有多高。",
+            "summary_en": "Layout search is computationally hard. However, in reality, there are generally just a few places to put a conversion in a specific kernel. The tricky part is picking an option, as this requires relying on a potentially inaccurate model of how expensive those ops are given the subsequent software stack and the hardware itself."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "OpenAI 为 ChatGPT Dots 准备专用电子邮件收件箱",
+            "title_en": "OpenAI prepares dedicated email inboxes for ChatGPT Dots",
+            "read_time": "2 MIN READ",
+            "url": "https://www.testingcatalog.com/openai-prepares-dedicated-email-inboxes-for-chatgpt-dots/?utm_source=tldrai",
+            "domain": "testingcatalog.com",
+            "highlight_kw": "OpenAI",
+            "summary_zh": "OpenAI 正在为 ChatGPT 中的 Dots 开发专用电子邮件地址，使它们能够独立发送和接收电子邮件。",
+            "summary_en": "OpenAI is developing dedicated email addresses for Dots in ChatGPT, allowing them to send and receive emails independently."
+          },
+          {
+            "title_zh": "Meta 将其 Muse AI 助手直接引入 Instagram DM",
+            "title_en": "Meta brings its Muse AI assistant directly into Instagram DMs",
+            "read_time": "3 MIN READ",
+            "url": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/?utm_source=tldrai",
+            "domain": "techcrunch.com",
+            "highlight_kw": "Meta",
+            "summary_zh": "Meta 现在将其 Muse AI 助手直接集成到 Instagram DM 中，允许用户与 Muse 聊天以了解有关帖子、地点或产品的背景信息。",
+            "summary_en": "Meta now integrates its Muse AI assistant directly into Instagram DMs, allowing users to chat with Muse for context on posts, places, or products."
+          },
+          {
+            "title_zh": "推动美国公开重量级前沿",
+            "title_en": "Pushing the US Open-Weight Frontier",
+            "read_time": "21 MIN READ",
+            "url": "https://www.harvey.ai/blog/applying-the-harvey-tenet-training-recipe-to-us-open-weight-models?utm_source=tldrai",
+            "domain": "harvey.ai",
+            "highlight_kw": "Pushing",
+            "summary_zh": "培训后可以在代理法律推理和任务完成方面取得实质性进展。",
+            "summary_en": "Post-training leads to substantial gains in both agentic legal reasoning and task completion."
+          },
+          {
+            "title_zh": "谷歌在反重力中添加任务清单",
+            "title_en": "Google Adds Task Checklists to Antigravity",
+            "read_time": "2 MIN READ",
+            "url": "https://www.testingcatalog.com/google-adds-task-checklists-to-antigravity-and-carbon-for-pro/?utm_source=tldrai",
+            "domain": "testingcatalog.com",
+            "highlight_kw": "Google Adds",
+            "summary_zh": "谷歌的反重力编码应用程序现在显示长期任务的实时清单，并允许用户选择单独的规划器和执行器模型。",
+            "summary_en": "Google's Antigravity coding app now shows live checklists for long tasks and lets users pick separate planner and executor models."
+          }
+        ]
+      }
+    ]
+  },
   '2026-11-24': {
     "date": "2026-11-24",
     "weekday": "TUE · 周二",
