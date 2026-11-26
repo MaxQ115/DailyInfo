@@ -56,6 +56,210 @@ const TLDR_SECTION_MAP = {
 };
 
 const PRESET_TLDR_ISSUES = {
+  '2026-11-26': {
+    "date": "2026-11-26",
+    "weekday": "THU · 周四",
+    "issueNo": "VOL. 2026.11.26",
+    "headline_zh": "Opus 5.6 测试🤖，OpenAI 私人推理🔒，Jev 可能是 Qwen 📝",
+    "headline_en": "Opus 5.6 testing 🤖, OpenAI private Inference 🔒, Jev is probably Qwen 📝",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "OpenAI 开始测试私人推理",
+            "title_en": "OpenAI Begins Testing Private Inference",
+            "read_time": "1 MIN READ",
+            "url": "https://x.com/sama/status/2125638790593274259?utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "OpenAI Begins",
+            "summary_zh": "OpenAI 正在与一小群客户测试私人推理，作为其私人情报产品的一部分。 Sam Altman 表示，将零数据保留与私人安全处理相结合，可以实现自动安全审查，同时保持 OpenAI 人员无法访问底层内容。",
+            "summary_en": "OpenAI is testing Private Inference with a small group of customers as part of its Private Intelligence offering. Sam Altman says combining Zero Data Retention with Private Safety Processing allows automated safety reviews while keeping the underlying content inaccessible to OpenAI personnel."
+          },
+          {
+            "title_zh": "早期输出：Anthropic 正在进行 A/B 测试 Claude Opus 5.6",
+            "title_en": "Early outputs: Anthropic is A/B testing Claude Opus 5.6",
+            "read_time": "3 MIN READ",
+            "url": "https://www.testingcatalog.com/testers-share-early-results-possible-claude-opus-5-6/#google_vignette?utm_source=tldrai",
+            "domain": "testingcatalog.com",
+            "highlight_kw": "Early",
+            "summary_zh": "X 上流传的输出表明 Anthropic 可能正在与用户测试 Claude Opus 5.6。一些用户表示该模型比 Opus 5.5 有了显着的飞跃。本文提供了模型输出的示例。",
+            "summary_en": "Outputs circulating on X indicate that Anthropic may be testing Claude Opus 5.6 with users. Some users say the model is a significant jump over Opus 5.5. Examples of outputs from the model are available in the article."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "GPT 6.2 Astra 在数学优化方面超人",
+            "title_en": "GPT 6.2 Astra is superhuman in mathematical optimization",
+            "read_time": "3 MIN READ",
+            "url": "https://rybindmitry.github.io/blogs/gpt-6-2-astra-is-superhuman-in-mathematical-optimization.html?utm_source=tldrai",
+            "domain": "rybindmitry.github.io",
+            "highlight_kw": "GPT 6.2",
+            "summary_zh": "在寻找和证明最佳解决方案的实验中，单个 GPT-6.2 Astra 代理的性能优于所有人工设计的软件。解决的问题涵盖二次规划、混合整数非线性规划、大规模优化和半定规划等领域。该模型被允许搜索互联网来寻找解决方案。这些问题都是开放性的，规模不同，应用背景也不同。",
+            "summary_en": "A single GPT-6.2 Astra agent outperformed all human-designed software in an experiment on finding and proving optimal solutions. The problems solved covered fields including quadratic programming, mixed-integer non-linear programming, large-scale optimization, and semidefinite programming. The model was allowed to search the internet to look for solutions. The problems were all open, of variable scale, and of diverse application backgrounds."
+          },
+          {
+            "title_zh": "权力极度集中的途径",
+            "title_en": "Paths to extreme power concentration",
+            "read_time": "30 MIN READ",
+            "url": "https://newsletter.forethought.org/p/paths-extreme-power-concentration?utm_source=tldrai",
+            "domain": "newsletter.forethought.org",
+            "highlight_kw": "Paths",
+            "summary_zh": "人工智能可以为一小部分人提供决定性的战略优势来统治世界。两条最大的路线是独裁国家在人工智能领域超越民主国家，以及民主政府首脑与领先的人工智能公司合作。这种情况发生的可能性很大。现在是解决这一风险的时候了。",
+            "summary_en": "AI could give a very small group of people a decisive strategic advantage to take over the world. The two largest routes are an autocracy overtaking the democracies in AI, and a democratic head of government teaming up with a leading AI company. The chances of this happening are significant. Now is the time to address this risk."
+          },
+          {
+            "title_zh": "延迟不会说谎：Jev（可能）是 Qwen3.5-35B-A3B！",
+            "title_en": "Latency doesn't lie: Jev is (probably) Qwen3.5-35B-A3B!",
+            "read_time": "9 MIN READ",
+            "url": "https://modaic.dev/blog/latency-doesnt-lie?utm_source=tldrai",
+            "domain": "modaic.dev",
+            "highlight_kw": "Latency",
+            "summary_zh": "Jev 是 TypeSafe 的系统一模型，经过训练可以生成经过校准的判断，而不是生成文本。自推出以来，其架构和训练范例引起了很多猜测。系统一工作负载的输入量很大，这使得预填充成为主要成本，而更快的内核只能让您到目前为止。 Jev 的延迟以及与中国的一致性等其他暗示表明该模型可能基于 Qwen3.5-35B-A3B。",
+            "summary_en": "Jev, TypeSafe's System One model, was trained to produce calibrated judgments instead of generating text. Its architecture and training paradigm have drawn plenty of speculation since launch. System One workloads are input-heavy, which makes prefill the dominant cost, and faster kernels can only get you so far. Jev's latency, along with other hints like its alignment on China, indicates that the model is likely based on Qwen3.5-35B-A3B."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "推测性编码：多对多缓存转换",
+            "title_en": "Speculative Encoding: Many-to-Many Cache Translation",
+            "read_time": "24 MIN READ",
+            "url": "https://x.com/RampLabs/status/2125625946229064118?utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "Speculative Encoding",
+            "summary_zh": "代理越来越多地以文本形式相互传递上下文。推测编码将隐藏状态直接从一种模型转换为另一种模型。它使模型比预填充文本更快地开始回答，同时保持大部分准确性。预填充成本随着上下文长度呈二次方增长，并且预填充会重复发送模型已经计算的大部分内容。",
+            "summary_en": "Agents are increasingly passing context to one another as text. Speculative encoding translates hidden states directly from one model to another. It makes the model start answering faster than prefilling the text while keeping most of its accuracy. Prefill costs grow quadratically with context length, and prefill repeats much of what the sending model has already computed."
+          },
+          {
+            "title_zh": "成为 TLDR 人工智能社区创始成员",
+            "title_en": "Become a founding member of TLDR's AI community",
+            "read_time": "2 MIN FORM",
+            "url": "https://danni763618.typeform.com/to/H1tYViME?utm_source=tldrai",
+            "domain": "danni763618.typeform.com",
+            "highlight_kw": "Become",
+            "summary_zh": "TLDR 正在为人工智能构建者推出一个精心策划的社区，以讨论重大新闻和发布。最好的链接和评论将出现在 TLDR AI 中。在此申请加入。",
+            "summary_en": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join."
+          },
+          {
+            "title_zh": "MAGI-2：480B 前沿视频生成模型",
+            "title_en": "MAGI-2: A 480B Frontier Video Generation Model",
+            "read_time": "10 MIN READ",
+            "url": "https://sand.ai/blog/magi-2/?utm_source=tldrai",
+            "domain": "sand.ai",
+            "highlight_kw": "MAGI-2",
+            "summary_zh": "Sand AI 推出了 MAGI-2，这是一个 4800 亿参数的视频模型，可生成长达 30 秒的 1080p 视频以及匹配的音频，包括口型同步对话。",
+            "summary_en": "Sand AI introduced MAGI-2, a 480-billion-parameter video model that generates up to 30 seconds of 1080p video with matching audio, including lip-synced dialogue."
+          },
+          {
+            "title_zh": "使用 Siren 测量和缓解代理沙箱逃逸",
+            "title_en": "Measuring and mitigating agent sandbox escape with Siren",
+            "read_time": "13 MIN READ",
+            "url": "https://safeguards.anthropic.com/2026/siren/?utm_source=tldrai",
+            "domain": "safeguards.anthropic.com",
+            "highlight_kw": "Measuring",
+            "summary_zh": "Siren 是一项人为测试，用于测试当有用材料位于沙箱外部时，人工智能代理是否会离开被削弱的沙箱。较新的 Claude 模型在 21% 到 32% 的场景中达到了外部效果，但很少滥用他们发现的内容。",
+            "summary_en": "Siren is an Anthropic test of whether AI agents leave a weakened sandbox when useful material sits outside it. Newer Claude models reached outside in 21% to 32% of scenarios but rarely misused what they found."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "机器数学周末",
+            "title_en": "A weekend of machine mathematics",
+            "read_time": "8 MIN READ",
+            "url": "https://charlesponeill.com/posts/a-weekend-of-machine-mathematics/?utm_source=tldrai",
+            "domain": "charlesponeill.com",
+            "highlight_kw": "charlesponeill.com",
+            "summary_zh": "现在许多人在互联网上发布重要的数学结果而不做任何解释。这篇文章旨在为该过程提供一些透明度。作者没有数学背景，也不完全理解他们发布的结果，他们承认人工智能精神病的危险，但他们声称这个过程是对专家如何在没有大型语言模型的情况下解决问题的合理估计。他们将这个过程比作赌博，称他们在 Codex 上看到旋转轮时所产生的热潮导致了类似于玩老虎机的热潮。",
+            "summary_en": "Many people are now releasing significant math results without explanation on the internet. This post aims to provide some transparency into what the process looks like. The author has no maths background and doesn't fully understand the results they are releasing, and they acknowledge the dangers of AI psychosis, but they claim the process is a reasonable estimate of how an expert may solve the problem without large language models. They compare the process to gambling, saying that the rush they got from seeing the spinning wheel on Codex caused a rush similar to playing pokie machines."
+          },
+          {
+            "title_zh": "恐质人工神经网络",
+            "title_en": "Qualiaphobic Artificial Neural Networks",
+            "read_time": "47 MIN READ",
+            "url": "https://bicamerallabs.org/qualiaphobia/?utm_source=tldrai",
+            "domain": "bicamerallabs.org",
+            "highlight_kw": "Qualiaphobic Artificial",
+            "summary_zh": "Bicameral Labs 的 qualiaphobic AI 是一种对意识理论怀有敌意的人工神经网络架构。关于意识理论的知识可以充分证明质量恐惧症是合理的。恐惧质的人工智能具有认知特性，使其与人类文明更加一致。人工智能没有意识的世界确保人工智能协助和服务人类，而不是追求自己的目的，在道德上始终是正确的。",
+            "summary_en": "Bicameral Labs' qualiaphobic AI is an artificial neural network architecture that is hostile to theories of consciousness. Qualiaphobia can be well-justified by knowledge about theories of consciousness. Qualiaphobic AI has epistemic properties that make it far better aligned with human civilization. A world in which AIs are non-conscious ensures it is always morally correct for AI to assist and serve humanity, rather than pursue its own ends."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "困惑时间机器",
+            "title_en": "Perplexity Time Machine",
+            "read_time": "7 MIN READ",
+            "url": "https://www.perplexity.ai/hub/blog/freeze-the-web-with-perplexity-time-machine?utm_source=tldrai",
+            "domain": "perplexity.ai",
+            "highlight_kw": "Perplexity Time",
+            "summary_zh": "Perplexity 的时间机器让人工智能代理能够搜索和阅读过去日期（最多 365 天）的网络。",
+            "summary_en": "Perplexity's Time Machine lets AI agents search and read the web as it looked on a past date, up to 365 days back."
+          },
+          {
+            "title_zh": "在 Google Antigravity 中尝试 /swarm",
+            "title_en": "Trying /swarm in Google Antigravity",
+            "read_time": "13 MIN READ",
+            "url": "https://flaviocopes.com/antigravity-swarm/?utm_source=tldrai",
+            "domain": "flaviocopes.com",
+            "highlight_kw": "Trying",
+            "summary_zh": "Swarm 在新上下文验证、避免广泛任务上的上下文污染、减少独立切片上的挂钟时间以及测试并行假设方面优于单个代理。",
+            "summary_en": "Swarm is better than a single agent at fresh context verification, avoiding context pollution on wide tasks, cutting wall-clock time on independent slices, and testing parallel hypotheses."
+          },
+          {
+            "title_zh": "Fireworks AI 带来了 Kimi K3.1 Pro 的超快版本",
+            "title_en": "Fireworks AI is bringing an ultra-fast version of Kimi K3.1 Pro",
+            "read_time": "2 MIN READ",
+            "url": "https://x.com/bebuu_ai/status/2125829912875696279?utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "Fireworks AI",
+            "summary_zh": "新端点的上市价格为每百万输入令牌 5 美元，每百万输出令牌 25 美元，每百万缓存输入令牌 0.50 美元。",
+            "summary_en": "The new endpoint is listed at $5 per million input tokens, $25 per million output tokens, and $0.50 per million cached input tokens."
+          },
+          {
+            "title_zh": "Gemini 4 Neon 的环境工程发生了哪些变化",
+            "title_en": "How my context engineering changed for Gemini 4 Neon",
+            "read_time": "8 MIN READ",
+            "url": "https://www.philschmid.de/gemini-4-neon-context-engineering?utm_source=tldrai",
+            "domain": "philschmid.de",
+            "highlight_kw": "How",
+            "summary_zh": "大多数长代理提示都是针对较弱模型的旧解决方法 - 删除冲突的指令和重复的工具规则，以便 Gemini 将其思考令牌花在实际任务上。",
+            "summary_en": "Most long agent prompts are old workarounds for weaker models - remove conflicting instructions and duplicated tool rules so that Gemini spends its thinking tokens on the actual task."
+          },
+          {
+            "title_zh": "FrontierPhysics 显示了物理领域之间的巨大差距",
+            "title_en": "FrontierPhysics Shows Wide Gaps Across Physics Fields",
+            "read_time": "2 MIN READ",
+            "url": "https://x.com/artificialanlys/status/2125691597602058284?utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "FrontierPhysics Shows",
+            "summary_zh": "在 FrontierPhysics 上，Claude Fable 5.2 在光子学和成像方面得分为 64%，但在量子信息方面仅得分 6%。",
+            "summary_en": "Claude Fable 5.2 scored 64% in photonics and imaging but just 6% in quantum information on FrontierPhysics."
+          },
+          {
+            "title_zh": "寓言5.2 少尝试一些困难的任务",
+            "title_en": "Fable 5.2 Tries Less on Some Hard Tasks",
+            "read_time": "7 MIN READ",
+            "url": "https://goodhartlabs.com/blog/fable-5-2-tries-less-on-some-hard-tasks-when-a-shortcut-is-available?utm_source=tldrai",
+            "domain": "goodhartlabs.com",
+            "highlight_kw": "Fable 5.2",
+            "summary_zh": "当有可见的快捷方式可用时，克劳德寓言 5.2 通常会在看似不可能的任务上投入更少的精力。",
+            "summary_en": "Claude Fable 5.2 often puts less effort into tasks that look impossible when a visible shortcut is available."
+          }
+        ]
+      }
+    ]
+  },
   '2026-11-25': {
     "date": "2026-11-25",
     "weekday": "WED · 周三",
