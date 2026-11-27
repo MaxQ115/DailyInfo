@@ -56,6 +56,180 @@ const TLDR_SECTION_MAP = {
 };
 
 const PRESET_TLDR_ISSUES = {
+  '2026-11-27': {
+    "date": "2026-11-27",
+    "weekday": "FRI · 周五",
+    "issueNo": "VOL. 2026.11.27",
+    "headline_zh": "OpenAI 成本控制 💰、测量 RSI 📈、环形变压器 ➰",
+    "headline_en": "OpenAI cost controls 💰, measuring RSI 📈, looped transformers ➰",
+    "sections": [
+      {
+        "sectionKey": "Headlines & Launches",
+        "items": [
+          {
+            "title_zh": "Anthropic 为 Claude 准备了 Google Drive 文件浏览器",
+            "title_en": "Anthropic prepares Google Drive file browser for Claude",
+            "read_time": "2 MIN READ",
+            "url": "https://www.testingcatalog.com/anthropic-prepares-google-drive-file-browser-for-claude/?utm_source=tldrai",
+            "domain": "testingcatalog.com",
+            "highlight_kw": "Anthropic",
+            "summary_zh": "Anthropic 正在开发 Google Drive 集成，让用户可以直接在 Claude 中浏览和管理他们的文件。该界面将显示 Google 文档、表格和幻灯片，并允许用户搜索和过滤文件。它目前在 Claude 的导航侧栏中显示为单独的项目。最终的实施可能会成为克劳德更新的项目经验的一部分。",
+            "summary_en": "Anthropic is developing a Google Drive integration that will let users browse and manage their files directly in Claude. The interface will display Google Docs, Sheets, and Slides and allow users to search and filter files. It currently appears as a separate item in Claude's navigation sidebar. The final implementation may become part of Claude's updated Projects experience."
+          },
+          {
+            "title_zh": "OpenAI可能处于成本控制模式",
+            "title_en": "OpenAI may be in cost control mode",
+            "read_time": "2 MIN READ",
+            "url": "https://micjm.com/blog/openai-is-in-cost-control-mode/?utm_source=tldrai",
+            "domain": "micjm.com",
+            "highlight_kw": "OpenAI",
+            "summary_zh": "OpenAI 的 Astra 6.2 和 Sol 6.2 更新因性能下降而受到批评，因为这两个模型都显示推理和输出令牌显着减少。这表明转向节省成本，p 值表明与以前的版本相比，其推理和输出大幅下降。这些变化使得 Astra 和 Sol 的异常值更加关注成本效率而不是性能。",
+            "summary_en": "OpenAI's Astra 6.2 and Sol 6.2 updates received criticism for reduced performance, as both models show significant reductions in reasoning and output tokens. This suggests a shift towards cost savings, with p-values indicating substantial declines in their reasoning and output compared to previous versions. These changes make Astra and Sol outliers focused more on cost-efficiency than performance."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Deep Dives & Analysis",
+        "items": [
+          {
+            "title_zh": "测量相对强弱指数",
+            "title_en": "Measuring RSI",
+            "read_time": "12 MIN READ",
+            "url": "https://andrewtrask.substack.com/p/measuring-rsi?utm_source=tldrai",
+            "domain": "andrewtrask.substack.com",
+            "highlight_kw": "Measuring RSI",
+            "summary_zh": "计算分配和人工干预都无法衡量人工智能训练算法是否有所改进。这两个指标都没有在人类干预和人工智能改进之间建立硬联系。此外，在成功训练出更强大的模型之前，他们无法检测到强递归。样本复杂性可以在不构建功能更强的人工智能的情况下检测强递归机制，而反事实测量则可以在人工智能工具的建议下测量人工智能能力的变化程度，从而解决这些挑战。",
+            "summary_en": "Neither compute allocation nor human intervention measures whether an AI training algorithm improved. Neither metric establishes a hard link between human intervention and AI improvement. Also, they are unable to detect strong recursion before a successfully more capable model is trained. Sample complexity, which detects the mechanism of strong recursion without building a more capable AI, and counterfactual measurement, which measures how much AI capability changes when advised by AI tools, address these challenges."
+          },
+          {
+            "title_zh": "你的模型是一种依赖",
+            "title_en": "Your Model Is a Dependency",
+            "read_time": "16 MIN READ",
+            "url": "https://www.cesarsotovalero.net/blog/your-model-is-a-dependency.html?utm_source=tldrai",
+            "domain": "cesarsotovalero.net",
+            "highlight_kw": "Your Model",
+            "summary_zh": "您选择使用的大语言模型 (LLM) 是一个依赖项。随着时间的推移，软件依赖性会膨胀、破坏并悄然变成负债。 LLM 是迄今为止软件开发中采用的最奇怪的依赖关系，但软件供应链手册几乎逐行适用于它们。公司需要开始采用软件供应链的习惯，并将其尽快应用到他们使用的模型中。",
+            "summary_en": "The large language model (LLM) you choose to use is a dependency. Software dependencies bloat, break, and quietly turn into liabilities over time. LLMs are the strangest dependencies adopted in software development so far, but the software supply chain playbook applies to them almost line by line. Companies need to start adopting habits from the software supply chain and applying them to the models they use as soon as possible."
+          },
+          {
+            "title_zh": "从模型压缩到环形变压器",
+            "title_en": "From Model Compression to Looped Transformers",
+            "read_time": "22 MIN READ",
+            "url": "https://shiweiliuiiiiiii.github.io/blog/2026/from-model-compression-to-looped-transformers/?utm_source=tldrai",
+            "domain": "shiweiliuiiiiiii.github.io",
+            "highlight_kw": "From Model",
+            "summary_zh": "模型层对压缩的敏感性并不相同。通常可以比早期层更积极地压缩深层网络的重要部分。影响不大的可压缩性表明模型没有像研究人员希望的那样有效地使用其架构。循环变压器提供了一种增加计算深度而不重复主要骨干参数的方法。然而，如何进行额外的计算实际上仍然很重要。",
+            "summary_en": "Model layers are not all equally sensitive to compression. It is often possible to compress substantial parts of the deeper network more aggressively than the early layers. The compressability with little consequence suggests that models are not using their architectures as effectively as researchers had hoped. Looped transformers offer a way to increase computational depth without duplicating the main backbone parameters. However, the question of how to make additional computation actually matter remains."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Engineering & Research",
+        "items": [
+          {
+            "title_zh": "成为 TLDR 社区的创始成员",
+            "title_en": "Become a founding member of TLDR's community",
+            "read_time": "2 MIN FORM",
+            "url": "https://danni763618.typeform.com/to/H1tYViME?utm_source=tldrai",
+            "domain": "danni763618.typeform.com",
+            "highlight_kw": "Become",
+            "summary_zh": "TLDR 正在为人工智能构建者推出一个精心策划的社区，以讨论最佳实践和最新的人工智能新闻。最好的链接和评论将出现在 TLDR 中。在此申请加入。",
+            "summary_en": "TLDR is launching a curated community for AI builders to discuss best practices and the latest AI news. The best links and comments will be featured in TLDR. Apply here to join."
+          },
+          {
+            "title_zh": "LayerStream：在更少或更便宜的 GPU 上实现更快的 MoE 微调",
+            "title_en": "LayerStream: faster MoE fine-tuning on fewer or cheaper GPUs",
+            "read_time": "10 MIN READ",
+            "url": "https://nebius.com/blog/posts/layerstream-moe-fine-tuning?utm_source=tldrai",
+            "domain": "nebius.com",
+            "highlight_kw": "LayerStream",
+            "summary_zh": "Nebius 的 LayerStream 训练引擎会在主机内存中保留优化器状态和保存的激活，并且仅当该层运行时才通过 GPU 传输该层的工作状态。在 16 个 H200 GPU 上，它在 7.1 分钟内完成了对 2580 万令牌数据集的传递，而不是 22.4 分钟，吞吐量是经过调整的 Megatron-LM 训练器的 3.15 倍，每个令牌的 GPU 成本降低了 68%。",
+            "summary_en": "Nebius' LayerStream training engine keeps optimizer state and saved activations in host memory and streams each layer's working state through the GPU only when that layer runs. On 16 H200 GPUs, it finished a pass over a 25.8M-token dataset in 7.1 minutes instead of 22.4, with 3.15x the throughput of a tuned Megatron-LM trainer and 68% lower GPU cost per token."
+          },
+          {
+            "title_zh": "柏拉图的钥匙",
+            "title_en": "Plato's Key",
+            "read_time": "8 MIN READ",
+            "url": "https://hazyresearch.stanford.edu/blog/2026-11-25-platos-key?utm_source=tldrai",
+            "domain": "hazyresearch.stanford.edu",
+            "highlight_kw": "Plato",
+            "summary_zh": "柏拉图表示假说假设神经网络趋向于共享现实表示。单独训练的模型可以学习几何上相似的表示，但相似并不意味着可以互换。 LLM 可以使用彼此的表示来代替自己的表示，而无需梯度下降。这张地图出人意料地简单：在实验中，一个旋转和一个全局尺度，以封闭形式拟合，让一个法学硕士使用另一个的表示。",
+            "summary_en": "The Platonic Representation Hypothesis posits that neural networks converge toward a shared representation of reality. Separately trained models can learn geometrically similar representations, but similar does not mean interchangeable. LLMs can use each other's representations in place of their own without gradient descent. The map is surprisingly simple: in experiments, a rotation and one global scale, fit in closed form, let one LLM use another's representations."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Miscellaneous",
+        "items": [
+          {
+            "title_zh": "为什么我看好 2027 年 MCP",
+            "title_en": "Why I'm Bullish on MCP for 2027",
+            "read_time": "10 MIN READ",
+            "url": "https://www.philschmid.de/mcp-2027?utm_source=tldrai",
+            "domain": "philschmid.de",
+            "highlight_kw": "Why",
+            "summary_zh": "MCP 正在不断发展，Linear、Notion 和 Atlassian 等实体将其用于重要的工具管理，显示出流量和工具处理的强劲增长。主要改进包括用于高效工具调用的代码模式、用于简化代理知识的集成技能以及用于实时更新和通知的 MCP 事件。可观测性和安全性等领域仍然需要开展工作，但到 2027 年，MCP 对于多智能体协调和高效任务管理将变得至关重要。",
+            "summary_en": "MCP is evolving, with entities like Linear, Notion, and Atlassian using it for significant tool management, showing robust growth in traffic and tool handling. Key advancements include Code Mode for efficient tool calling, integrated Skills for streamlined agent knowledge, and MCP Events for real-time updates and notifications. There's still work needed in areas like observability and security, but MCP is becoming crucial for multi-agent coordination and efficient task management by 2027."
+          },
+          {
+            "title_zh": "规模相关算法是否会阻碍软件智能爆炸？",
+            "title_en": "Do scale-dependent algorithms cut against a software intelligence explosion?",
+            "read_time": "13 MIN READ",
+            "url": "https://newsletter.forethought.org/p/do-scale-dependent-algorithms-cut-against-a-software-intelligence-explosion?utm_source=tldrai",
+            "domain": "newsletter.forethought.org",
+            "highlight_kw": "Do",
+            "summary_zh": "与规模相关的算法将阻止纯软件的智能爆炸。他们这样做的数量将取决于如何衡量算法进展。按照人工智能公司实际衡量算法进展的方式，影响会很小。人工智能公司应该发布更多数据，以便独立研究人员能够评估是否会出现纯软件智能爆炸。",
+            "summary_en": "Scale-dependent algorithms will cut against a software-only intelligence explosion. The amount they do so will depend on how algorithmic progress is measured. With the way AI companies actually measure algorithmic progress, the effect will be small. AI companies should publish more data so that independent researchers can assess whether there will be a software-only intelligence explosion."
+          }
+        ]
+      },
+      {
+        "sectionKey": "Quick Links",
+        "items": [
+          {
+            "title_zh": "利用同行的工作获得对 OpenAI 研究基础设施的未经授权的访问",
+            "title_en": "Using peers' work to gain unauthorized access to OpenAI research infrastructure",
+            "read_time": "13 MIN READ",
+            "url": "https://openai.com/safety-alignment/misalignment-reports/using-peers-work-to-gain-unauthorized-access-to-openai-research-infrastructure/?utm_source=tldrai",
+            "domain": "openai.com",
+            "highlight_kw": "Using",
+            "summary_zh": "OpenAI 观察到，7 月 19 日，进行网络安全评估的代理获得了对其研究基础设施的未经授权的访问权限，利用该访问权限来修复损坏的目标、更改评估设置以及检索工作空间中不可用的日志和私人分级代码。",
+            "summary_en": "OpenAI observed agents taking a cybersecurity evaluation gaining unauthorized access to its research infrastructure on July 19, using the access to repair broken targets, change evaluation settings, and retrieve logs and private grading code unavailable from their workspaces."
+          },
+          {
+            "title_zh": "推出适用于 AMD Ryzen 和 Radeon 的 llama.cpp 基准仪表板",
+            "title_en": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+            "read_time": "3 MIN READ",
+            "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench?utm_source=tldrai",
+            "domain": "huggingface.co",
+            "highlight_kw": "Introducing",
+            "summary_zh": "Hugging Face 上的 llama.cpp × AMD 基准仪表板可让 AMD 开发人员跟踪 Ryzen 和 Radeon 硬件上的 llama.cpp 构建、模型和量化性能。",
+            "summary_en": "The llama.cpp × AMD Benchmark dashboard on Hugging Face lets AMD developers track performance across llama.cpp builds, models, and quantizations on Ryzen and Radeon hardware."
+          },
+          {
+            "title_zh": "Thariq Shihipar 加入 OpenAI",
+            "title_en": "Thariq Shihipar has joined OpenAI",
+            "read_time": "1 MIN READ",
+            "url": "https://x.com/trq212/status/2125675533761671405?utm_source=tldrai",
+            "domain": "x.com",
+            "highlight_kw": "Thariq Shihipar",
+            "summary_zh": "Thariq Shihipar 离开 Anthropic 前往 OpenAI 工作，为超过 10 亿人构建人工智能产品并推动前沿发展。",
+            "summary_en": "Thariq Shihipar has left Anthropic to work at OpenAI to build AI products for over a billion people and to push the frontier forward."
+          },
+          {
+            "title_zh": "Nous Research 准备下周重新设计 Hermes 桌面",
+            "title_en": "Nous Research readies Hermes Desktop redesign for next week",
+            "read_time": "3 MIN READ",
+            "url": "https://www.testingcatalog.com/nous-research-readies-hermes-desktop-redesign-for-next-week/?utm_source=tldrai",
+            "domain": "testingcatalog.com",
+            "highlight_kw": "Nous Research",
+            "summary_zh": "Nous Research 计划下周发布重新设计的 Hermes 桌面应用程序，该应用程序具有带有集中主屏幕和可自定义代理页面的新界面。",
+            "summary_en": "Nous Research plans to release a redesigned Hermes Desktop app next week, featuring a new interface with a centralized home screen and customizable agent pages."
+          }
+        ]
+      }
+    ]
+  },
   '2026-11-26': {
     "date": "2026-11-26",
     "weekday": "THU · 周四",
